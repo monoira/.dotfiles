@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local mux = wezterm.mux
 local config = {}
 
 -- Use config builder object if possible
@@ -10,8 +11,15 @@ end
 config.window_background_opacity = 0.9
 config.font_size = 16
 config.font = wezterm.font("CommitMono Nerd Font", { weight = "Regular", italic = false })
-config.window_decorations = "RESIZE"
 config.use_cap_height_to_scale_fallback_fonts = true
+
+-- || start in fullscreen
+config.window_decorations = "RESIZE"
+
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = mux.spawn_window(cmd or {})
+	window:gui_window():maximize()
+end)
 
 -- dim inactive panes
 config.inactive_pane_hsb = {
