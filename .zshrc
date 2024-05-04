@@ -13,7 +13,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -26,10 +29,17 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+ZSH_THEME="robbyrussell"
+
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
 
 
 source $ZSH/oh-my-zsh.sh
@@ -39,14 +49,6 @@ zstyle :compinstall filename '/home/irakli/.zshrc'
 autoload -Uz compinit
 compinit
 
-# || MINE
-
-ZSH_THEME="robbyrussell"
-
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
+# mine
 alias n="nvim"
+
