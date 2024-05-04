@@ -13,8 +13,14 @@ check_exit_status() {
 }
 
 # || Installing pacman and AUR packages
-
 # installs useful pacman packages
+
+sudo pacman -S --noconfirm zsh
+check_exit_status "zsh failed"
+
+sudo pacman -S --noconfirm zsh-syntax-highlighting
+check_exit_status "zsh-syntax-highlighting failed"
+
 sudo pacman -S --noconfirm timeshift
 check_exit_status "timeshift failed"
 
