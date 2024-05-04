@@ -30,6 +30,9 @@ install_yay_packages_and_check() {
 
 install_pacman_packages_and_check zsh
 install_pacman_packages_and_check zsh-syntax-highlighting
+# Set zsh as the default shell
+sudo chsh -s /bin/zsh
+
 install_pacman_packages_and_check timeshift
 install_pacman_packages_and_check nodejs
 install_pacman_packages_and_check npm
