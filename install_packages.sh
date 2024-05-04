@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# NOTE: after installing EndeavourOS, run this script first
-# for software installation and useful configurations.
+# NOTE: after installing EndeavourOS, run this script first.
 
 # failure log script in case installation of some packages fail
 log_file=~/install_progress_log.txt
@@ -36,10 +35,11 @@ install_pacman_packages_and_check nodejs
 install_pacman_packages_and_check npm
 install_pacman_packages_and_check git
 install_pacman_packages_and_check lazygit
-install_pacman_packages_and_check cargo
+
+install_pacman_packages_and_check nuget
 install_pacman_packages_and_check dotnet-sdk
 install_pacman_packages_and_check aspnet-runtime
-install_pacman_packages_and_check nuget
+
 install_pacman_packages_and_check xclip
 install_pacman_packages_and_check ripgrep
 install_pacman_packages_and_check fd
@@ -52,17 +52,3 @@ install_pacman_packages_and_check wezterm
 
 install_yay_packages_and_check visual-studio-code-bin
 install_yay_packages_and_check figma-linux
-
-# other system configurations
-
-# activates bluetooth on EndeavourOS
-sudo systemctl start bluetooth
-
-sudo systemctl enable bluetooth
-
-# fixing time on linux - problem of dual booting windows and linux
-# https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
-timedatectl set-local-rtc 1 --adjust-system-clock
-
-# activates timeshift autobackup
-sudo systemctl enable --now cronie.service
