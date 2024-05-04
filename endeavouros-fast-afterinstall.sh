@@ -1,98 +1,68 @@
 #!/bin/bash
 
-# DESCRIPTION: after installing EndeavourOS, run this script for software installation and useful configurations.
+# NOTE: after installing EndeavourOS, run this script first
+# for software installation and useful configurations.
 
-# NOTE: Function to check the exit status and print an error message
+# failure log script in case installation of some packages fail
+log_file=~/install_progress_log.txt
 
-check_exit_status() {
-	local status=$?
-	if [ $status -ne 0 ]; then
-		echo "Error: $1 failed."
-		exit 1
+# installation scripts. if it fails, failure will be echoed to log_file
+install_pacman_packages_and_check() {
+	package_name=$1
+	sudo pacman -S --noconfirm $package_name
+	if type -p $package_name >/dev/null; then
+		echo "$package_name Installed" >>$log_file
+	else
+		echo "$package_name FAILED TO INSTALL!!!" >>$log_file
 	fi
 }
 
-# || Installing pacman and AUR packages
-# installs useful pacman packages
+install_yay_packages_and_check() {
+	package_name=$1
+	yay -S --noconfirm $package_name
+	if type -p $package_name >/dev/null; then
+		echo "$package_name Installed" >>$log_file
+	else
+		echo "$package_name FAILED TO INSTALL!!!" >>$log_file
+	fi
+}
 
-sudo pacman -S --noconfirm zsh
-check_exit_status "zsh failed"
+# PACMAN PACKAGES
 
-sudo pacman -S --noconfirm zsh-syntax-highlighting
-check_exit_status "zsh-syntax-highlighting failed"
+install_pacman_packages_and_check zsh
+install_pacman_packages_and_check zsh-syntax-highlighting
+install_pacman_packages_and_check timeshift
+install_pacman_packages_and_check nodejs
+install_pacman_packages_and_check npm
+install_pacman_packages_and_check git
+install_pacman_packages_and_check lazygit
+install_pacman_packages_and_check cargo
+install_pacman_packages_and_check dotnet-sdk
+install_pacman_packages_and_check aspnet-runtime
+install_pacman_packages_and_check nuget
+install_pacman_packages_and_check xclip
+install_pacman_packages_and_check ripgrep
+install_pacman_packages_and_check fd
+install_pacman_packages_and_check ffmpegthumbs
+install_pacman_packages_and_check neovim
+install_pacman_packages_and_check otf-commit-mono-nerd
+install_pacman_packages_and_check wezterm
 
-sudo pacman -S --noconfirm timeshift
-check_exit_status "timeshift failed"
+# YAY AUR PACKAGES
 
-sudo pacman -S --noconfirm nodejs
-check_exit_status "nodejs failed"
+install_yay_packages_and_check visual-studio-code-bin
+install_yay_packages_and_check figma-linux
 
-sudo pacman -S --noconfirm npm
-check_exit_status "npm failed"
-
-sudo pacman -S --noconfirm git
-check_exit_status "git failed"
-
-sudo pacman -S --noconfirm lazygit
-check_exit_status "lazygit failed"
-
-sudo pacman -S --noconfirm cargo
-check_exit_status "cargo failed"
-
-sudo pacman -S --noconfirm dotnet-sdk
-check_exit_status "dotnet-sdk failed"
-
-sudo pacman -S --noconfirm aspnet-runtime
-check_exit_status "aspnet-runtime failed"
-
-sudo pacman -S --noconfirm nuget
-check_exit_status "nuget failed"
-
-sudo pacman -S --noconfirm xclip
-check_exit_status "xclip failed"
-
-sudo pacman -S --noconfirm ripgrep
-check_exit_status "ripgrep failed"
-
-sudo pacman -S --noconfirm fd
-check_exit_status "fd failed"
-
-sudo pacman -S --noconfirm ffmpegthumbs
-check_exit_status "ffmpegthumbs failed"
-
-sudo pacman -S --noconfirm neovim
-check_exit_status "neovim failed"
-
-sudo pacman -S --noconfirm otf-commit-mono-nerd
-check_exit_status "otf-commit-mono-nerd failed"
-
-sudo pacman -S --noconfirm wezterm
-check_exit_status "wezterm failed"
-
-# installs useful yay packages
-yay -S --noconfirm visual-studio-code-bin
-check_exit_status "visual-studio-code-bin (AUR)"
-
-yay -S --noconfirm figma-linux
-check_exit_status "figma-linux (AUR)"
-
-# || other system configurations
+# other system configurations
 
 # activates bluetooth on EndeavourOS
 sudo systemctl start bluetooth
-check_exit_status "Bluetooth activation"
 
 sudo systemctl enable bluetooth
-check_exit_status "Bluetooth enabling"
 
 # fixing time on linux - problem of dual booting windows and linux
 # https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
 timedatectl set-local-rtc 1 --adjust-system-clock
-check_exit_status "Linux Time got fixed"
 
 # activates timeshift autobackup
 sudo systemctl enable --now cronie.service
-check_exit_status "Timeshift autobackup activation"
-
-# now save whatever you are doing and reboot the computer!
-# test
