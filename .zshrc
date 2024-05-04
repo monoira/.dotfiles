@@ -29,8 +29,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-ZSH_THEME="robbyrussell"
-
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
@@ -40,6 +38,10 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+
+
+# theme
+ZSH_THEME="robbyrussell"
 
 
 source $ZSH/oh-my-zsh.sh
