@@ -22,7 +22,7 @@
   [create_symlinks.sh](./create_symlinks.sh)
   to spread around .dotfiles
 
-## things you have to do since the shell can't do them
+## things you have to do manually since the shell can't do them
 
 - add a keyboard layout
 - configure LibreOffice dark mode on EndeavourOS
