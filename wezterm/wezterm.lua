@@ -8,7 +8,7 @@ if wezterm.config_builder then
 end
 
 -- || use wsl on windows
-config.default_domain = 'WSL:Ubuntu'
+-- config.default_domain = 'WSL:Ubuntu'
 
 -- || settings
 config.window_background_opacity = 0.9
