@@ -7,9 +7,6 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- || use wsl on windows
--- config.default_domain = 'WSL:Ubuntu'
-
 -- || settings
 config.window_background_opacity = 0.9
 config.font_size = 16
