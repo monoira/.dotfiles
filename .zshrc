@@ -75,10 +75,10 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 
 # || plugins
-plugins=(git fzf)
+plugins=(git vi-mode fzf)
 
 # || theme
- ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 source $ZSH/oh-my-zsh.sh
 bindkey -v
