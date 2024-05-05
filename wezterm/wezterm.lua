@@ -7,7 +7,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- || use wsl on linux
+-- || use wsl on windows
 config.default_domain = 'WSL:Ubuntu-22.04'
 
 -- || settings
