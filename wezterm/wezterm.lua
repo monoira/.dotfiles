@@ -13,15 +13,14 @@ config.font_size = 16
 config.font = wezterm.font("CommitMono Nerd Font", { weight = "Regular", italic = false })
 config.use_cap_height_to_scale_fallback_fonts = true
 
--- config.color_scheme = "Wez"
--- config.color_scheme = "Night Owl (Gogh)"
--- config.color_scheme = "Nightfly (Gogh)"
--- config.color_scheme = "Kanagawa (Gogh)"
--- config.color_scheme = "Humanoid dark (base16)"
--- config.color_scheme = "Breath (Gogh)"
+-- || color schemes
+-- good themes:
+--config.color_scheme = "OneDark (base16)"
+--config.color_scheme = "Night Owl (Gogh)"
+--config.color_scheme = "Nightfly (Gogh)"
+config.color_scheme = "Humanoid dark (base16)"
 
 -- || start in fullscreen
-
 config.window_decorations = "RESIZE"
 wezterm.on("gui-startup", function(cmd)
 	local tab, pane, window = mux.spawn_window(cmd or {})

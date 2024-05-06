@@ -77,9 +77,10 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # || plugins
 plugins=(git docker vi-mode fzf)
 
-# || theme - frisk is pretty good
-# intheloop
-ZSH_THEME="jispwoso"
+# || theme
+# good themes:
+# strug - intheloop
+ZSH_THEME="strug"
 
 source $ZSH/oh-my-zsh.sh
 bindkey -v
