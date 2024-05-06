@@ -9,7 +9,7 @@ return {
 
       "vim-language-server",
       "stylua",
-      "codespell",
+      "typos-lsp",
       "markdownlint",
 
       "bash-language-server",
