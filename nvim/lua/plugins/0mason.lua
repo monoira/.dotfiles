@@ -15,7 +15,6 @@ return {
       "bash-language-server",
       "shellcheck",
       "shfmt",
-      "beautysh",
 
       "emmet-language-server",
       "prettier",

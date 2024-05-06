@@ -15,7 +15,8 @@ require("lazy").setup({
       import = "lazyvim.plugins",
     },
 
-    { import = "lazyvim.plugins.extras.lang.tailwind" },
+    -- NOTE: Uncomment when you start using tailwind
+    -- { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.json" },
