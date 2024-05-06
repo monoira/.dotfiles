@@ -6,6 +6,16 @@
 log_file=~/install_progress_log.txt
 
 # installation scripts. if it fails, failure will be echoed to log_file
+install_yay_packages_and_check() {
+	package_name=$1
+	yay -S --noconfirm $package_name
+	if type -p $package_name >/dev/null; then
+		echo "$package_name Installed" >>$log_file
+	else
+		echo "$package_name FAILED TO INSTALL!!!" >>$log_file
+	fi
+}
+
 install_pacman_packages_and_check() {
 	package_name=$1
 	sudo pacman -S --noconfirm $package_name
@@ -16,15 +26,10 @@ install_pacman_packages_and_check() {
 	fi
 }
 
-install_yay_packages_and_check() {
-	package_name=$1
-	yay -S --noconfirm $package_name
-	if type -p $package_name >/dev/null; then
-		echo "$package_name Installed" >>$log_file
-	else
-		echo "$package_name FAILED TO INSTALL!!!" >>$log_file
-	fi
-}
+# YAY AUR PACKAGES
+yay --noconfirm
+install_yay_packages_and_check visual-studio-code-bin
+install_yay_packages_and_check figma-linux
 
 # PACMAN PACKAGES
 install_pacman_packages_and_check zsh
@@ -47,7 +52,3 @@ install_pacman_packages_and_check ffmpegthumbs
 install_pacman_packages_and_check neovim
 install_pacman_packages_and_check otf-commit-mono-nerd
 install_pacman_packages_and_check wezterm
-
-# YAY AUR PACKAGES
-install_yay_packages_and_check visual-studio-code-bin
-install_yay_packages_and_check figma-linux
