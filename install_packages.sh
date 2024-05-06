@@ -27,7 +27,6 @@ install_yay_packages_and_check() {
 }
 
 # PACMAN PACKAGES
-
 install_pacman_packages_and_check zsh
 install_pacman_packages_and_check zsh-syntax-highlighting
 
