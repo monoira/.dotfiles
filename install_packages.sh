@@ -49,6 +49,5 @@ install_pacman_packages_and_check otf-commit-mono-nerd
 install_pacman_packages_and_check wezterm
 
 # YAY AUR PACKAGES
-
 install_yay_packages_and_check visual-studio-code-bin
 install_yay_packages_and_check figma-linux
