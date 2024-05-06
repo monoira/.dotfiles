@@ -2,6 +2,7 @@ return {
   "williamboman/mason.nvim",
   opts = {
     ensure_installed = {
+      "html-lsp",
       "css-lsp",
       "css-variables-language-server",
       "cssmodules-language-server",
