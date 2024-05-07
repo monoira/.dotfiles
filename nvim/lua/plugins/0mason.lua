@@ -18,6 +18,13 @@ return {
 
       "emmet-language-server",
       "prettier",
+
+      "bash-debug-adapter",
+      "firefox-debug-adapter",
+      "js-debug-adapter",
+      "netcoredbg",
+      "delve",
+      "go-debug-adapter",
     },
   },
 }

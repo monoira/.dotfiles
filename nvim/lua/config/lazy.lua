@@ -27,6 +27,10 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.lazyrc" },
 
+    -- debugger
+    { import = "lazyvim.plugins.extras.dap.core" },
+    { import = "lazyvim.plugins.extras.dap.nlua" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
