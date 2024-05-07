@@ -27,9 +27,6 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.lazyrc" },
 
-    -- neotest
-    { import = "lazyvim.plugins.extras.test.core" },
-
     -- debugger
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
