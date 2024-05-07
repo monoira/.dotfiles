@@ -43,7 +43,6 @@ install_yay_package_and_check figma-linux
 
 # PACMAN PACKAGES
 install_pacman_package_and_check zsh
-install_pacman_package_and_check zsh-syntax-highlighting
 
 install_pacman_package_and_check timeshift
 install_pacman_package_and_check nodejs
