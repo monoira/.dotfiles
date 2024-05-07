@@ -5,25 +5,35 @@
 # failure log script in case installation of some packages fail
 log_file=~/install_progress_log.txt
 
-# installation scripts. if it fails, failure will be echoed to log_file
-install_yay_packages_and_check() {
-	package_name=$1
-	yay -S --noconfirm $package_name
-	if type -p $package_name >/dev/null; then
-		echo "$package_name Installed" >>$log_file
-	else
-		echo "$package_name FAILED TO INSTALL!!!" >>$log_file
-	fi
+# Function to check if a package is installed
+package_installed() {
+    if command -v "$1" &>/dev/null; then
+        return 0  # Package is installed
+    else
+        return 1  # Package is not installed
+    fi
 }
 
-install_pacman_packages_and_check() {
-	package_name=$1
-	sudo pacman -S --noconfirm $package_name
-	if type -p $package_name >/dev/null; then
-		echo "$package_name Installed" >>$log_file
-	else
-		echo "$package_name FAILED TO INSTALL!!!" >>$log_file
-	fi
+# Function to install Yay packages and check installation
+install_yay_package_and_check() {
+    package_name=$1
+    yay -S --noconfirm "$package_name"
+    if package_installed "$package_name"; then
+        echo "$package_name Installed" >> "$log_file"
+    else
+        echo "$package_name FAILED TO INSTALL!!!" >> "$log_file"
+    fi
+}
+
+# Function to install Pacman packages and check installation
+install_pacman_package_and_check() {
+    package_name=$1
+    sudo pacman -S --noconfirm "$package_name"
+    if package_installed "$package_name"; then
+        echo "$package_name Installed" >> "$log_file"
+    else
+        echo "$package_name FAILED TO INSTALL!!!" >> "$log_file"
+    fi
 }
 
 # YAY AUR PACKAGES
