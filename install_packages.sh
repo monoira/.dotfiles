@@ -58,6 +58,7 @@ install_pacman_package_and_check aspnet-runtime
 install_pacman_package_and_check xclip
 install_pacman_package_and_check ripgrep
 install_pacman_package_and_check fd
+install_pacman_package_and_check fzf
 install_pacman_package_and_check ffmpegthumbs
 install_pacman_package_and_check neovim
 install_pacman_package_and_check otf-commit-mono-nerd
