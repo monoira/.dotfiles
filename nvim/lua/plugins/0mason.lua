@@ -21,7 +21,7 @@ return {
 
       -- bash debugger
       "bash-debug-adapter",
-      -- js debugger
+      -- js and ts debugger
       "js-debug-adapter",
       -- go debugger - need both
       "delve",
