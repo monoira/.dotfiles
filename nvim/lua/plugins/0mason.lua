@@ -19,10 +19,11 @@ return {
       "emmet-language-server",
       "prettier",
 
+      -- bash debugger
       "bash-debug-adapter",
-      "firefox-debug-adapter",
+      -- js debugger
       "js-debug-adapter",
-      "netcoredbg",
+      -- go debugger - need both
       "delve",
       "go-debug-adapter",
     },
