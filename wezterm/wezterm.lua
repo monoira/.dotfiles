@@ -8,15 +8,14 @@ if wezterm.config_builder then
 end
 
 -- || settings
-config.window_background_opacity = 0.99
+config.window_background_opacity = 0.9
 config.font_size = 16
 config.font = wezterm.font("CommitMono Nerd Font", { weight = "Regular", italic = false })
 config.use_cap_height_to_scale_fallback_fonts = true
 
 -- || color schemes
---config.color_scheme = "Sublette"
---config.color_scheme = "Catppuccin Mocha (Gogh)"
-config.color_scheme = "Gogh (Gogh)"
+config.color_scheme = "Sublette"
+--config.color_scheme = "Gogh (Gogh)"
 
 -- || start in fullscreen
 config.window_decorations = "RESIZE"
