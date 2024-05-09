@@ -14,11 +14,11 @@ config.font = wezterm.font("CommitMono Nerd Font", { weight = "Regular", italic 
 config.use_cap_height_to_scale_fallback_fonts = true
 
 -- || color schemes
--- good themes:
+-- good schemes:
 --config.color_scheme = "OneDark (base16)"
 --config.color_scheme = "Night Owl (Gogh)"
 --config.color_scheme = "Nightfly (Gogh)"
-config.color_scheme = "Humanoid dark (base16)"
+--config.color_scheme = "Humanoid dark (base16)"
 
 -- || start in fullscreen
 config.window_decorations = "RESIZE"
