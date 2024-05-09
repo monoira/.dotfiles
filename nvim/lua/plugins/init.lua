@@ -11,7 +11,7 @@ return {
       require("tint").setup()
     end,
   },
-  -- NOTE: colorizer documentation at github
+  -- NOTE: colorizer - documentation at github
   {
     "NvChad/nvim-colorizer.lua",
     config = function()
@@ -45,4 +45,3 @@ return {
     end,
   },
 }
-
