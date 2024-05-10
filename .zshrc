@@ -60,7 +60,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # zstyle ':omz:update' frequency 13
 
 # || plugins
-plugins=(docker vi-mode)
+plugins=(docker vi-mode fzf)
 
 # || theme
 ZSH_THEME="strug"
