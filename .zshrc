@@ -75,7 +75,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 
 # || plugins
-plugins=(git docker vi-mode)
+plugins=(docker vi-mode)
 
 # || theme
 ZSH_THEME="strug"
