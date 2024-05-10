@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # NOTE: after installing EndeavourOS, run this script first.
+# NOTE: you need to have yay and pacman installed for this script to work.
 
-# failure log script in case installation of some packages fail
+# log failed packages
 log_file=~/install_progress_log.txt
 
 # Functions to check if a package is installed
