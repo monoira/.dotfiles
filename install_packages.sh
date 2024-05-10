@@ -5,9 +5,17 @@
 # failure log script in case installation of some packages fail
 log_file=~/install_progress_log.txt
 
-# Function to check if a package is installed
-package_installed() {
-	if command -v "$1" &>/dev/null; then
+# Functions to check if a package is installed
+pacman_package_installed() {
+	if pacman -Qi "$1" &>/dev/null; then
+		return 0 # Package is installed
+	else
+		return 1 # Package is not installed
+	fi
+}
+
+yay_package_installed() {
+	if yay -Qi "$1" &>/dev/null; then
 		return 0 # Package is installed
 	else
 		return 1 # Package is not installed
@@ -18,7 +26,7 @@ package_installed() {
 install_yay_package_and_check() {
 	package_name=$1
 	yay -S --noconfirm "$package_name"
-	if package_installed "$package_name"; then
+	if yay_package_installed "$package_name"; then
 		echo "$package_name Installed" >>"$log_file"
 	else
 		echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
@@ -29,7 +37,7 @@ install_yay_package_and_check() {
 install_pacman_package_and_check() {
 	package_name=$1
 	sudo pacman -S --noconfirm "$package_name"
-	if package_installed "$package_name"; then
+	if pacman_package_installed "$package_name"; then
 		echo "$package_name Installed" >>"$log_file"
 	else
 		echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
@@ -44,8 +52,8 @@ install_yay_package_and_check postman-bin
 
 # PACMAN PACKAGES
 install_pacman_package_and_check zsh
-install_pacman_package_and_check sh-autosuggestions
-install_pacman_package_and_check sh-syntax-highlighting
+install_pacman_package_and_check zsh-autosuggestions
+install_pacman_package_and_check zsh-syntax-highlighting
 
 install_pacman_package_and_check timeshift
 install_pacman_package_and_check nodejs
