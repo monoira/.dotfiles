@@ -44,6 +44,8 @@ install_yay_package_and_check postman-bin
 
 # PACMAN PACKAGES
 install_pacman_package_and_check zsh
+install_pacman_package_and_check sh-autosuggestions
+install_pacman_package_and_check sh-syntax-highlighting
 
 install_pacman_package_and_check timeshift
 install_pacman_package_and_check nodejs

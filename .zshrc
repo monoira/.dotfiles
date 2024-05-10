@@ -84,9 +84,12 @@ source $ZSH/oh-my-zsh.sh
 bindkey -v
 zstyle :compinstall filename '/home/irakli/.zshrc'
 
-autoload -Uz compinit
-compinit
+# || loading pacman zsh plugins
+autoload -Uz compinit && compinit
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # || aliases
-alias n="nvim"
+alias n="nvim ~/repos/1-web-development-projects/2_coding_training_files_2024/2_NEW_PROJECTS"
 
