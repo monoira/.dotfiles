@@ -80,16 +80,17 @@ plugins=(git docker vi-mode)
 # || theme
 ZSH_THEME="strug"
 
+
 source $ZSH/oh-my-zsh.sh
 bindkey -v
 zstyle :compinstall filename '/home/irakli/.zshrc'
 
-# || loading pacman zsh plugins
+# || aliases
+alias n="nvim ~/repos/1-web-development-projects/2_coding_training_files_2024/2_NEW_PROJECTS"
+
+# || loading pacman zsh plugins - this must be at the bottom
 autoload -Uz compinit && compinit
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# || aliases
-alias n="nvim ~/repos/1-web-development-projects/2_coding_training_files_2024/2_NEW_PROJECTS"
 
