@@ -17,6 +17,8 @@ return {
 
       -- docker
       "hadolint",
+      "docker-compose-language-service",
+      "dockerfile-language-server",
 
       -- bash
       "bash-language-server",
