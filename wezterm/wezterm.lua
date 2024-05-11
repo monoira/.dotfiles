@@ -9,9 +9,11 @@ end
 
 -- || settings
 config.window_background_opacity = 0.9
-config.font_size = 16
+config.font_size = 17
 config.font = wezterm.font("CommitMono Nerd Font", { weight = "Regular", italic = false })
 config.use_cap_height_to_scale_fallback_fonts = true
+
+config.hide_tab_bar_if_only_one_tab = true
 
 -- || color schemes
 config.color_scheme = "Sublette"
