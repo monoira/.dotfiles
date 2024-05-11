@@ -30,6 +30,7 @@ return {
 
       -- NOTE: MY ADDITIONS
       "css",
+      "gitcommit",
 
       -- golang
       "go",
