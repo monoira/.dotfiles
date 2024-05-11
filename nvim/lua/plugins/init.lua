@@ -1,11 +1,5 @@
 return {
   {
-    "dhruvasagar/vim-table-mode",
-    keys = {
-      { "<leader>sx", "<cmd>TableModeToggle<cr>", desc = "Table Mode Toggle" },
-    },
-  },
-  {
     "levouh/tint.nvim",
     config = function()
       require("tint").setup()
