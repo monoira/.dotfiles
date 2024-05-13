@@ -71,7 +71,7 @@ bindkey -v
 zstyle :compinstall filename '/home/irakli/.zshrc'
 
 # || aliases
-alias n="nvim ~/repos/1-web-development-projects/2_coding_training_files_2024/2_NEW_PROJECTS"
+alias n="nvim ~/repos/1-web-development-projects/2024/2_NEW_PROJECTS"
 
 # || loading pacman zsh plugins - NOTE: this must be at the bottom
 autoload -Uz compinit && compinit
