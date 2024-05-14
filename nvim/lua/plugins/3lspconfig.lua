@@ -1,6 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
+    -- NOTE: formatting
     -- https://github.com/typescript-language-server/typescript-language-server/issues/257#issuecomment-1825582878
     -- disable tsserver as a formatter
     format = {
