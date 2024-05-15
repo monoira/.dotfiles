@@ -63,6 +63,7 @@ install_pacman_package_and_check git
 install_pacman_package_and_check lazygit
 
 install_pacman_package_and_check xclip
+install_pacman_package_and_check unzip
 install_pacman_package_and_check ripgrep
 install_pacman_package_and_check fd
 install_pacman_package_and_check fzf
