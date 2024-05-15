@@ -31,7 +31,6 @@ hide_when_typing = true
 style = "Block"
 
 
-
 [font]
 normal = { family = "CommitMono Nerd Font"}
 size = 16
