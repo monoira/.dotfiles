@@ -3,6 +3,7 @@ import = [
     "~/.config/alacritty/themes/dracula_plus.toml"
 ]
 
+
 [shell]
 program = "/usr/bin/zsh"
 
@@ -17,8 +18,19 @@ decorations = "Full"
 blur = false
 
 padding = { x = 0, y = 0 }
+# HACK: this fixes weird spacing at the bottom
 dynamic_padding = true
 opacity = 0.8
+
+
+[mouse]
+hide_when_typing = true
+
+
+[cursor]
+style = "Block"
+
+
 
 [font]
 normal = { family = "CommitMono Nerd Font"}
