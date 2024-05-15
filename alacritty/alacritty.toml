@@ -9,7 +9,7 @@ program = "/usr/bin/zsh"
 
 [window]
 # startup_mode = "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
-startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 title = "Alacritty"
 dynamic_title = true 
 decorations_theme_variant = "None"
@@ -22,5 +22,5 @@ opacity = 0.8
 
 [font]
 normal = { family = "CommitMono Nerd Font"}
-size = 14
+size = 16
 builtin_box_drawing = true
