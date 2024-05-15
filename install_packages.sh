@@ -7,16 +7,16 @@
 log_file=~/install_progress_log.txt
 
 # Functions to check if a package is installed
-pacman_package_installed() {
-	if pacman -Qi "$1" &>/dev/null; then
+yay_package_installed() {
+	if yay -Qi "$1" &>/dev/null; then
 		return 0 # Package is installed
 	else
 		return 1 # Package is not installed
 	fi
 }
 
-yay_package_installed() {
-	if yay -Qi "$1" &>/dev/null; then
+pacman_package_installed() {
+	if pacman -Qi "$1" &>/dev/null; then
 		return 0 # Package is installed
 	else
 		return 1 # Package is not installed
@@ -70,6 +70,6 @@ install_pacman_package_and_check fzf
 install_pacman_package_and_check ffmpegthumbs
 install_pacman_package_and_check neovim
 install_pacman_package_and_check otf-commit-mono-nerd
-install_pacman_package_and_check wezterm
+install_pacman_package_and_check alacritty
 
 install_pacman_package_and_check fastfetch

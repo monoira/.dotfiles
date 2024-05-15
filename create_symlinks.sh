@@ -11,7 +11,7 @@ sudo rm -rf ~/.gitconfig >/dev/null 2>&1
 sudo rm -rf ~/.zshrc >/dev/null 2>&1
 
 sudo rm -rf ~/.config/nvim >/dev/null 2>&1
-sudo rm -rf ~/.config/wezterm >/dev/null 2>&1
+sudo rm -rf ~/.config/alacritty >/dev/null 2>&1
 
 # || creating symlinks
 
@@ -20,4 +20,4 @@ ln -sf $dotfiles_dir/.gitconfig ~/.gitconfig
 ln -sf $dotfiles_dir/.zshrc ~/.zshrc
 
 ln -sf $dotfiles_dir/nvim ~/.config/nvim
-ln -sf $dotfiles_dir/wezterm ~/.config/wezterm
+ln -sf $dotfiles_dir/alacritty ~/.config/alacritty
