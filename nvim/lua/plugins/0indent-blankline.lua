@@ -4,5 +4,6 @@ return {
   "lukas-reineke/indent-blankline.nvim",
   event = "LazyFile",
   opts = { scope = { enabled = false } },
+  -- HACK:
   version = "=3.5.4",
 }
