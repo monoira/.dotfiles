@@ -62,7 +62,11 @@ install_pacman_package_and_check npm
 install_pacman_package_and_check git
 install_pacman_package_and_check lazygit
 
+# clipboard for - X11
 install_pacman_package_and_check xclip
+# clipboard for - wayland
+install_pacman_package_and_check wl-clipboard
+
 install_pacman_package_and_check unzip
 install_pacman_package_and_check ripgrep
 install_pacman_package_and_check fd
