@@ -6,6 +6,9 @@ return {
     end,
   },
   -- NOTE: colorizer - documentation at github
+  -- maybe change to
+  -- https://github.com/brenoprata10/nvim-highlight-colors
+  -- for better coloring? seems like better option, but needs neovim 10
   {
     "NvChad/nvim-colorizer.lua",
     config = function()
