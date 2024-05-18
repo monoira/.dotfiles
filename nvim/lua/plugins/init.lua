@@ -5,32 +5,25 @@ return {
       require("tint").setup()
     end,
   },
-  -- HACK: colorizer - documentation at github
-  -- maybe change to
-  -- https://github.com/brenoprata10/nvim-highlight-colors
-  -- for better coloring? seems like better option, but needs neovim 10
+
+  -- Ensure termguicolors is enabled if not already in options.lua
+  -- vim.opt.termguicolors = true
   {
-    "NvChad/nvim-colorizer.lua",
+    "brenoprata10/nvim-highlight-colors",
     config = function()
-      require("colorizer").setup({
-        filetypes = { "*" },
-        user_default_options = {
-          RGB = true,
-          RRGGBB = true,
-          names = true,
-          RRGGBBAA = true,
-          AARRGGBB = true,
-          rgb_fn = true,
-          hsl_fn = true,
-          css = true,
-          css_fn = true,
-          mode = "background",
-          tailwind = true,
-          sass = { enable = true, parsers = { "css" } },
-          virtualtext = "■",
-          always_update = true,
-        },
-        buftypes = {},
+      require("nvim-highlight-colors").setup({
+        ---Render style
+        ---@usage 'background'|'foreground'|'virtual'
+        render = "background",
+
+        ---Set virtual symbol (requires render to be set to 'virtual')
+        virtual_symbol = "■",
+
+        ---Highlight named colors, e.g. 'green'
+        enable_named_colors = true,
+
+        ---Highlight tailwind colors, e.g. 'bg-blue-500'
+        enable_tailwind = false,
       })
     end,
   },
