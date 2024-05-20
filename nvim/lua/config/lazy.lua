@@ -27,6 +27,9 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.project" },
     { import = "lazyvim.plugins.extras.lazyrc" },
 
+    -- use lua snip until nvim-snippets gets better documentation? not important
+    { import = "lazyvim.plugins.extras.coding.luasnip" },
+
     -- debugger
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
