@@ -1,9 +1,8 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  opts = {
-    highlight = { enable = true },
-    indent = { enable = true },
-    ensure_installed = {
+  opts = function(_, opts)
+    vim.list_extend(opts.ensure_installed, {
+      -- defaults
       "bash",
       "c",
       "diff",
@@ -40,6 +39,6 @@ return {
 
       -- docker
       "dockerfile",
-    },
-  },
+    })
+  end,
 }

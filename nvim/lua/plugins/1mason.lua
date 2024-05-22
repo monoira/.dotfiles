@@ -23,8 +23,10 @@ return {
 
       -- || bash
       "bash-language-server",
-      "shellcheck",
+      "beautysh",
       "shfmt",
+
+      "shellcheck",
       -- bash debugger
       "bash-debug-adapter",
 
