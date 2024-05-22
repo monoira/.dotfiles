@@ -63,7 +63,7 @@ install_pacman_package_and_check git
 install_pacman_package_and_check lazygit
 install_pacman_package_and_check unzip
 
-# needed to see video/audio thumbnails inside dolphin
+# needed to see video/audio thumbnails inside dolphin on endeavourOS
 install_pacman_package_and_check ffmpegthumbs
 
 # needed for neovim - clipboard for - X11
