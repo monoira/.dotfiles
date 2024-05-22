@@ -1,7 +1,8 @@
 return {
   "williamboman/mason.nvim",
-  opts = {
-    ensure_installed = {
+  opts = function(_, opts)
+    opts.ensure_installed = opts.ensure_installed or {}
+    vim.list_extend(opts.ensure_installed, {
       "emmet-language-server",
       "html-lsp",
       "css-lsp",
@@ -15,12 +16,12 @@ return {
       "typos-lsp",
       "prettier",
 
-      -- docker
+      -- || docker
       "hadolint",
       "docker-compose-language-service",
       "dockerfile-language-server",
 
-      -- bash
+      -- || bash
       "bash-language-server",
       "shellcheck",
       "shfmt",
@@ -38,6 +39,6 @@ return {
 
       -- js and ts debugger
       "js-debug-adapter",
-    },
-  },
+    })
+  end,
 }
