@@ -61,17 +61,19 @@ install_pacman_package_and_check nodejs
 install_pacman_package_and_check npm
 install_pacman_package_and_check git
 install_pacman_package_and_check lazygit
+install_pacman_package_and_check unzip
 
-# clipboard for - X11
+# needed to see video/audio thumbnails inside dolphin
+install_pacman_package_and_check ffmpegthumbs
+
+# needed for neovim - clipboard for - X11
 install_pacman_package_and_check xclip
-# clipboard for - wayland
+# needed for neovim - clipboard for - wayland
 install_pacman_package_and_check wl-clipboard
 
-install_pacman_package_and_check unzip
 install_pacman_package_and_check ripgrep
 install_pacman_package_and_check fd
 install_pacman_package_and_check fzf
-install_pacman_package_and_check ffmpegthumbs
 install_pacman_package_and_check neovim
 install_pacman_package_and_check otf-commit-mono-nerd
 install_pacman_package_and_check alacritty
