@@ -25,7 +25,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.linting.eslint" },
 
     { import = "lazyvim.plugins.extras.util.project" },
-    { import = "lazyvim.plugins.extras.lazyrc" },
 
     -- use lua snip until nvim-snippets gets better documentation? not important
     { import = "lazyvim.plugins.extras.coding.luasnip" },
@@ -57,7 +56,7 @@ require("lazy").setup({
         -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
-        --"tutor",
+        -- "tutor",
         "zipPlugin",
       },
     },
