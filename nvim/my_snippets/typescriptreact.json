@@ -1,14 +1,27 @@
 {
-  "fetch with try/Catch": {
+  "fetch with try/catch": {
     "prefix": "fetch",
     "body": [
-      "try {",
-      "\tconst res = await fetch($1);",
-      "\tconst data = await res.json();",
-      "} catch (err) {",
-      "\tconsole.error(err);",
+      "const $1 = async () => {",
+      "  try {",
+      "    const res = await fetch($2);",
+      "    if (res.ok) {",
+      "      const data = await res.json();",
+      "      set$3(data);",
+      "",
+      "      setIsLoading(false);",
+      "      setError(null);",
+      "    } else if (!res.ok) {",
+      "      throw Error($4)",
+      "    }",
+      "  } catch (err) {",
+      "    console.error(err);",
+      "    setIsLoading(false);",
+      "    setError(err.message);",
+      "  }",
       "}"
-    ]
+    ],
+    "description": "fetch with try/Catch"
   },
   "SEO component for react + typescript + helmet": {
     "prefix": "helmet-seo",
