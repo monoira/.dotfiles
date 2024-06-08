@@ -45,37 +45,43 @@ install_pacman_package_and_check() {
 	fi
 }
 
-# YAY AUR PACKAGES
+# | YAY AUR PACKAGES
 yay --noconfirm
 install_yay_package_and_check visual-studio-code-bin
 install_yay_package_and_check figma-linux
 install_yay_package_and_check postman-bin
 
-# PACMAN PACKAGES
-install_pacman_package_and_check zsh
-install_pacman_package_and_check zsh-autosuggestions
-install_pacman_package_and_check zsh-syntax-highlighting
+# | PACMAN PACKAGES
 
-install_pacman_package_and_check timeshift
+# | tools and neovim
+# python (it's pip installer that comes with it) and npm are required
+# for neovim to download mason packages properly.
+# rest are also required for other functionalities inside neovim.
+install_pacman_package_and_check python
 install_pacman_package_and_check nodejs
 install_pacman_package_and_check npm
 install_pacman_package_and_check git
 install_pacman_package_and_check lazygit
 install_pacman_package_and_check unzip
-
-# needed to see video/audio thumbnails inside dolphin on endeavourOS
-install_pacman_package_and_check ffmpegthumbs
+install_pacman_package_and_check ripgrep
+install_pacman_package_and_check fd
+install_pacman_package_and_check fzf
+install_pacman_package_and_check neovim
 
 # needed for neovim - clipboard for - X11
 install_pacman_package_and_check xclip
 # needed for neovim - clipboard for - wayland
 install_pacman_package_and_check wl-clipboard
 
-install_pacman_package_and_check ripgrep
-install_pacman_package_and_check fd
-install_pacman_package_and_check fzf
-install_pacman_package_and_check neovim
+# | font, terminal and zsh
 install_pacman_package_and_check otf-commit-mono-nerd
 install_pacman_package_and_check alacritty
+install_pacman_package_and_check zsh
+install_pacman_package_and_check zsh-autosuggestions
+install_pacman_package_and_check zsh-syntax-highlighting
 
 install_pacman_package_and_check fastfetch
+install_pacman_package_and_check timeshift
+
+# needed to see video/audio thumbnails inside dolphin on endeavourOS
+install_pacman_package_and_check ffmpegthumbs
