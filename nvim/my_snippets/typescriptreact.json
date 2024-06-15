@@ -15,10 +15,11 @@
       "      throw Error($4)",
       "    }",
       "  } catch (err) {",
-      "    console.error(err);",
       "    setIsLoading(false);",
-      "    setError(err.message);",
-      "  }",
+      "",
+      "    if (err instanceof Error) { ",
+      "       setError(err.message);",
+      "    }",
       "}"
     ],
     "description": "fetch with try/Catch"
