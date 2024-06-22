@@ -60,6 +60,7 @@ install_yay_package_and_check postman-bin
 install_pacman_package_and_check python
 install_pacman_package_and_check nodejs
 install_pacman_package_and_check npm
+install_pacman_package_and_check go
 install_pacman_package_and_check git
 install_pacman_package_and_check lazygit
 install_pacman_package_and_check unzip
