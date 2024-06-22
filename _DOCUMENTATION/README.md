@@ -27,6 +27,5 @@
 
 - on EndeavourOS
   - add a keyboard layout
-  - configure LibreOffice dark mode
   - configure favorites based on the following image:
     ![image of favorites on EndeavourOS](./favorites_img.png)
