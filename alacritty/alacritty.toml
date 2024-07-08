@@ -31,6 +31,12 @@ hide_when_typing = true
 style = "Block"
 
 
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
+
 [font]
 normal = { family = "CommitMono Nerd Font"}
 size = 16
