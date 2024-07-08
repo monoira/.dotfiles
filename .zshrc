@@ -3,7 +3,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-
 # || keymaps
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -65,6 +64,8 @@ plugins=(docker vi-mode fzf)
 # || theme
 ZSH_THEME="strug"
 
+# || default editor
+export EDITOR=nvim
 
 source $ZSH/oh-my-zsh.sh
 bindkey -v
@@ -72,7 +73,7 @@ zstyle :compinstall filename '/home/irakli/.zshrc'
 
 # || aliases
 
-# || loading pacman zsh plugins - NOTE: this must be at the bottom
+# || loading pacman zsh plugins - NOTE: this must be at the very bottom
 autoload -Uz compinit && compinit
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
