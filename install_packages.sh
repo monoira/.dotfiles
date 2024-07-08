@@ -8,41 +8,41 @@ log_file=~/install_progress_log.txt
 
 # Functions to check if a package is installed
 yay_package_installed() {
-	if yay -Qi "$1" &>/dev/null; then
-		return 0 # Package is installed
-	else
-		return 1 # Package is not installed
-	fi
+  if yay -Qi "$1" &>/dev/null; then
+    return 0 # Package is installed
+  else
+    return 1 # Package is not installed
+  fi
 }
 
 pacman_package_installed() {
-	if pacman -Qi "$1" &>/dev/null; then
-		return 0 # Package is installed
-	else
-		return 1 # Package is not installed
-	fi
+  if pacman -Qi "$1" &>/dev/null; then
+    return 0 # Package is installed
+  else
+    return 1 # Package is not installed
+  fi
 }
 
 # Function to install Yay packages and check installation
 install_yay_package_and_check() {
-	package_name=$1
-	yay -S --noconfirm "$package_name"
-	if yay_package_installed "$package_name"; then
-		echo "$package_name Installed" >>"$log_file"
-	else
-		echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
-	fi
+  package_name=$1
+  yay -S --noconfirm "$package_name"
+  if yay_package_installed "$package_name"; then
+    echo "$package_name Installed" >>"$log_file"
+  else
+    echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
+  fi
 }
 
 # Function to install Pacman packages and check installation
 install_pacman_package_and_check() {
-	package_name=$1
-	sudo pacman -S --noconfirm "$package_name"
-	if pacman_package_installed "$package_name"; then
-		echo "$package_name Installed" >>"$log_file"
-	else
-		echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
-	fi
+  package_name=$1
+  sudo pacman -S --noconfirm "$package_name"
+  if pacman_package_installed "$package_name"; then
+    echo "$package_name Installed" >>"$log_file"
+  else
+    echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
+  fi
 }
 
 # | YAY AUR PACKAGES
@@ -50,6 +50,7 @@ yay --noconfirm
 install_yay_package_and_check visual-studio-code-bin
 install_yay_package_and_check figma-linux
 install_yay_package_and_check postman-bin
+install_yay_package_and_check vimv-git
 
 # | PACMAN PACKAGES
 
