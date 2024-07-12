@@ -10,7 +10,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 zstyle ':omz:update' mode reminder
 
 # Plugins
-plugins=(docker vi-mode fzf git)  # Add 'git' for git integration
+plugins=(docker vi-mode fzf)
 
 # Theme
 ZSH_THEME="strug"
