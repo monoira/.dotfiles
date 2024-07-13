@@ -18,7 +18,7 @@ ZSH_THEME="strug"
 # Set nvim as default editor
 export EDITOR=nvim
 
-# Custom aliases and function in .aliases file
+# Custom aliases and functions
 source $HOME/.bash_aliases
 
 # Source Oh My Zsh config
