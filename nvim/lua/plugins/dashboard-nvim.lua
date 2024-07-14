@@ -30,7 +30,7 @@ return {
         -- stylua: ignore
         center = {
           {
-            action = 'lua require("persistence").load()',
+            action = 'require("persistence").load({ last = true })',
             desc = "Restore Session",
             icon = " ",
             key = "s",
