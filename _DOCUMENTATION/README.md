@@ -29,3 +29,4 @@
   - add a keyboard layout
   - configure favorites based on the following image:
     ![image of favorites on EndeavourOS](./favorites_img.png)
+  - NOTE: replace kTorrent with qBittorent
