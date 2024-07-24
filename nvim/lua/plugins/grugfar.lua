@@ -8,13 +8,14 @@ return {
       "<leader>sr",
       function()
         local grug = require("grug-far")
-        local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")
+        local myPath = "!node_modules !dist !.eslintcache !*json !*mock* !*mdx !*stories* !*test*"
+
         grug.grug_far({
           transient = true,
           prefills = {
             search = "",
             replacement = "",
-            filesFilter = "!node_modules !dist !.eslintcache !*json !*mock* !*mdx !*stories* !*test*",
+            filesFilter = myPath,
             flags = "",
           },
         })
