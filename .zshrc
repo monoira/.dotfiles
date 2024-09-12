@@ -18,6 +18,9 @@ ZSH_THEME="strug"
 # Set nvim as default editor
 export EDITOR=nvim
 
+# Set alacritty as default terminal
+export TERMINAL=alacritty
+
 # Custom aliases and functions
 source $HOME/.bash_aliases
 

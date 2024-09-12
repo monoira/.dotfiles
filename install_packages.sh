@@ -51,7 +51,7 @@ install_yay_package_and_check visual-studio-code-bin
 install_yay_package_and_check figma-linux
 install_yay_package_and_check postman-bin
 install_yay_package_and_check vimv-git
-
+install_yay_package_and_check rclone-browser
 # | PACMAN PACKAGES
 
 # | tools and neovim
