@@ -15,10 +15,8 @@ plugins=(docker vi-mode fzf)
 # Theme
 ZSH_THEME="strug"
 
-# Set nvim as default editor
+# Setting defaults
 export EDITOR=nvim
-
-# Set alacritty as default terminal
 export TERMINAL=alacritty
 
 # Custom aliases and functions
