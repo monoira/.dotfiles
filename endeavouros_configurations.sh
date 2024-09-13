@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # activates bluetooth on EndeavourOS
 sudo systemctl start bluetooth
 

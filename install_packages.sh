@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # NOTE: after installing EndeavourOS, run this script first.
 # NOTE: you need to have yay and pacman installed for this script to work.
