@@ -84,6 +84,9 @@ install_pacman_package_and_check zsh
 install_pacman_package_and_check zsh-autosuggestions
 install_pacman_package_and_check zsh-syntax-highlighting
 
+install_pacman_package_and_check virtualbox
+install_pacman_package_and_check virtualbox-ext-vnc
+
 install_pacman_package_and_check fastfetch
 install_pacman_package_and_check timeshift
 
