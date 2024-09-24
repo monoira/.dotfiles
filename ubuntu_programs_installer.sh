@@ -25,5 +25,13 @@ fc-cache -f -v
 # Clean up
 rm -rf "$TEMP_DIR"
 
+# | temporary snap / apt tutorial
+# install with snap / apt - sudo snap install package_name
+# remove with snap / apt - sudo snap remove package_name
+# | SNAP ONLY
+# see all available updates with snap - sudo snap refresh --list
+# update with snap - sudo snap refresh
+# To get information about a single package - snap info package_name
+
 # NOTE: installations
-# sudo apt install snapd
+sudo snap install nvim
