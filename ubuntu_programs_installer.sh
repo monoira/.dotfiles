@@ -26,12 +26,13 @@ fc-cache -f -v
 rm -rf "$TEMP_DIR"
 
 # | temporary snap / apt tutorial
-# install with snap / apt - sudo snap install package_name
-# remove with snap / apt - sudo snap remove package_name
+# install with snap / apt - NOTE:sudo snap install package_name
+# remove with snap / apt - NOTE:sudo snap remove package_name
 # | SNAP ONLY
-# see all available updates with snap - sudo snap refresh --list
-# update with snap - sudo snap refresh
-# To get information about a single package - snap info package_name
+# see all available updates with snap - NOTE:sudo snap refresh --list
+# update with snap - NOTE:sudo snap refresh
+# to get information about a single package - NOTE:snap info package_name
+# By default, Snap saves one older version of the Snap packages you can go back to the previous one with the revert option - NOTE:sudo snap revert package_name
 
 # NOTE: installations
 sudo snap install nvim
