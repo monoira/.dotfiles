@@ -9,8 +9,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Oh My Zsh update reminders
 zstyle ':omz:update' mode reminder
 
-# Plugins
-plugins=(docker vi-mode fzf)
+# Plugins - zsh-autosuggestions and zsh-syntax-highlighting need to be last in list to work properly!
+plugins=(docker vi-mode fzf zsh-autosuggestions zsh-syntax-highlighting)
 
 # Theme
 ZSH_THEME="strug"
@@ -24,8 +24,3 @@ source $HOME/.bash_aliases
 
 # Source Oh My Zsh config
 source $ZSH/oh-my-zsh.sh
-
-# Auto suggestions and syntax highlighting - MUST BE AT THE VERY BOTTOM
-autoload -Uz compinit && compinit
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

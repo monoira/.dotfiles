@@ -5,7 +5,7 @@
 # Create a temporary directory
 TEMP_DIR=$(mktemp -d)
 
-nerd_font_name="FiraCode"
+nerd_font_name="CommitMono"
 
 nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
 
