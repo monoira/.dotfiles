@@ -26,7 +26,7 @@ apt_package_installed() {
 # Function to install Snap packages and check installation
 install_snap_package_and_check() {
     package_name=$1
-    sudo snap install "$package_name"
+    sudo snap install -y "$package_name"
     if snap_package_installed "$package_name"; then
         echo "$package_name Installed" >>"$log_file"
     else
