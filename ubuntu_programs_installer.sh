@@ -56,6 +56,9 @@ sudo apt install xclip
 # needed for neovim - clipboard for - wayland
 sudo apt install wl-clipboard
 
+sudo apt install vlc
+sudo apt install libreoffice
+
 # NOTE: || snap packages:
 
 # needs --classic flag.
