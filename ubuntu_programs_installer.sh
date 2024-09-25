@@ -39,6 +39,7 @@
 
 # NOTE: || apt packages:
 sudo apt install curl
+sudo apt install git
 sudo apt install python3
 sudo apt install nodejs
 sudo apt install npm
