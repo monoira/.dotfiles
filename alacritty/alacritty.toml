@@ -38,6 +38,6 @@ bindings = [
 
 
 [font]
-normal = { family = "CommitMono Nerd Font"}
+normal = { family = "Hack Nerd Font"}
 size = 16
 builtin_box_drawing = true

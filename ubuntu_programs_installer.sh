@@ -1,28 +1,29 @@
 #!/usr/bin/env bash
 
-# NOTE: Font installation
+# NOTE: Automatic font installation
 
 # Create a temporary directory
-TEMP_DIR=$(mktemp -d)
+TEMP_DIR=$(mktemp --directory)
 
-nerd_font_name="CommitMono"
+nerd_font_name="Hack"
 
 nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
 
-# Download the font zip file
+# download the font zip file
 wget -O "$TEMP_DIR/font.zip" "$nerd_fonts_repo_url"
 
-# Unzip the font file
+# unzip the font file
 unzip "$TEMP_DIR/font.zip" -d "$TEMP_DIR"
 
-# Move the font files to the system fonts directory
+# move the font files to the system fonts directory
 sudo mkdir -p /usr/local/share/fonts/
-sudo mv "$TEMP_DIR"/*.otf /usr/local/share/fonts/
+# BUG: only works if fonts inside zip are .ttf extension. doesn't work with .otf. fix later.
+sudo mv "$TEMP_DIR"/*.ttf /usr/local/share/fonts/
 
-# Update the font cache
+# update the font cache
 fc-cache -f -v
 
-# Clean up
+# clean up
 sudo rm -rf "$TEMP_DIR"
 
 # | temporary snap / apt tutorial
