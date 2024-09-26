@@ -48,16 +48,21 @@ sudo apt install -y xclip
 sudo apt install -y wl-clipboard
 
 # NOTE: general packages
-sudo apt install -y vlc
 sudo apt install -y libreoffice
+sudo apt install -y vlc
+sudo apt install -y timeshift
 sudo apt install -y qbittorrent
 sudo apt install -y strawberry
+sudo apt install -y rclone
+sudo apt install -y rclone-browser
 sudo apt install -y virtualbox
 sudo apt install -y virtualbox-ext-pack
 
 # NOTE: || snap packages:
 
 # normal snaps
+sudo snap install postman
+sudo snap install figma-linux
 
 # snaps that need --classic flag.
 sudo snap install --classic nvim
