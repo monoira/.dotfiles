@@ -26,17 +26,6 @@ fc-cache -f -v
 # clean up
 sudo rm -rf "$TEMP_DIR"
 
-# | temporary snap / apt tutorial
-# install --- sudo snap install package_name
-# remove --- sudo snap remove package_name
-
-# | SNAP ONLY
-# update all snaps - sudo snap refresh
-# see all available updates with snap --- sudo snap refresh --list
-# update with snap --- sudo snap refresh
-# to get information about a single package --- snap info package_name
-# By default, Snap saves one older version of the Snap packages you can go back to the previous one with the revert option --- sudo snap revert package_name
-
 # NOTE: || apt packages:
 sudo apt install curl
 sudo apt install git
