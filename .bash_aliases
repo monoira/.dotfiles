@@ -1,1 +1,1 @@
-search() { yay -Qeq | rg "$1" | fzf; }
+# aptsearch() { apt list  | rg "$1" | fzf; }
