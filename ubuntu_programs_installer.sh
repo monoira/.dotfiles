@@ -4,6 +4,7 @@
 sudo apt install -y curl
 sudo apt install -y git
 sudo apt install -y python3
+sudo apt install -y cargo
 sudo apt install -y nodejs
 sudo apt install -y npm
 
@@ -52,7 +53,7 @@ sudo install lazygit /usr/local/bin
 rm -rf lazygit.tar.gz
 rm -rf lazygit
 
-# NOTE: Automatic font installation
+# NOTE: automatic font installation
 
 # Create a temporary directory
 TEMP_FONT_DIR=$(mktemp --directory)
@@ -81,6 +82,9 @@ fc-cache -f -v
 
 # clean up
 sudo rm -rf "$TEMP_FONT_DIR"
+
+# NOTE: installing vimv - cargo required!
+cargo install vimv
 
 # NOTE: || THOSE MUST BE DONE MANUALLY!
 
