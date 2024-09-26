@@ -85,6 +85,7 @@ sudo rm -rf "$TEMP_FONT_DIR"
 
 # NOTE: installing vimv - cargo required!
 cargo install vimv
+sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 
 # NOTE: || THOSE MUST BE DONE MANUALLY!
 
