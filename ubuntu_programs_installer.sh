@@ -69,8 +69,12 @@ unzip "$TEMP_FONT_DIR/font.zip" -d "$TEMP_FONT_DIR"
 
 # move the font files to the system fonts directory
 sudo mkdir -p /usr/local/share/fonts/
-# BUG: only works if fonts inside zip are .ttf extension. doesn't work with .otf. fix later.
+
+# BUG: fix/DRY later. for now I will just repeat same code. for some reason *.{otf,ttf,woff,woff2} didn't worked.
+sudo mv "$TEMP_FONT_DIR"/*.otf /usr/local/share/fonts/
 sudo mv "$TEMP_FONT_DIR"/*.ttf /usr/local/share/fonts/
+sudo mv "$TEMP_FONT_DIR"/*.woff /usr/local/share/fonts/
+sudo mv "$TEMP_FONT_DIR"/*.woff2 /usr/local/share/fonts/
 
 # update the font cache
 fc-cache -f -v
