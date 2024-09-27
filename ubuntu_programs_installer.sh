@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # NOTE: || APT PACKAGES:
+sudo apt update && sudo apt upgrade
 sudo apt install -y curl
 sudo apt install -y git
 sudo apt install -y python3
