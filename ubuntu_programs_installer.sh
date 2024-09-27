@@ -93,7 +93,7 @@ sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 
 # NOTE: || THOSE MUST BE DONE MANUALLY!
 
-# NOTE: oh-my-zsh
+# NOTE: oh-my-zsh installation
 
 # sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -102,3 +102,4 @@ sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 # NOTE: change default terminal on ubuntu. needs to be done manually even if $TERMINAL changes.
 
 # sudo update-alternatives --config x-terminal-emulator
+# sudo update-alternatives --config editor
