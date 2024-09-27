@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 # NOTE: || APT PACKAGES:
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl
 sudo apt install -y git
 sudo apt install -y python3
+sudo apt install -y python3-pip
+sudo apt install -y golang
 sudo apt install -y cargo
 sudo apt install -y nodejs
 sudo apt install -y npm
@@ -45,7 +47,6 @@ sudo snap install figma-linux
 # snaps that need --classic flag.
 sudo snap install --classic nvim
 sudo snap install --classic code
-sudo snap install --classic go
 
 # NOTE: || COMPLICATED INSTALLATIONS.
 
