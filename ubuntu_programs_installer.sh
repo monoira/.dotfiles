@@ -24,6 +24,7 @@ sudo apt install -y wl-clipboard
 # general packages
 sudo apt install -y libreoffice
 sudo apt install -y vlc
+
 sudo apt install -y timeshift
 sudo apt install -y qbittorrent
 sudo apt install -y strawberry
