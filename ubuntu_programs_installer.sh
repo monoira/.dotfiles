@@ -95,6 +95,6 @@ sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# NOTE: change default terminal. need to be manually even if $TERMINAL changes.
+# NOTE: change default terminal on ubuntu. needs to be done manually even if $TERMINAL changes.
 
 # sudo update-alternatives --config x-terminal-emulator
