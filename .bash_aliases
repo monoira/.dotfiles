@@ -4,4 +4,8 @@
 aptfind() { apt list | rg "$1" | fzf | wl-copy; }
 
 # prints out name of your linux distro.
+# reads first word of the /etc/issue. which on ubuntu is "ubuntu"
 currentLinux() { awk '{print $1}' /etc/issue; }
+
+# large version
+currentLinuxFull() { cat /etc/os-release; }
