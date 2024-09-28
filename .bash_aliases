@@ -1,1 +1,1 @@
-# aptsearch() { apt list  | rg "$1" | fzf; }
+aptfind() { apt list | rg "$1" | fzf; }
