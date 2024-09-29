@@ -60,33 +60,42 @@ rm -rf lazygit
 
 # NOTE: automatic font installation
 
-# Create a temporary directory
-TEMP_FONT_DIR=$(mktemp --directory)
-
 nerd_font_name="Hack"
 
-nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
+# Check if the font is already installed
+nerd_font_check=$(fc-list : family | sort | uniq | grep "$nerd_font_name")
 
-# download the font zip file
-wget -O "$TEMP_FONT_DIR/font.zip" "$nerd_fonts_repo_url"
+# If the nerd font is not installed, run the script
+if [ -z "$nerd_font_check" ]; then
+  # Create a temporary directory
+  TEMP_FONT_DIR=$(mktemp --directory)
 
-# unzip the font file
-unzip "$TEMP_FONT_DIR/font.zip" -d "$TEMP_FONT_DIR"
+  nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
 
-# move the font files to the system fonts directory
-sudo mkdir -p /usr/local/share/fonts/
+  # download the font zip file
+  wget -O "$TEMP_FONT_DIR/font.zip" "$nerd_fonts_repo_url"
 
-# BUG: fix/DRY later. for now I will just repeat same code. for some reason *.{otf,ttf,woff,woff2} didn't worked.
-sudo mv "$TEMP_FONT_DIR"/*.otf /usr/local/share/fonts/
-sudo mv "$TEMP_FONT_DIR"/*.ttf /usr/local/share/fonts/
-sudo mv "$TEMP_FONT_DIR"/*.woff /usr/local/share/fonts/
-sudo mv "$TEMP_FONT_DIR"/*.woff2 /usr/local/share/fonts/
+  # unzip the font file
+  unzip "$TEMP_FONT_DIR/font.zip" -d "$TEMP_FONT_DIR"
 
-# update the font cache
-fc-cache -f -v
+  # create system fonts directory if it doesn't already exists
+  sudo mkdir -p /usr/local/share/fonts/
 
-# clean up
-sudo rm -rf "$TEMP_FONT_DIR"
+  # move the font files to the system fonts directory
+  # BUG: fix/DRY later. for now I will just repeat same code. for some reason *.{otf,ttf,woff,woff2} didn't worked.
+  sudo mv "$TEMP_FONT_DIR"/*.otf /usr/local/share/fonts/
+  sudo mv "$TEMP_FONT_DIR"/*.ttf /usr/local/share/fonts/
+  sudo mv "$TEMP_FONT_DIR"/*.woff /usr/local/share/fonts/
+  sudo mv "$TEMP_FONT_DIR"/*.woff2 /usr/local/share/fonts/
+
+  # update the font cache
+  fc-cache -f -v
+
+  # clean up temporary directory
+  sudo rm -rf "$TEMP_FONT_DIR"
+else
+  echo "$nerd_font_name is already installed."
+fi
 
 # NOTE: installing vimv - cargo required!
 cargo install vimv
