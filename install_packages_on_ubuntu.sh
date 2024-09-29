@@ -3,6 +3,7 @@
 # NOTE: || APT PACKAGES:
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl
+sudo apt install -y build-essential
 sudo apt install -y git
 sudo apt install -y python3
 sudo apt install -y python3-pip
