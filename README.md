@@ -7,7 +7,8 @@
 
 ## What Scripts to use
 
-- On Ubuntu, to automatically download packages, fonts, etc
+- On Ubuntu, you MUST clone this at ~/
+  after which to automatically download packages, fonts, etc
   and get setup going, run:
   [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
 
