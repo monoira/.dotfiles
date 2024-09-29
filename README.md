@@ -1,6 +1,6 @@
 # This is where I keep my
 
-- dotfiles + Neovim, Alacritty, Zsh and gitconfig configurations.
+- dotfiles - Neovim, Alacritty, Zsh and gitconfig configurations.
 - Vscode settings & workspaces
 - bash aliases
 - Scripts that install them on ubuntu
