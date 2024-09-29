@@ -9,7 +9,7 @@
 
 - On Ubuntu, to automatically download packages, fonts, etc
   and get setup going, run:
-  [ubuntu_install_packages.sh](./ubuntu_install_packages.sh)
+  [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
 
 - Run this to spread around .dotfiles
   [create_symlinks.sh](./create_symlinks.sh)

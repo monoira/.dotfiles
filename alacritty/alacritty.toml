@@ -33,11 +33,15 @@ style = "Block"
 
 [keyboard]
 bindings = [
-  { key = "N", mods = "Control", action = "SpawnNewInstance" }
+  { key = "N", mods = "Control", action = "SpawnNewInstance" },
+  { key = "F11", action = "ToggleFullscreen" }
 ]
 
 
 [font]
-normal = { family = "Hack Nerd Font"}
+normal = { family = "Hack Nerd Font", style = "Regular" }
+bold = { family = "Hack Nerd Font", style = "Bold" }
+italic = { family = "Hack Nerd Font", style = "Italic" }
+
 size = 14
 builtin_box_drawing = true
