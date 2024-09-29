@@ -33,7 +33,7 @@ style = "Block"
 
 [keyboard]
 bindings = [
-  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" }
+  { key = "N", mods = "Control", action = "SpawnNewInstance" }
 ]
 
 
