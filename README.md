@@ -14,7 +14,7 @@
 - Run this to spread around .dotfiles
   [create_symlinks.sh](./create_symlinks.sh)
 
-## Things you have to do on ubuntu manually since the shell can't do them or other problems
+## Things you have to do on Ubuntu manually since the shell can't do them or other problems
 
 ### oh-my-zsh installation
 
