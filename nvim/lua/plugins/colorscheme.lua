@@ -1,25 +1,25 @@
-return {
-  {
-    "olimorris/onedarkpro.nvim",
-  },
-
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "onedark",
-    },
-  },
-}
-
 -- return {
 --   {
---     "catppuccin/nvim",
+--     "olimorris/onedarkpro.nvim",
 --   },
 --
 --   {
 --     "LazyVim/LazyVim",
 --     opts = {
---       colorscheme = "catppuccin-mocha",
+--       colorscheme = "onedark",
 --     },
 --   },
 -- }
+
+return {
+  {
+    "catppuccin/nvim",
+  },
+
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin-mocha",
+    },
+  },
+}
