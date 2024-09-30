@@ -14,6 +14,7 @@ sudo apt install -y npm
 
 sudo apt install -y alacritty
 sudo apt install -y zsh
+sudo apt install -y tmux
 
 # basic programs + needed for neovim
 sudo apt install -y fzf
@@ -28,13 +29,13 @@ sudo apt install -y wl-clipboard
 # general packages
 sudo apt install -y libreoffice
 sudo apt install -y vlc
+sudo apt install -y cmus
 sudo apt install -y shotwell
 sudo apt install -y screenfetch
 sudo apt install -y htop
 
 sudo apt install -y timeshift
 sudo apt install -y qbittorrent
-sudo apt install -y strawberry
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
 sudo apt install -y virtualbox
