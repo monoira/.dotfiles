@@ -17,7 +17,7 @@
 
 ## Things you have to do on Ubuntu manually since the shell can't do them or other problems
 
-### oh-my-zsh installation
+- oh-my-zsh installation
 
 ```bash
     sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -25,7 +25,7 @@
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-### Change default terminal on ubuntu. Needs to be done manually even if $TERMINAL & $EDITOR is changed
+- Change default terminal on ubuntu. Needs to be done manually even if $TERMINAL & $EDITOR is changed
 
 ```bash
   sudo update-alternatives --config x-terminal-emulator
