@@ -6,6 +6,7 @@ import = [
 
 [shell]
 program = "/usr/bin/zsh"
+# checks for tmux session to attach. if fails, creates new session
 args = ["--login", "-c", "tmux a -t base || tmux new -s base"]
 
 
