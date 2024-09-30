@@ -9,6 +9,7 @@ sudo apt install -y python3
 sudo apt install -y python3-pip
 sudo apt install -y golang
 sudo apt install -y cargo
+sudo apt install -y luarocks
 sudo apt install -y nodejs
 sudo apt install -y npm
 
