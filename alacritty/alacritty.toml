@@ -9,7 +9,7 @@ program = "/usr/bin/zsh"
 
 
 [env]
-TERM = "screen-256color"
+term = "xterm-256color"
 
 
 [window]
