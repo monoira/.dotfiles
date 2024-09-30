@@ -32,8 +32,6 @@
   sudo update-alternatives --config editor
 ```
 
-- Build [docker-desktop](https://www.youtube.com/watch?v=OTmyNHTQ0AA)
-
 - Add a keyboard layout
 - Place packages based on the following image:
   ![Image of packages on Ubuntu](./_docs/packages.png)
