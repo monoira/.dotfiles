@@ -6,7 +6,7 @@ import = [
 
 [shell]
 program = "/usr/bin/zsh"
-args = ["-l","-c","tmux a -t base || tmux new -s base"]
+args = ["--login", "-c", "tmux a -t base || tmux new -s base"]
 
 
 [env]
