@@ -1,6 +1,6 @@
 # https://alacritty.org/config-alacritty.html
 import = [
-    "~/.config/alacritty/themes/dracula_plus.toml"
+    "~/.config/alacritty/themes/catppuccin-mocha.toml"
 ]
 
 
