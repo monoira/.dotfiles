@@ -30,6 +30,7 @@ sudo apt install -y libreoffice
 sudo apt install -y vlc
 sudo apt install -y shotwell
 sudo apt install -y screenfetch
+sudo apt install -y htop
 
 sudo apt install -y timeshift
 sudo apt install -y qbittorrent
