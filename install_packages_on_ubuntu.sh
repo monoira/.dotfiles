@@ -48,7 +48,7 @@ sudo snap install figma-linux
 
 # snaps that need --classic flag.
 sudo snap install --classic nvim
-sudo snap install --classic code
+# sudo snap install --classic code
 
 # NOTE: || COMPLICATED INSTALLATIONS.
 
