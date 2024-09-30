@@ -40,7 +40,7 @@ style = "Block"
 
 [keyboard]
 bindings = [
-  { key = "N", mods = "Control", action = "SpawnNewInstance" },
+  # { key = "N", mods = "Control", action = "SpawnNewInstance" },
   { key = "F11", action = "ToggleFullscreen" }
 ]
 
