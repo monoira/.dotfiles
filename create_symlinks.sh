@@ -25,5 +25,5 @@ ln -sf $dotfiles_dir/nvim ~/.config/nvim
 sudo rm -rf ~/.config/alacritty >/dev/null 2>&1
 ln -sf $dotfiles_dir/alacritty ~/.config/alacritty
 
-sudo rm -rf ~/.config/tmux >/dev/null 2>&1
-ln -sf $dotfiles_dir/tmux ~/.config/tmux
+sudo rm -rf ~/tmux >/dev/null 2>&1
+ln -sf $dotfiles_dir/tmux ~/tmux

@@ -31,16 +31,6 @@
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-### Change default terminal on ubuntu. Needs to be done manually even if $TERMINAL & $EDITOR is changed
-
-```bash
-  sudo update-alternatives --config x-terminal-emulator
-```
-
-```bash
-  sudo update-alternatives --config editor
-```
-
 - Add a keyboard layout
 - Place packages based on the following image:
   ![Image of packages on Ubuntu](./_docs/packages.png)
