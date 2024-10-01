@@ -112,4 +112,3 @@ return {
     { "<leader>fp", "<Cmd>Telescope projects<CR>", desc = "Projects" },
   },
 }
-
