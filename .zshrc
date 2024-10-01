@@ -10,7 +10,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 zstyle ':omz:update' mode reminder
 
 # Plugins - zsh-autosuggestions and zsh-syntax-highlighting need to be last in list to work properly!
-plugins=(vi-mode fzf docker zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(fzf docker zsh-autosuggestions zsh-syntax-highlighting)
 
 # Theme
 ZSH_THEME="strug"
