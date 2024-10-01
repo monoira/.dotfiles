@@ -30,8 +30,7 @@ opacity = 0.8
 
 
 [mouse]
-# NOTE: disable for now
-hide_when_typing = false
+hide_when_typing = true
 
 
 [cursor]
