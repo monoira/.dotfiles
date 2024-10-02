@@ -4,7 +4,7 @@
 log_file=~/.0install_progress_log.txt
 
 # function to check if package apt is installed or not
-apt_package_installed() {
+apt_package_is_installed() {
   if dpkg -s "$1" >/dev/null 2>&1; then
     return 0 # Package is installed
   else
@@ -16,8 +16,8 @@ apt_package_installed() {
 install_apt_package_and_check() {
   package_name=$1
   sudo apt install -y "$package_name"
-  if apt_package_installed "$package_name"; then
-    echo "$package_name Installed" >>"$log_file"
+  if apt_package_is_installed "$package_name"; then
+    echo "$package_name Installed." >>"$log_file"
   else
     echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
   fi
