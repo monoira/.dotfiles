@@ -7,6 +7,8 @@ dotfiles_dir=~/.dotfiles
 # >/dev/null thing makes it so that any system responses will be written there.
 # - Second line creates symlink between files at .dotfiles and it's regular destination.
 
+# single file dotfiles
+
 sudo rm -rf ~/.bashrc >/dev/null 2>&1
 ln -sf $dotfiles_dir/.bashrc ~/.bashrc
 
@@ -18,6 +20,8 @@ ln -sf $dotfiles_dir/.bash_aliases ~/.bash_aliases
 
 sudo rm -rf ~/.gitconfig >/dev/null 2>&1
 ln -sf $dotfiles_dir/.gitconfig ~/.gitconfig
+
+# directories
 
 sudo rm -rf ~/.config/nvim >/dev/null 2>&1
 ln -sf $dotfiles_dir/nvim ~/.config/nvim
