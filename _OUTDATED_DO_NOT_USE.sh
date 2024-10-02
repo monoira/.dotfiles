@@ -90,6 +90,3 @@ install_pacman_package_and_check virtualbox-ext-vnc
 
 install_pacman_package_and_check fastfetch
 install_pacman_package_and_check timeshift
-
-# needed to see video/audio thumbnails inside dolphin on endeavourOS
-install_pacman_package_and_check ffmpegthumbs
