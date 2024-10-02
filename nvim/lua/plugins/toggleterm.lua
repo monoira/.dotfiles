@@ -6,14 +6,14 @@ return {
     cmd = "ToggleTerm",
     keys = {
       {
-        [[<C-\>]],
+        "<leader><C-\\>",
         "<cmd>:lcd %:h<cr>",
         "<cmd>ToggleTerm<cr>",
         desc = "Toggle terminal",
       },
     },
     opts = {
-      open_mapping = [[<C-\>]],
+      open_mapping = "<leader><C-\\>",
       direction = "horizontal",
       size = 10,
     },
