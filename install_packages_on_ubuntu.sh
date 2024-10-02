@@ -3,7 +3,7 @@
 # apt install function
 log_file=~/.0install_progress_log.txt
 
-# function to check if package apt is installed or not
+# function to check if apt package was successfully installed
 apt_package_is_installed() {
   if dpkg -s "$1" >/dev/null 2>&1; then
     return 0 # Package is installed
@@ -12,7 +12,7 @@ apt_package_is_installed() {
   fi
 }
 
-# Function to install apt packages and check installation status
+# Function to install apt package and check installation status
 install_apt_package_and_check() {
   package_name=$1
   sudo apt install -y "$package_name"
