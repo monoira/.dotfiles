@@ -1,69 +1,47 @@
 #!/usr/bin/env bash
 
-# apt install function
-log_file=~/.0install_progress_log.txt
-
-# function to check if apt package was successfully installed
-apt_package_is_installed() {
-  if dpkg -s "$1" >/dev/null 2>&1; then
-    return 0 # Package is installed
-  else
-    return 1 # Package is not installed
-  fi
-}
-
-# Function to install apt package and check installation status
-install_apt_package_and_check() {
-  package_name=$1
-  sudo apt install -y "$package_name"
-  if apt_package_is_installed "$package_name"; then
-    echo "$package_name Installed." >>"$log_file"
-  else
-    echo "$package_name FAILED TO INSTALL!!!" >>"$log_file"
-  fi
-}
-
 # NOTE: || APT PACKAGES:
 sudo apt update -y && sudo apt upgrade -y
-install_apt_package_and_check curl
-install_apt_package_and_check build-essential
-install_apt_package_and_check git
-install_apt_package_and_check python3
-install_apt_package_and_check python3-pip
-install_apt_package_and_check golang
-install_apt_package_and_check cargo
-install_apt_package_and_check luarocks
-install_apt_package_and_check nodejs
-install_apt_package_and_check npm
+sudo apt install -y curl
+sudo apt install -y build-essential
+sudo apt install -y git
+sudo apt install -y python3
+sudo apt install -y python3-pip
+sudo apt install -y golang
+sudo apt install -y cargo
+sudo apt install -y luarocks
+sudo apt install -y nodejs
+sudo apt install -y npm
 
-install_apt_package_and_check alacritty
-install_apt_package_and_check zsh
-install_apt_package_and_check tmux
+sudo apt install -y alacritty
+sudo apt install -y zsh
+sudo apt install -y tmux
 
 # basic programs + needed for neovim
-install_apt_package_and_check fzf
-install_apt_package_and_check fd-find
-install_apt_package_and_check ripgrep
+sudo apt install -y fzf
+sudo apt install -y fd-find
+sudo apt install -y ripgrep
 
 # needed for neovim - clipboard for - X11
-install_apt_package_and_check xclip
+sudo apt install -y xclip
 # needed for neovim - clipboard for - wayland
-install_apt_package_and_check wl-clipboard
+sudo apt install -y wl-clipboard
 
 # general packages
-install_apt_package_and_check libreoffice
-install_apt_package_and_check vlc
-install_apt_package_and_check shotwell
-install_apt_package_and_check screenfetch
-install_apt_package_and_check htop
+sudo apt install -y screenfetch
+sudo apt install -y htop
+sudo apt install -y timeshift
 
-install_apt_package_and_check timeshift
-install_apt_package_and_check qbittorrent
-install_apt_package_and_check strawberry
-install_apt_package_and_check rclone
-install_apt_package_and_check rclone-browser
-install_apt_package_and_check virtualbox
-install_apt_package_and_check virtualbox-ext-pack
+sudo apt install -y libreoffice
+sudo apt install -y vlc
+sudo apt install -y shotwell
+
+sudo apt install -y qbittorrent
+sudo apt install -y strawberry
+sudo apt install -y rclone
+sudo apt install -y rclone-browser
+sudo apt install -y virtualbox
+sudo apt install -y virtualbox-ext-pack
 
 # NOTE: || SNAP PACKAGES:
 
