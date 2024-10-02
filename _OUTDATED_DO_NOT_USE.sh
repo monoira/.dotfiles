@@ -45,6 +45,8 @@ install_pacman_package_and_check() {
   fi
 }
 
+# not on ubuntu !apt: vimv, lazygit
+
 # | YAY AUR PACKAGES
 yay --noconfirm
 install_yay_package_and_check visual-studio-code-bin
