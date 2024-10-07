@@ -12,6 +12,7 @@ return {
     { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
     { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
     { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+    -- NOTE: unsetting ctrl + \ so that I can use that keys for toggleterm.lua instead.
+    -- { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
   },
 }
