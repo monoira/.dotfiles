@@ -1,6 +1,11 @@
 # Path to Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 
+# Setting defaults
+export EDITOR=nvim
+export TERMINAL=alacritty
+export LANG=en_US.UTF-8
+
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -14,10 +19,8 @@ plugins=(vi-mode fzf docker zsh-autosuggestions zsh-syntax-highlighting)
 
 # Theme
 ZSH_THEME="strug"
-
-# Setting defaults
-export EDITOR=nvim
-export TERMINAL=alacritty
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="bira"
 
 # Custom aliases and functions
 source $HOME/.bash_aliases
