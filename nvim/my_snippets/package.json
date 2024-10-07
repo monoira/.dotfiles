@@ -13,6 +13,12 @@
           "typescriptreact"
         ],
         "path": "./typescriptreact.json"
+      },
+      {
+        "language": [
+          "gitignore"
+        ],
+        "path": "./gitignore.json"
       }
     ]
   }

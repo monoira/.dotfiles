@@ -1,6 +1,6 @@
 {
   "Website head tags": {
-    "prefix": "headcontent",
+    "prefix": "defaulthead",
     "body": [
       "    <!-- || dynamic meta tags -->",
       "    <title>Website Title 123</title>",
