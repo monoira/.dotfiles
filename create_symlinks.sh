@@ -10,13 +10,13 @@ dotfiles_dir=~/.dotfiles
 # single file dotfiles
 
 sudo rm -rf ~/.bashrc >/dev/null 2>&1
-ln -sf $dotfiles_dir/.bashrc ~/.bashrc
+ln -sf $dotfiles_dir/zsh/.bashrc ~/.bashrc
 
 sudo rm -rf ~/.zshrc >/dev/null 2>&1
-ln -sf $dotfiles_dir/.zshrc ~/.zshrc
+ln -sf $dotfiles_dir/zsh/.zshrc ~/.zshrc
 
-sudo rm -rf ~/.bash_aliases >/dev/null 2>&1
-ln -sf $dotfiles_dir/.bash_aliases ~/.bash_aliases
+sudo rm -rf ~/.zsh_aliases >/dev/null 2>&1
+ln -sf $dotfiles_dir/zsh/.zsh_aliases ~/.zsh_aliases
 
 sudo rm -rf ~/.gitconfig >/dev/null 2>&1
 ln -sf $dotfiles_dir/.gitconfig ~/.gitconfig

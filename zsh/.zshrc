@@ -23,7 +23,7 @@ ZSH_THEME="strug"
 # ZSH_THEME="bira"
 
 # Custom aliases and functions
-source $HOME/.bash_aliases
+source $HOME/.zsh_aliases
 
 # Source Oh My Zsh config
 source $ZSH/oh-my-zsh.sh
