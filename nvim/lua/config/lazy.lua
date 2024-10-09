@@ -19,7 +19,7 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    -- learn how to integrate tailwind here https://www.lazyvim.org/extras/lang/tailwind
+    -- LATER: tailwindcss support.
     -- { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
@@ -38,12 +38,13 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.editor.telescope" },
 
-    -- use lua snip until nvim-snippets gets better documentation? not important
+    -- HACK: use lua snip until nvim-snippets gets better documentation.
+    -- unless nvim-snippets doesn't have vscode-snippets and is too complicated.
     { import = "lazyvim.plugins.extras.coding.luasnip" },
 
-    -- debugger
-    { import = "lazyvim.plugins.extras.dap.core" },
-    { import = "lazyvim.plugins.extras.dap.nlua" },
+    -- LATER: debugger
+    -- { import = "lazyvim.plugins.extras.dap.core" },
+    -- { import = "lazyvim.plugins.extras.dap.nlua" },
 
     { import = "plugins" },
   },
