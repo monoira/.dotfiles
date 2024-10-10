@@ -15,7 +15,7 @@
 ## What Scripts to use and in what order
 
 - On Ubuntu, you MUST clone this at ~/
-  after which to automatically download packages, fonts, etc
+  after which to automatically download packages, nerd font, docker, etc
   and get setup going, run:
   [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
 
