@@ -1,11 +1,18 @@
-# This is where I keep my
+<!--toc:start-->
+
+- [What I keep in this repository](#what-i-keep-in-this-repository)
+  - [What Scripts to use and in what order](#what-scripts-to-use-and-in-what-order)
+  - [Tasks you have to do manually because of certain problems](#tasks-you-have-to-do-manually-because-of-certain-problems)
+  <!--toc:end-->
+
+# What I keep in this repository
 
 - dotfiles - Neovim, Alacritty, Zsh and gitconfig configurations.
 - Vscode settings & workspaces
 - bash aliases
 - Scripts that install them on ubuntu
 
-## What Scripts to use
+## What Scripts to use and in what order
 
 - On Ubuntu, you MUST clone this at ~/
   after which to automatically download packages, fonts, etc
@@ -15,9 +22,9 @@
 - Run this to spread around .dotfiles
   [create_symlinks.sh](./create_symlinks.sh)
 
-## Things you have to do on Ubuntu manually since the shell can't do them or other problems
+## Tasks you have to do manually because of certain problems
 
-### oh-my-zsh installation
+oh-my-zsh installation
 
 ```bash
     sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
