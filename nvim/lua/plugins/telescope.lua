@@ -19,7 +19,7 @@ return {
 
     return {
       defaults = {
-        -- HACK: ignore those folders/files when running telescope
+        -- NOTE: ignore those folders/files when running telescope
         file_ignore_patterns = {
           "yarn.lock",
           "node_modules/",

@@ -8,14 +8,14 @@ return {
       "<leader>sr",
       function()
         local grug = require("grug-far")
-        local myPath = "!node_modules !dist !.eslintcache !*json !*mock* !*mdx !*stories* !*test*"
+        local ignoreThosePaths = "!node_modules !dist !.eslintcache !*json !*mock* !*mdx !*stories* !*test*"
 
-        grug.grug_far({
+        grug.open({
           transient = true,
           prefills = {
             search = "",
             replacement = "",
-            filesFilter = myPath,
+            filesFilter = ignoreThosePaths,
             flags = "",
           },
         })
