@@ -1,0 +1,85 @@
+autoinstall:
+  version: 1
+  locale: en_US
+  keyboard: us
+  timezone: Asia/Tbilisi
+  # This adds the default ubuntu-desktop packages to the system.
+  # Any desired additional packages may also be listed here.
+  packages:
+    - ubuntu-desktop
+
+    - build-essential
+    - git
+    - wget
+    - curl
+    - python3
+    - python3-pip
+    - golang
+    - cargo
+    - luarocks
+    - nodejs
+    - npm
+
+    - alacritty
+    - zsh
+    - tmux
+
+    - fzf
+    - fd-find
+    - ripgrep
+
+    - xclip
+    - wl-clipboard
+
+    - screenfetch
+    - htop
+    - timeshift
+
+    - libreoffice
+    - vlc
+    - shotwell
+
+    - qbittorrent
+    - strawberry
+    - rclone
+    - rclone-browser
+    - virtualbox
+    - virtualbox-ext-pack
+
+  # This adds the default snaps found on a 22.04 Ubuntu Desktop system.
+  # Any desired additional snaps may also be listed here.
+  snaps:
+    - name: firefox
+      classic: false
+    - name: gnome-3-38-2004
+      classic: false
+    - name: gtk-common-themes
+      classic: false
+    - name: snap-store
+      classic: false
+    - name: snapd-desktop-integration
+      classic: false
+    - name: firmware-updater
+      classic: false
+
+    - name: postman
+      classic: false
+    - name: figma-linux
+      classic: false
+
+    - name: nvim
+      classic: true
+
+  # This inhibits user creation, which for Desktop images means that
+  # gnome-initial-setup will prompt for user creation on first boot.
+  user-data:
+    users: [""]
+
+  late-commands:
+    - curtin in-target -- bash -c "echo 'deb http://archive.ubuntu.com/ubuntu oriocle main restricted universe multiverse' > /etc/apt/sources.list"
+    - curtin in-target -- bash -c "echo 'deb http://archive.ubuntu.com/ubuntu oriocle-updates main restricted universe multiverse' >> /etc/apt/sources.list"
+    - curtin in-target -- bash -c "echo 'deb http://archive.ubuntu.com/ubuntu oriocle-backports main restricted universe multiverse' >> /etc/apt/sources.list"
+    - curtin in-target -- bash -c "echo 'deb http://security.ubuntu.com/ubuntu oriocle-security main restricted universe multiverse' >> /etc/apt/sources.list"
+    - apt update -y
+    - apt upgrade -y
+    - apt autoremove -y
