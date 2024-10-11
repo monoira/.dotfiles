@@ -1,7 +1,8 @@
 autoinstall:
   version: 1
-  locale: en_US
-  keyboard: us
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
   timezone: Asia/Tbilisi
   # This adds the default ubuntu-desktop packages to the system.
   # Any desired additional packages may also be listed here.
