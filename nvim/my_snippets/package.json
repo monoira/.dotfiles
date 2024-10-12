@@ -19,6 +19,12 @@
           "gitignore"
         ],
         "path": "./gitignore.json"
+      },
+      {
+        "language": [
+          "editorconfig"
+        ],
+        "path": "./editorconfig.json"
       }
     ]
   }

@@ -1,0 +1,17 @@
+{
+  "Sensible default .editorconfig content": {
+    "prefix": "default",
+    "body": [
+      "root = true",
+      "",
+      "[*]",
+      "indent_style = space",
+      "indent_size = 2",
+      "tab_width = 8",
+      "end_of_line = lf",
+      "charset = utf-8",
+      "insert_final_newline = true"
+    ],
+    "description": "Sensible default .editorconfig content"
+  }
+}

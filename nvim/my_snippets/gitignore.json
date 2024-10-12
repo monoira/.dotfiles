@@ -1,5 +1,5 @@
 {
-  "Sensible default gitignore content": {
+  "Sensible default .gitignore content": {
     "prefix": "default",
     "body": [
       "# Logs",
@@ -27,6 +27,6 @@
       "*.sln",
       "*.sw?"
     ],
-    "description": "Sensible default gitignore content"
+    "description": "Sensible default .gitignore content"
   }
 }
