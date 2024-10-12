@@ -16,23 +16,23 @@
 
 - On Ubuntu, you MUST clone this repository with submodules at ~/ using one of the following commands
 
-HTTPS cloning
+  HTTPS cloning
 
-```bash
-git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
-```
+  ```bash
+  git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
+  ```
 
-SSH cloning
+  SSH cloning
 
-```bash
-git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
-```
+  ```bash
+  git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
+  ```
 
-After which to automatically download packages, nerd font, docker, etc
-and get setup going, run:
-[install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
+  After which to automatically download packages, nerd font, docker, etc
+  and get setup going, run:
+  [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
 
-When script finishes, reboot your system.
+  When script finishes, reboot your system.
 
 - Run this to create and spread around dotfile symlinks
   [create_symlinks.sh](./create_symlinks.sh)
