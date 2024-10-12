@@ -18,6 +18,7 @@
   after which to automatically download packages, nerd font, docker, etc
   and get setup going, run:
   [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
+
   When script finishes, reboot your system.
 
 - Run this to spread around .dotfiles
