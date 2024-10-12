@@ -14,14 +14,27 @@
 
 ## What Scripts to use and in what order
 
-- On Ubuntu, you MUST clone this at ~/
-  after which to automatically download packages, nerd font, docker, etc
-  and get setup going, run:
-  [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
+- On Ubuntu, you MUST clone this repository with submodules at ~/ using one of the following commands
 
-  When script finishes, reboot your system.
+HTTPS cloning
 
-- Run this to spread around .dotfiles
+```bash
+git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/
+```
+
+SSH cloning
+
+```bash
+git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/
+```
+
+After which to automatically download packages, nerd font, docker, etc
+and get setup going, run:
+[install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
+
+When script finishes, reboot your system.
+
+- Run this to create and spread around dotfile symlinks
   [create_symlinks.sh](./create_symlinks.sh)
 
 ## Tasks you have to do manually because of certain problems
