@@ -19,13 +19,13 @@
 HTTPS cloning
 
 ```bash
-git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/
+git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
 ```
 
 SSH cloning
 
 ```bash
-git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/
+git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
 ```
 
 After which to automatically download packages, nerd font, docker, etc
