@@ -41,7 +41,6 @@ sudo apt install -y strawberry
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
 sudo apt install -y virtualbox
-sudo apt install -y virtualbox-ext-pack
 
 # NOTE: || SNAP PACKAGES:
 
