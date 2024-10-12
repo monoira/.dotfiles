@@ -28,9 +28,16 @@
   git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
   ```
 
-  After which to automatically download packages, nerd font, docker, etc
-  and get setup going, run:
-  [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
+  After which run this script: [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
+  to automate following tasks:
+
+  - Download useful and necessary apt and snap packages
+  - Download nerd font: Hack nerd font in my case ( Changeable in script )
+  - Download and compile lazydocker
+  - Download and compile lazygit
+  - Download vimv
+  - Configure gnome settings with gsettings to:
+    hide trash on dash-to-dock, hide home, disable notifications, etc.
 
   When script finishes, reboot your system.
 
