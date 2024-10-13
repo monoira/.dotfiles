@@ -40,7 +40,12 @@ sudo apt install -y qbittorrent
 sudo apt install -y strawberry
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
-sudo apt install -y virtualbox
+
+# installing qemu and virt-manager
+sudo apt install qemu-system qemu-kvm virt-manager bridge-utils -y
+sudo useradd -g "$USER" libvirt-kvm
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
 
 # NOTE: || SNAP PACKAGES:
 
