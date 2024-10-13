@@ -41,8 +41,8 @@ sudo apt install -y strawberry
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
 
-# installing qemu and virt-manager
-sudo apt install qemu-system qemu-kvm virt-manager bridge-utils -y
+# installs qemu virtual machine emulator and virt-manager
+sudo apt install -y qemu-system qemu-kvm virt-manager bridge-utils
 sudo useradd -g "$USER" libvirt-kvm
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service

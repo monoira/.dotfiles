@@ -16,19 +16,19 @@
 
 - On Ubuntu, you MUST clone this repository with submodules at ~/ using one of the following commands
 
-  HTTPS cloning
-
-  ```bash
-  git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
-  ```
-
   SSH cloning
 
   ```bash
   git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
   ```
 
-  After which run this script: [install_packages_on_ubuntu.sh](./install_packages_on_ubuntu.sh)
+  HTTPS cloning
+
+  ```bash
+  git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
+  ```
+
+  After which run this script: [install.sh](./install.sh)
   to automate following tasks:
 
   - Download useful and necessary apt and snap packages
