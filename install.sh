@@ -56,6 +56,10 @@ sudo snap install figma-linux
 # snaps that need --classic flag.
 sudo snap install --classic nvim
 
+# NOTE: purging garbage packages on ubuntu
+sudo apt purge -y kate
+sudo snap remove --purge snap-store
+
 # NOTE: || COMPLICATED AUTOMATIC INSTALLATIONS.
 
 # NOTE: lazygit installation
@@ -132,6 +136,9 @@ if [ -z "$nerd_font_check" ]; then
 else
   echo "$nerd_font_name is already installed."
 fi
+
+# NOTE: autoremoving packages that are no longer needed
+sudo apt autoremove -y
 
 # NOTE: installing vimv - cargo required!
 cargo install vimv
