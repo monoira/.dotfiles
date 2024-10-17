@@ -41,20 +41,6 @@ sudo apt install -y strawberry
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
 
-# installs qemu virtual machine emulator and virt-manager
-sudo apt install -y virt-manager qemu-system qemu-utils libvirt-daemon-system
-sudo usermod -aG libvirt "$USER"
-sudo usermod -aG kvm "$USER"
-
-sudo systemctl enable libvirtd.service
-sudo systemctl start libvirtd.service
-
-# NOTE: || SNAP PACKAGES:
-
-# normal snaps
-sudo snap install postman
-sudo snap install figma-linux
-
 # snaps that need --classic flag.
 sudo snap install --classic nvim
 
