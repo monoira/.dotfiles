@@ -10,11 +10,12 @@
 - dotfiles - Neovim, Alacritty, Zsh and gitconfig configurations.
 - Vscode settings & workspaces
 - bash aliases
-- Scripts that install them on ubuntu
+- Scripts that install them
 
 ## What Scripts to use and in what order
 
-- On Ubuntu, you MUST clone this repository with submodules at ~/ using one of the following commands
+- On Ubuntu or any Debian based distribution with snap and gnome installed,
+  you MUST clone this repository with submodules at ~/ using one of the following commands
 
   SSH cloning
 
