@@ -8,39 +8,58 @@
 # What I keep in this repository
 
 - dotfiles - Neovim, Alacritty, Zsh and gitconfig configurations.
-- Vscode settings & workspaces
+- VSCode settings & workspaces
 - bash aliases
 - Scripts that install them
 
-## What Scripts to use and in what order
+## HOW TO SETUP
 
-- On Ubuntu or any Debian based distribution with snap and gnome installed,
-  you MUST clone this repository with submodules at ~/ using one of the following commands
+### General must have requirements
 
-  SSH cloning
+- Ubuntu or any Debian based distribution with snap and
+  gnome desktop environment installed
+- git
+- bash
 
-  ```bash
-  git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
-  ```
+#### INSTALLATION METHOD 1
 
-  HTTPS cloning
+REQUIREMENTS:
 
-  ```bash
-  git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
-  ```
+Must have ssh key and be signed up to Github with it
+since this uses git clone with ssh
 
-  After which run this script: [install.sh](./install.sh)
-  to automate following tasks:
+```bash
+wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
+```
 
-  - Download useful and necessary apt and snap packages
-  - Download nerd font: Hack nerd font in my case ( Changeable in script )
-  - Download and compile lazydocker
-  - Download and compile lazygit
-  - Download vimv
-  - Configure gnome settings with gsettings to:
-    hide trash on dash-to-dock, hide home, disable notifications, etc.
+#### INSTALLATION METHOD 2
 
-  When script finishes, reboot your system.
+you MUST clone this repository with submodules at ~/ using one of the following commands
+
+SSH cloning
+
+```bash
+git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
+```
+
+HTTPS cloning
+
+```bash
+git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
+```
+
+After which run this script: [install.sh](./install.sh)
+to automate following tasks:
+
+- Download useful and necessary apt and snap packages
+- Download nerd font: Hack nerd font in my case ( Changeable in script )
+- Download and compile lazydocker
+- Download and compile lazygit
+- Download vimv
+- Configure gnome settings with gsettings to:
+  hide trash on dash-to-dock, hide home, disable notifications, etc.
+
+When script finishes, reboot your system.
 
 - Run this to create and spread around dotfile symlinks
   [create_symlinks.sh](./create_symlinks.sh)
