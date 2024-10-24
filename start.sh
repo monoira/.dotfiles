@@ -2,7 +2,6 @@
 
 required_packages=(
   bash
-  sh
   git
   wget
 )

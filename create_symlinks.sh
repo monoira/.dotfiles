@@ -5,7 +5,7 @@ dotfiles_dir=~/.dotfiles
 
 # NOTE: if you add file or directory here, also add it in uninstall.sh in case of uninstallation
 
-sh ./uninstall.sh
+bash ./uninstall.sh
 
 # single file dotfiles
 
