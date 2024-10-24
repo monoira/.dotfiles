@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# || Variables
-dotfiles_dir=~/.dotfiles
-
-# NOTE: if you add file or directory here, also add it in uninstall.sh
-
-sh ./uninstall.sh
-
 # single file dotfiles
 
 sudo rm -rf ~/.bashrc >/dev/null 2>&1
