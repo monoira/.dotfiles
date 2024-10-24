@@ -4,10 +4,10 @@
 
 - [What I keep in this repository](#what-i-keep-in-this-repository)
 
-  - [HOW TO SETUP](#how-to-setup)
-    - [INSTALLATION METHOD 1 - Auto Installation (Recommended)](#installation-method-1-auto-installation-recommended)
+  - [REQUIREMENTS AND REQUIRED PACKAGES](#requirements-and-required-packages)
+    - [Auto Installation (Recommended)](#auto-installation-recommended)
       - [What this script does](#what-this-script-does)
-    - [INSTALLATION METHOD 2 - Manual installation](#installation-method-2-manual-installation)
+    - [Manual installation](#manual-installation)
   - [Tasks you have to do manually because of certain problems](#tasks-you-have-to-do-manually-because-of-certain-problems)
   - [How to uninstall](#how-to-uninstall)
   <!--toc:end-->
