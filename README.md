@@ -29,7 +29,7 @@
 - Git
 - Wget
 
-#### INSTALLATION METHOD 1 - Auto installation (Recommended)
+#### INSTALLATION METHOD 1 - Auto Installation (Recommended)
 
 METHOD SPECIFIC REQUIREMENTS:
 
