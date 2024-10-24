@@ -28,3 +28,5 @@ ln -sf $dotfiles_dir/nvim ~/.config/nvim
 ln -sf $dotfiles_dir/alacritty ~/.config/alacritty
 
 ln -sf $dotfiles_dir/tmux ~/.config/tmux
+
+echo "<--- SYMLINKS HAVE BEEN SET. SCRIPTS ARE FINISHED. --->"
