@@ -30,7 +30,7 @@
 
 METHOD SPECIFIC REQUIREMENTS:
 
-Must have ssh key and be signed up to Github with it
+Must have ssh key and be signed in to Github with it
 since this uses git clone with ssh
 
 ```bash
