@@ -5,10 +5,9 @@
 - [What I keep in this repository](#what-i-keep-in-this-repository)
 
   - [HOW TO SETUP](#how-to-setup)
-    - [Requirements / required packages](#requirements-required-packages)
-      - [INSTALLATION METHOD 1 - Auto installation (Recommended)](#installation-method-1-auto-installation-recommended)
-        - [What this script does](#what-this-script-does)
-      - [INSTALLATION METHOD 2 - Manual installation](#installation-method-2-manual-installation)
+    - [INSTALLATION METHOD 1 - Auto Installation (Recommended)](#installation-method-1-auto-installation-recommended)
+      - [What this script does](#what-this-script-does)
+    - [INSTALLATION METHOD 2 - Manual installation](#installation-method-2-manual-installation)
   - [Tasks you have to do manually because of certain problems](#tasks-you-have-to-do-manually-because-of-certain-problems)
   - [How to uninstall](#how-to-uninstall)
   <!--toc:end-->
@@ -18,9 +17,7 @@
 - bash aliases
 - Scripts that install them
 
-## HOW TO SETUP
-
-### Requirements / required packages
+## REQUIREMENTS AND REQUIRED PACKAGES
 
 - Ubuntu or any Debian based distribution with snap and
   gnome desktop environment installed
@@ -29,7 +26,7 @@
 - Git
 - Wget
 
-#### INSTALLATION METHOD 1 - Auto Installation (Recommended)
+### Auto Installation (Recommended)
 
 METHOD SPECIFIC REQUIREMENTS:
 
@@ -40,7 +37,7 @@ since this uses git clone with ssh
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-##### What this script does
+#### What this script does
 
 - Download useful and necessary apt and snap packages
 - Download nerd font: Hack nerd font in my case ( Changeable in script )
@@ -50,9 +47,13 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 - Configure gnome settings with gsettings to:
   hide trash on dash-to-dock, hide home, disable notifications, etc.
 
-When script finishes, reboot your system.
+When scripts finish, signaled by
 
-#### INSTALLATION METHOD 2 - Manual installation
+<--- SYMLINKS HAVE BEEN SET. SCRIPTS ARE FINISHED. --->
+
+Being echoed in terminal, reboot your system.
+
+### Manual installation
 
 METHOD SPECIFIC REQUIREMENTS:
 
@@ -81,14 +82,18 @@ to automate following tasks:
 - Configure gnome settings with gsettings to:
   hide trash on dash-to-dock, hide home, disable notifications, etc.
 
-When script finishes, reboot your system.
+Then Run this script to create and spread around dotfile symlinks
+[create_symlinks.sh](./create_symlinks.sh)
 
-- Run this to create and spread around dotfile symlinks
-  [create_symlinks.sh](./create_symlinks.sh)
+When scripts finish, signaled by
+
+<--- SYMLINKS HAVE BEEN SET. SCRIPTS ARE FINISHED. --->
+
+Being echoed in terminal, reboot your system.
 
 ## Tasks you have to do manually because of certain problems
 
-- Oh-My-Zsh installation
+- Install Oh-My-Zsh
 
   ```bash
       sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -122,6 +127,6 @@ Warning: this will remove aka rm -rf
 ~/.config/alacritty
 ~/.config/tmux
 
-And possibly more
+And possibly more.
 for full info on what [uninstall.sh](./uninstall.sh) will remove,
 check [uninstall.sh](./uninstall.sh) script itself.
