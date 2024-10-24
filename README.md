@@ -113,6 +113,7 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/uninstall.sh 
 ```
 
 Warning: this will remove aka rm -rf
+
 ~/.bashrc
 ~/.zshrc
 ~/.zsh_aliases
@@ -123,4 +124,4 @@ Warning: this will remove aka rm -rf
 
 And possibly more
 for full info on what [uninstall.sh](./uninstall.sh) will remove,
-check [uninstall.sh](./uninstall.sh) file itself.
+check [uninstall.sh](./uninstall.sh) script itself.
