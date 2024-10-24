@@ -40,7 +40,7 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 #### What this script does
 
 - Download useful and necessary apt and snap packages
-- Download nerd font: Hack nerd font in my case ( Changeable in script )
+- Download nerd font: Hack nerd font
 - Download and compile lazydocker
 - Download and compile lazygit
 - Download vimv
@@ -75,7 +75,7 @@ After which run this script: [install.sh](./install.sh)
 to automate following tasks:
 
 - Download useful and necessary apt and snap packages
-- Download nerd font: Hack nerd font in my case ( Changeable in script )
+- Download nerd font: Hack nerd font
 - Download and compile lazydocker
 - Download and compile lazygit
 - Download vimv
