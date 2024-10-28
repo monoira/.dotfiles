@@ -19,8 +19,7 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    -- LATER: tailwindcss support.
-    -- if you activate this, then change "enable_tailwind = false," to true in init.lua nvim-highlight-colors
+    -- WHEN NEEDED: tailwindcss support.
     -- { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.go" },
