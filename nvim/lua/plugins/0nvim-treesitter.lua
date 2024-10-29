@@ -32,10 +32,10 @@ return {
       "gitcommit",
 
       -- golang
-      "go",
-      "gomod",
-      "gowork",
-      "gosum",
+      -- "go",
+      -- "gomod",
+      -- "gowork",
+      -- "gosum",
 
       -- docker
       "dockerfile",

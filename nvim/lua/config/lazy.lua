@@ -22,7 +22,9 @@ require("lazy").setup({
     -- WHEN NEEDED: tailwindcss support.
     -- { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.go" },
+    -- WHEN NEEDED: golang support.
+    -- when needed, also uncomment lines in nvim-treesitter.lua and mason.lua
+    -- { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.lang.sql" },
 
     { import = "lazyvim.plugins.extras.lang.markdown" },

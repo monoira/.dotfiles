@@ -27,19 +27,19 @@ return {
       "shfmt",
 
       "shellcheck",
-      -- bash debugger
+      -- || bash debugger
       "bash-debug-adapter",
 
-      -- go tools
-      "goimports",
-      "gofumpt",
-      "gomodifytags",
-      "impl",
-      -- go debugger - need both
-      "delve",
-      "go-debug-adapter",
+      -- || go tools
+      -- "goimports",
+      -- "gofumpt",
+      -- "gomodifytags",
+      -- "impl",
+      -- || go debugger - need both
+      -- "delve",
+      -- "go-debug-adapter",
 
-      -- js and ts debugger
+      -- || js and ts debugger
       "js-debug-adapter",
     })
   end,
