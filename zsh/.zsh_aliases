@@ -3,9 +3,10 @@
 # find package, choose it in fzf and it will go into your clipboard.
 aptfind() { apt list | rg "$1" | fzf | wl-copy; }
 
-# prints out name of your linux distro.
-# reads first word of the /etc/issue. which on ubuntu is "ubuntu"
-currentLinuxDistro() { awk '{print $1}' /etc/issue; }
+# large version
+linuxVersion() { cat /etc/os-release; }
 
 # large version
-currentLinuxDistroFull() { cat /etc/os-release; }
+updateSystem() {
+  sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh
+}
