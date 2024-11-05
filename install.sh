@@ -50,6 +50,14 @@ sudo snap remove --purge snap-store
 
 # NOTE: || COMPLICATED AUTOMATIC INSTALLATIONS.
 
+# NOTE: postgreqsl installation
+sudo apt install -y postgresql
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+# NOTE: sqlfluff sql linter installation
+sudo apt install sqlfluff
+
 # NOTE: lazygit installation
 cd /tmp
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
