@@ -23,11 +23,9 @@ return {
 
       -- || bash
       "bash-language-server",
-      "beautysh",
       "shfmt",
-
       "shellcheck",
-      -- || bash debugger
+      -- bash debugger
       "bash-debug-adapter",
 
       -- || go tools
@@ -35,7 +33,7 @@ return {
       -- "gofumpt",
       -- "gomodifytags",
       -- "impl",
-      -- || go debugger - need both
+      -- go debugger - need both? idk
       -- "delve",
       -- "go-debug-adapter",
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# NOTE: || APT PACKAGES:
+# NOTE: apt packages
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl
 sudo apt install -y build-essential
@@ -17,14 +17,16 @@ sudo apt install -y alacritty
 sudo apt install -y zsh
 sudo apt install -y tmux
 
-# basic programs + needed for neovim
+# packages needed for neovim
 sudo apt install -y fzf
 sudo apt install -y fd-find
 sudo apt install -y ripgrep
 
-# needed for neovim - clipboard for - X11
+sudo apt install -y python3.12-venv
+
+# clipboard for - X11
 sudo apt install -y xclip
-# needed for neovim - clipboard for - wayland
+# clipboard for - wayland
 sudo apt install -y wl-clipboard
 
 # general packages
@@ -63,9 +65,6 @@ sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] h
 
 # Install for desktop mode only
 sudo apt install pgadmin4-desktop
-
-# NOTE: sqlfluff sql linter - needed for lazyvim - installation
-sudo apt install sqlfluff
 
 # NOTE: lazygit installation
 cd /tmp
