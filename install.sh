@@ -24,6 +24,8 @@ sudo apt install -y ripgrep
 
 sudo apt install -y python3.12-venv
 
+sudo
+
 # clipboard for - X11
 sudo apt install -y xclip
 # clipboard for - wayland
