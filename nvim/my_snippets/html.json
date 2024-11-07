@@ -32,6 +32,7 @@
       "      property=\"twitter:image\"",
       "      content=\"https://www.picsum.photos/1200/630\"",
       "    />",
+      "    <meta name=\"twitter:card\" content=\"summary_large_image\" />",
       "",
       "    <!-- || icons & webmanifest -->",
       "    <link",
