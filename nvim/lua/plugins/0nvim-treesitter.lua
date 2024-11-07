@@ -2,44 +2,11 @@ return {
   "nvim-treesitter/nvim-treesitter",
   opts = function(_, opts)
     vim.list_extend(opts.ensure_installed, {
-      -- || defaults
-      "bash",
-      "c",
-      "diff",
-      "html",
-      "javascript",
-      "jsdoc",
-      "json",
-      "jsonc",
-      "lua",
-      "luadoc",
-      "luap",
-      "markdown",
-      "markdown_inline",
-      "python",
-      "query",
-      "regex",
-      "toml",
-      "tsx",
-      "typescript",
-      "vim",
-      "vimdoc",
-      "xml",
-      "yaml",
+      -- NOTE: default syntax highlighting packages in LazyVim
+      -- http://www.lazyvim.org/plugins/treesitter#nvim-treesitter
 
-      -- NOTE: PERSONAL ADDITIONS
+      -- NOTE: personal additions
       "css",
-      "gitcommit",
-      "sql",
-
-      -- || golang
-      -- "go",
-      -- "gomod",
-      -- "gowork",
-      -- "gosum",
-
-      -- || docker
-      "dockerfile",
     })
   end,
 }
