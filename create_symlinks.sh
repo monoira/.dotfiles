@@ -17,6 +17,8 @@ ln -sf $dotfiles_dir/zsh/.zsh_aliases ~/.zsh_aliases
 
 ln -sf $dotfiles_dir/.gitconfig ~/.gitconfig
 
+ln -sf $dotfiles_dir/.sqlfluff ~/.sqlfluff
+
 # directories
 
 ln -sf $dotfiles_dir/nvim ~/.config/nvim
