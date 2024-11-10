@@ -55,16 +55,11 @@ sudo snap remove --purge snap-store
 # NOTE: postgreqsl installation
 sudo apt install -y postgresql
 
-# NOTE: pgadmin4 installation
+# NOTE: dbeaver installation
 
-# this command Installs the public key for the repository
-curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
-
-# This command adds pgadmin4, pgadmin4-desktop and pgadmin4-web to apt sources list
-sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && sudo apt -y update'
-
-# Install for desktop mode only
-sudo apt install pgadmin4-desktop
+sudo wget -O /usr/share/keyrings/dbeaver.gpg.key https://dbeaver.io/debs/dbeaver.gpg.key
+echo "deb [signed-by=/usr/share/keyrings/dbeaver.gpg.key] https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
+sudo apt update -y && sudo apt -y install dbeaver-ce
 
 # NOTE: lazygit installation
 cd /tmp
