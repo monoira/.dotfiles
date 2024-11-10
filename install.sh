@@ -50,13 +50,12 @@ sudo snap install --classic nvim
 sudo apt purge -y kate
 sudo snap remove --purge snap-store
 
-# NOTE: || COMPLICATED AUTOMATIC INSTALLATIONS.
+# NOTE: || COMPLICATED AUTOMATED INSTALLATIONS
 
 # NOTE: postgreqsl installation
 sudo apt install -y postgresql
 
 # NOTE: dbeaver installation
-
 sudo wget -O /usr/share/keyrings/dbeaver.gpg.key https://dbeaver.io/debs/dbeaver.gpg.key
 echo "deb [signed-by=/usr/share/keyrings/dbeaver.gpg.key] https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
 sudo apt update -y && sudo apt -y install dbeaver-ce
@@ -97,8 +96,11 @@ sudo install lazydocker /usr/local/bin
 rm lazydocker.tar.gz lazydocker
 cd -
 
-# NOTE: automatic font installation
+# NOTE: vimv installation - cargo required!
+cargo install vimv
+sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 
+# NOTE: nerd font installation
 nerd_font_name="Hack"
 
 # Check if the font is already installed
@@ -138,10 +140,6 @@ fi
 
 # NOTE: autoremoving packages that are no longer needed
 sudo apt autoremove -y
-
-# NOTE: installing vimv - cargo required!
-cargo install vimv
-sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 
 # NOTE: changing gsettings to customize gnome desktop environment to my taste
 
