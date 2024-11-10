@@ -116,6 +116,7 @@ Being echoed in terminal, reboot your system.
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
 
+- Add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - Add a keyboard layout
 - Place packages based on the following image:
   ![Image of packages on Ubuntu](./_docs/packages.png)
