@@ -127,6 +127,7 @@ Being echoed in terminal, reboot your system.
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/uninstall.sh | bash
 ```
 
+note: this will only remove config files & directories, Not Programs installed.
 Warning: this will remove AKA rm -rf
 
 ~/.bashrc
