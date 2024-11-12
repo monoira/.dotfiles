@@ -1,1 +1,0 @@
-player() { ls -t ~/Music/DriveSyncFiles/*.mp3 >~/Music/DriveSyncFiles/playlist.m3u && cmus ; }

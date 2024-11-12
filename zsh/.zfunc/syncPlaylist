@@ -1,0 +1,2 @@
+# lists all mp3 songs by date modified and saves output to playlist.m3u at cmu's playlist directory
+syncPlaylist() { ls -t ~/Music/DriveSyncFiles/*.mp3 >~/.config/cmus/playlists/playlist.m3u; }
