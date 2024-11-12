@@ -27,4 +27,6 @@ ln -sf $dotfiles_dir/alacritty ~/.config/alacritty
 
 ln -sf $dotfiles_dir/tmux ~/.config/tmux
 
+ln -sf $dotfiles_dir/zsh/.zfunc ~/.zfunc
+
 echo "<--- SYMLINKS HAVE BEEN SET. SCRIPTS ARE FINISHED. --->"

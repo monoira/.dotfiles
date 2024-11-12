@@ -12,7 +12,7 @@ export LANG=en_US.UTF-8
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Oh My Zsh update reminders
-zstyle ':omz:update' mode reminder
+zstyle ':omz:update' mode disabled
 
 # Plugins - zsh-autosuggestions and zsh-syntax-highlighting need to be last in list to work properly!
 plugins=(vi-mode fzf docker zsh-autosuggestions zsh-syntax-highlighting)
@@ -22,8 +22,12 @@ ZSH_THEME="strug"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="bira"
 
-# Custom aliases and functions
-source $HOME/.zsh_aliases
-
 # Source Oh My Zsh config
 source $ZSH/oh-my-zsh.sh
+
+# Custom aliases
+source $HOME/.zsh_aliases
+
+# Custom functions loaded automatically
+fpath=( ~/.zfunc "${fpath[@]}" )
+autoload -Uz $fpath[1]/*(.:t)
