@@ -94,9 +94,9 @@ When scripts finish, signaled by
 
 Being echoed in terminal, reboot your system.
 
-## Tasks you have to do manually because of certain problems
+## Tasks you have to do manually because of certain problems or else
 
-- Install Oh-My-Zsh
+- Install OhMyZsh
 
   ```bash
       sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -109,6 +109,12 @@ Being echoed in terminal, reboot your system.
   ```bash
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
+
+- IF YOU WANT, pause auto update / refresh of all snap packages
+
+```bash
+sudo snap refresh --hold
+```
 
 - Add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - Add a keyboard layout
