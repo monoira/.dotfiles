@@ -10,6 +10,7 @@
     - [Auto Installation (Recommended)](#auto-installation-recommended)
     - [Manual installation](#manual-installation)
   - [Tasks you have to do manually because of certain problems](#tasks-you-have-to-do-manually-because-of-certain-problems)
+  - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [How to uninstall](#how-to-uninstall)
   <!--toc:end-->
 
@@ -94,9 +95,9 @@ When scripts finish, signaled by
 
 Being echoed in terminal, reboot your system.
 
-## Tasks you have to do manually because of certain problems or else
+## Tasks you have to do manually because of certain problems
 
-- Install OhMyZsh
+- install OhMyZsh
 
   ```bash
       sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -110,16 +111,18 @@ Being echoed in terminal, reboot your system.
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
 
-- IF YOU WANT, pause auto update / refresh of all snap packages
+- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
+- add a keyboard layout
+- place packages based on the following image:
+  ![Image of packages on Ubuntu](./_docs/packages.png)
+
+## Optional tips you might want to consider
+
+- pause auto update / refresh of all snap packages
 
 ```bash
 sudo snap refresh --hold
 ```
-
-- Add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
-- Add a keyboard layout
-- Place packages based on the following image:
-  ![Image of packages on Ubuntu](./_docs/packages.png)
 
 ## How to uninstall
 
