@@ -135,11 +135,17 @@ NOTE: this will only remove config files & directories, Not Programs installed.
 WARNING: this will remove AKA rm -rf
 
 ~/.bashrc
+
 ~/.zshrc
+
 ~/.zsh_aliases
+
 ~/.gitconfig
+
 ~/.config/nvim
+
 ~/.config/alacritty
+
 ~/.config/tmux
 
 And possibly more.
