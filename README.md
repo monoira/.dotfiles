@@ -5,8 +5,9 @@
 - [What I keep in this repository](#what-i-keep-in-this-repository)
 
   - [REQUIREMENTS AND REQUIRED PACKAGES](#requirements-and-required-packages)
+  - [What this script does](#what-this-script-does)
+  - [INSTALLATION](#installation)
     - [Auto Installation (Recommended)](#auto-installation-recommended)
-      - [What this script does](#what-this-script-does)
     - [Manual installation](#manual-installation)
   - [Tasks you have to do manually because of certain problems](#tasks-you-have-to-do-manually-because-of-certain-problems)
   - [How to uninstall](#how-to-uninstall)
@@ -20,11 +21,24 @@
 
 ## REQUIREMENTS AND REQUIRED PACKAGES
 
-- Ubuntu or any Debian based distribution with snap and
+- Ubuntu or any Debian based distribution with snapd installed + configured and
   gnome desktop environment installed
 - Bash (Already preinstalled on Debian based distributions)
 - Git
-- Wget
+
+## What this script does
+
+- Downloads useful and necessary apt and snap packages
+- Downloads nerd font: Hack nerd font
+- Downloads and compiles lazydocker
+- Downloads and compiles lazygit
+- Downloads vimv
+- Configures gnome settings with gsettings to:
+  hide trash on dash-to-dock, hide home, disable notifications, etc.
+
+And possibly more. For full info check scripts themselves.
+
+## INSTALLATION
 
 ### Auto Installation (Recommended)
 
@@ -36,16 +50,6 @@ METHOD SPECIFIC REQUIREMENTS:
 ```bash
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
-
-#### What this script does
-
-- Download useful and necessary apt and snap packages
-- Download nerd font: Hack nerd font
-- Download and compile lazydocker
-- Download and compile lazygit
-- Download vimv
-- Configure gnome settings with gsettings to:
-  hide trash on dash-to-dock, hide home, disable notifications, etc.
 
 When scripts finish, signaled by
 
@@ -76,16 +80,6 @@ After which run this script: [install.sh](./install.sh) like this:
 ```bash
 bash ~/.dotfiles/install.sh
 ```
-
-To automate following tasks:
-
-- Download useful and necessary apt and snap packages
-- Download nerd font: Hack nerd font
-- Download and compile lazydocker
-- Download and compile lazygit
-- Download vimv
-- Configure gnome settings with gsettings to:
-  hide trash on dash-to-dock, hide home, disable notifications, etc.
 
 Then Run this script [create_symlinks.sh](./create_symlinks.sh) to create
 and spread around dotfile symlinks like this:
@@ -127,8 +121,8 @@ Being echoed in terminal, reboot your system.
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/uninstall.sh | bash
 ```
 
-note: this will only remove config files & directories, Not Programs installed.
-Warning: this will remove AKA rm -rf
+NOTE: this will only remove config files & directories, Not Programs installed.
+WARNING: this will remove AKA rm -rf
 
 ~/.bashrc
 ~/.zshrc

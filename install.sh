@@ -2,7 +2,9 @@
 
 # NOTE: apt packages
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y curl
+sudo apt install -y curl       # for lasygit AND lazydocker
+sudo apt install -y wget       # for dbeaver AND install_nerd_font()
+sudo apt install -y fontconfig # for install_nerd_font()
 sudo apt install -y build-essential
 sudo apt install -y git
 sudo apt install -y python3
@@ -29,7 +31,7 @@ sudo apt install -y xclip
 # clipboard for - wayland
 sudo apt install -y wl-clipboard
 
-# general packages
+# NOTE: general use apt packages
 sudo apt install -y screenfetch
 sudo apt install -y cmatrix
 sudo apt install -y htop
@@ -42,6 +44,10 @@ sudo apt install -y qbittorrent
 sudo apt install -y strawberry
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
+
+# NOTE: snaps packages
+sudo snap install figma-linux
+sudo snap install postman
 
 # snaps that need --classic flag.
 sudo snap install --classic nvim
@@ -100,43 +106,53 @@ cd -
 cargo install vimv
 sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 
-# NOTE: nerd font installation
-nerd_font_name="Hack"
+# NOTE: install nerd font automated installation function
 
-# Check if the font is already installed
-nerd_font_check=$(fc-list : family | sort | uniq | grep "$nerd_font_name")
+# first and only argument: name of the nerd font that is inside ryanoasis/nerd-fonts repository on github.
+# WARN: make sure you check and write font name in right case. In case of "Hack" nerd font:
+# GOOD: Hack
+# BAD: hack
+install_nerd_font() {
+  nerd_font_name=$1
 
-# If the nerd font is not installed, run the script
-if [ -z "$nerd_font_check" ]; then
-  # Create a temporary directory
-  TEMP_FONT_DIR=$(mktemp --directory)
+  # Check if the font is already installed
+  nerd_font_check=$(fc-list : family | sort | uniq | grep "$nerd_font_name")
 
-  nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
+  # If the nerd font is not installed, runs the following script
+  if [ -z "$nerd_font_check" ]; then
+    # Create a temporary directory
+    TEMP_FONT_DIR=$(mktemp --directory)
 
-  # download the font zip file
-  wget -O "$TEMP_FONT_DIR/font.zip" "$nerd_fonts_repo_url"
+    nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
 
-  # unzip the font file
-  unzip "$TEMP_FONT_DIR/font.zip" -d "$TEMP_FONT_DIR"
+    # download the font zip file
+    wget -O "$TEMP_FONT_DIR/font.zip" "$nerd_fonts_repo_url"
 
-  # create system fonts directory if it doesn't already exists
-  sudo mkdir -p /usr/local/share/fonts/
+    # unzip the font file
+    unzip "$TEMP_FONT_DIR/font.zip" -d "$TEMP_FONT_DIR"
 
-  # move the font files to the system fonts directory
-  # BUG: fix/DRY later. for now I will just repeat same code. for some reason *.{otf,ttf,woff,woff2} didn't worked.
-  sudo mv "$TEMP_FONT_DIR"/*.otf /usr/local/share/fonts/
-  sudo mv "$TEMP_FONT_DIR"/*.ttf /usr/local/share/fonts/
-  sudo mv "$TEMP_FONT_DIR"/*.woff /usr/local/share/fonts/
-  sudo mv "$TEMP_FONT_DIR"/*.woff2 /usr/local/share/fonts/
+    # create system fonts directory if it doesn't already exists
+    sudo mkdir -p /usr/local/share/fonts/
 
-  # update the font cache
-  fc-cache -f -v
+    # move the font files to the system fonts directory
+    # NOTE: I am repeating code instead of using *.{otf,ttf,woff,woff2} because *.{otf,ttf,woff,woff2} is not
+    # supported in sh. I try to make THIS FILE sh compatible.
+    sudo mv "$TEMP_FONT_DIR"/*.otf /usr/local/share/fonts/
+    sudo mv "$TEMP_FONT_DIR"/*.ttf /usr/local/share/fonts/
+    sudo mv "$TEMP_FONT_DIR"/*.woff /usr/local/share/fonts/
+    sudo mv "$TEMP_FONT_DIR"/*.woff2 /usr/local/share/fonts/
 
-  # clean up temporary directory
-  sudo rm -rf "$TEMP_FONT_DIR"
-else
-  echo "$nerd_font_name is already installed."
-fi
+    # update the font cache
+    fc-cache -f -v
+
+    # clean up temporary directory
+    sudo rm -rf "$TEMP_FONT_DIR"
+  else
+    echo "$nerd_font_name is already installed."
+  fi
+}
+
+install_nerd_font "Hack"
 
 # NOTE: autoremoving packages that are no longer needed
 sudo apt autoremove -y
