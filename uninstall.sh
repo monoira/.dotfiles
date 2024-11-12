@@ -20,4 +20,6 @@ sudo rm -rf ~/.config/alacritty >/dev/null 2>&1
 
 sudo rm -rf ~/.config/tmux >/dev/null 2>&1
 
+sudo rm -rf ~/.config/cmus >/dev/null 2>&1
+
 sudo rm -rf ~/.zfunc >/dev/null 2>&1
