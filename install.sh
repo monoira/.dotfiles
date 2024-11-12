@@ -106,7 +106,7 @@ cd -
 cargo install vimv
 sudo ln -sf ~/.cargo/bin/vimv /bin/vimv
 
-# NOTE: install nerd font automated installation function
+# NOTE: automated nerd font installation function
 
 # first and only argument: name of the nerd font that is inside ryanoasis/nerd-fonts repository on github.
 # WARN: make sure you check and write font name in right case. In case of "Hack" nerd font:
