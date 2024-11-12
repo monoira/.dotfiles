@@ -131,6 +131,7 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/uninstall.sh 
 ```
 
 NOTE: this will only remove config files & directories, Not Programs installed.
+
 WARNING: this will remove AKA rm -rf
 
 ~/.bashrc
