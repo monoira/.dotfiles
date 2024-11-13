@@ -24,8 +24,6 @@ sudo apt install -y fzf
 sudo apt install -y fd-find
 sudo apt install -y ripgrep
 
-sudo apt install -y python3.12-venv
-
 # clipboard for - X11
 sudo apt install -y xclip
 # clipboard for - wayland
@@ -41,7 +39,7 @@ sudo apt install -y shotwell
 
 sudo apt install -y timeshift
 sudo apt install -y qbittorrent
-sudo apt install -y strawberry
+sudo apt install -y cmus
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
 
