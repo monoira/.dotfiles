@@ -5,22 +5,19 @@
 - [What I keep in this repository](#what-i-keep-in-this-repository)
 
   - [REQUIREMENTS AND REQUIRED PACKAGES](#requirements-and-required-packages)
-  - [What this script does](#what-this-script-does)
+  - [What will all of this do?](#what-will-all-of-this-do)
   - [INSTALLATION](#installation)
-    - [Auto Installation (Recommended)](#auto-installation-recommended)
-    - [Manual installation](#manual-installation)
-  - [Tasks you have to do manually because of certain problems](#tasks-you-have-to-do-manually-because-of-certain-problems)
+  - [Manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
-  - [How to uninstall](#how-to-uninstall)
   <!--toc:end-->
 
-- dotfiles - Neovim, Alacritty, Zsh and gitconfig configurations.
+- dotfiles - Neovim, Alacritty, Zsh, Cmus, gitconfig,
+  and possibly more configurations
+- zsh functions
+- Various installation scripts
 - VSCode settings & workspaces
 
   ( I no longer use VSCode, even in this scripts, but keep the settings anyway )
-
-- Bash aliases
-- Scripts that install them
 
 ## REQUIREMENTS AND REQUIRED PACKAGES
 
@@ -28,12 +25,9 @@
   gnome desktop environment installed
 - Bash (Already preinstalled on Debian based distributions)
 - Git
+- Stow
 
-## Why are you not using GNU/stow
-
-I don't like stow. I will symlink configs myself
-
-## What this script does
+## What will all of this do?
 
 - Downloads useful and necessary apt and snap packages
 - Downloads nerd font: Hack nerd font
@@ -43,11 +37,10 @@ I don't like stow. I will symlink configs myself
 - Configures gnome settings with gsettings to:
   hide trash on dash-to-dock, hide home, disable notifications, etc.
 
-And possibly more. For full info check scripts themselves.
+And possibly more.
+For full info, check scripts themselves at [\_scripts](./_scripts)
 
 ## INSTALLATION
-
-### Auto Installation (Recommended)
 
 METHOD SPECIFIC REQUIREMENTS:
 
@@ -55,53 +48,12 @@ METHOD SPECIFIC REQUIREMENTS:
   since this script uses git clone with ssh
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
+wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/_scripts/start.sh | bash
 ```
 
-When scripts finish, signaled by
+When scripts finish, reboot your system.
 
-<--- SYMLINKS HAVE BEEN SET. SCRIPTS ARE FINISHED. --->
-
-Being echoed in terminal, reboot your system.
-
-### Manual installation
-
-METHOD SPECIFIC REQUIREMENTS:
-
-- You MUST clone this repository with submodules at ~/ using one of the following commands
-
-SSH cloning
-
-```bash
-git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
-```
-
-HTTPS cloning
-
-```bash
-git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles
-```
-
-After which run this script: [install.sh](./install.sh) like this:
-
-```bash
-bash ~/.dotfiles/install.sh
-```
-
-Then Run this script [create_symlinks.sh](./create_symlinks.sh) to create
-and spread around dotfile symlinks like this:
-
-```bash
-bash ~/.dotfiles/create_symlinks.sh
-```
-
-When scripts finish, signaled by
-
-<--- SYMLINKS HAVE BEEN SET. SCRIPTS ARE FINISHED. --->
-
-Being echoed in terminal, reboot your system.
-
-## Tasks you have to do manually because of certain problems
+## Manual tasks that can not be automated
 
 - install OhMyZsh
 
@@ -129,31 +81,3 @@ Being echoed in terminal, reboot your system.
 ```bash
 sudo snap refresh --hold
 ```
-
-## How to uninstall
-
-```bash
-wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/uninstall.sh | bash
-```
-
-NOTE: this will only remove config files & directories, Not Programs installed.
-
-WARNING: this will remove AKA rm -rf
-
-~/.bashrc
-
-~/.zshrc
-
-~/.zsh_aliases
-
-~/.gitconfig
-
-~/.config/nvim
-
-~/.config/alacritty
-
-~/.config/tmux
-
-And possibly more.
-For full info on what [uninstall.sh](./uninstall.sh) will remove,
-check [uninstall.sh](./uninstall.sh) script itself.
