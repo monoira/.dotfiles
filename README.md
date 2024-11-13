@@ -6,12 +6,12 @@
 
   - [REQUIREMENTS AND REQUIRED PACKAGES](#requirements-and-required-packages)
   - [What will all of this do?](#what-will-all-of-this-do)
-  - [INSTALLATION](#installation)
+  - [Installation](#installation)
   - [Manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   <!--toc:end-->
 
-- dotfiles - Neovim, Alacritty, Zsh, Cmus, gitconfig,
+- dotfiles managed by GNU/Stow - Neovim, Alacritty, Zsh, Cmus, gitconfig,
   and possibly more configurations
 - zsh functions
 - Various installation scripts
@@ -21,8 +21,8 @@
 
 ## REQUIREMENTS AND REQUIRED PACKAGES
 
-- Ubuntu or any Debian based distribution with snapd installed + configured and
-  gnome desktop environment installed
+- Ubuntu or any Debian based distribution with snapd installed and configured
+- Gnome desktop environment installed
 - Bash (Already preinstalled on Debian based distributions)
 - Git
 - Stow
@@ -43,7 +43,7 @@ For full info, check scripts themselves at
 and
 [install.sh](./install.sh)
 
-## INSTALLATION
+## Installation
 
 METHOD SPECIFIC REQUIREMENTS:
 
