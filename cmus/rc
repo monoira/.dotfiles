@@ -1,4 +1,7 @@
 colorscheme dracula
 
-# Enable mouse
 set mouse=true
+
+set format_playlist= %a - %t %= %d
+
+bind -f common q quit
