@@ -16,7 +16,9 @@
 
 - dotfiles - Neovim, Alacritty, Zsh and gitconfig configurations.
 - VSCode settings & workspaces
+
   ( I no longer use VSCode, even in this scripts, but keep the settings anyway )
+
 - Bash aliases
 - Scripts that install them
 
