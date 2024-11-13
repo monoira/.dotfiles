@@ -38,7 +38,10 @@
   hide trash on dash-to-dock, hide home, disable notifications, etc.
 
 And possibly more.
-For full info, check scripts themselves at [\_scripts](./_scripts)
+For full info, check scripts themselves at
+[start.sh](./start.sh)
+and
+[install.sh](./install.sh)
 
 ## INSTALLATION
 
@@ -48,7 +51,7 @@ METHOD SPECIFIC REQUIREMENTS:
   since this script uses git clone with ssh
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/_scripts/start.sh | bash
+wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
 When scripts finish, reboot your system.

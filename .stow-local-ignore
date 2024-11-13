@@ -1,6 +1,0 @@
-# ignore files you don't want stow to symlink around the system
-_docs
-_scripts
-.gitignore
-.gitmodules
-README.md
