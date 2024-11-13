@@ -1,6 +1,7 @@
 set format_playlist=%t %= %d
 
 set repeat=true
+set repeat_current=true
 
 colorscheme dracula
 

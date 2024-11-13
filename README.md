@@ -27,6 +27,10 @@
 - Bash (Already preinstalled on Debian based distributions)
 - Git
 
+## Why are you not using GNU/stow
+
+I don't like stow. I will symlink configs myself
+
 ## What this script does
 
 - Downloads useful and necessary apt and snap packages
