@@ -1,7 +1,7 @@
+set format_playlist=%t %= %d
+
+set repeat=true
+
 colorscheme dracula
-
-set mouse=true
-
-set format_playlist= %a - %t %= %d
 
 bind -f common q quit
