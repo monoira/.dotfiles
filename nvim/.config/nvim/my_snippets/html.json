@@ -1,6 +1,6 @@
 {
   "Website head tags": {
-    "prefix": "utils_html_head",
+    "prefix": "snip_html_head",
     "body": [
       "    <meta charset=\"UTF-8\" />",
       "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",

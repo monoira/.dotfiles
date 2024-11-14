@@ -1,6 +1,6 @@
 {
   "Sensible default .editorconfig content": {
-    "prefix": "utils_default",
+    "prefix": "snip_default",
     "body": [
       "root = true",
       "",

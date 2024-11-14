@@ -21,9 +21,10 @@
 
 ## REQUIREMENTS AND REQUIRED PACKAGES
 
-- Ubuntu or any Debian based distribution with snapd installed and configured
-- Gnome desktop environment installed
 - Bash (Already preinstalled on Debian based distributions)
+- Ubuntu or any Debian based distribution with snapd
+  installed and configured for --classic flag
+- Gnome desktop environment installed and running
 - Git
 - Stow
 

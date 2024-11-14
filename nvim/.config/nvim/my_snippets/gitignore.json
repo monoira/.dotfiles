@@ -1,6 +1,6 @@
 {
   "Sensible default .gitignore content": {
-    "prefix": "utils_default",
+    "prefix": "snip_default",
     "body": [
       "# Logs",
       "logs",

@@ -1,6 +1,6 @@
 {
   "SEO component with react + ts + helmet": {
-    "prefix": "utils_helmet",
+    "prefix": "snip_helmet",
     "body": [
       "import { Helmet } from \"react-helmet-async\";",
       "",
