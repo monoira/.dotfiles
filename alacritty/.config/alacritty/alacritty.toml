@@ -15,9 +15,8 @@ term = "xterm-256color"
 
 
 [window]
-# startup_mode = "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
 startup_mode = "Maximized"
-title = "Alacritty"
+title = ""
 dynamic_title = true 
 decorations_theme_variant = "None"
 decorations = "Full"

@@ -19,6 +19,8 @@ return {
 
     return {
       defaults = {
+        -- FIX: re-test telescope's fuzzy finding vertical layout once you buy new monitor
+        -- layout_strategy = "vertical",
         -- NOTE: ignore those folders/files when running telescope
         file_ignore_patterns = {
           "yarn.lock",
