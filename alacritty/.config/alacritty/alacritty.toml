@@ -19,7 +19,7 @@ startup_mode = "Maximized"
 title = ""
 dynamic_title = true 
 decorations_theme_variant = "None"
-decorations = "Full"
+decorations = "None"
 blur = false
 
 padding = { x = 0, y = 0 }
