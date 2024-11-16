@@ -25,10 +25,11 @@
 - Ubuntu or any Debian based distribution with snapd
   installed and configured for --classic flag
 - Gnome desktop environment installed and running
-- Git
-- Stow
+- wget
+- git
+- stow
 
-## What will all of this do?
+## What does all of this do? it:
 
 - Downloads useful and necessary apt and snap packages
 - Downloads nerd font: Hack nerd font
