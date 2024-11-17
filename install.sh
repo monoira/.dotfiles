@@ -32,7 +32,7 @@ sudo apt install -y wl-clipboard
 # NOTE: general use apt packages
 sudo apt install -y screenfetch
 sudo apt install -y cmatrix
-sudo apt install -y htop
+sudo apt install -y btop
 sudo apt install -y libreoffice
 sudo apt install -y vlc
 sudo apt install -y shotwell
