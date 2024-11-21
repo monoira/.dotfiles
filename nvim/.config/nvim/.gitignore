@@ -1,0 +1,4 @@
+lazy-lock.json
+lazyvim.json
+# .lazy.lua location is ./lua/config/.lazy.lua
+.lazy.lua

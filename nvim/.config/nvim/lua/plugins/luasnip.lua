@@ -5,5 +5,5 @@ return {
   -- install jsregexp (optional!).
   build = "make install_jsregexp",
 
-  require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/my_snippets" }),
+  require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" }),
 }
