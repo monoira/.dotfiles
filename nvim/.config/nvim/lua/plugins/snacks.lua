@@ -33,7 +33,7 @@ return {
             icon = "󰒲 ",
             key = "<leader>l",
             desc = "Lazy",
-            action = "Lazy",
+            action = ":Lazy",
           },
         },
       },
