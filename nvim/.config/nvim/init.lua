@@ -1,4 +1,8 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- vim.g.dbs = require("dbs")
+-- NOTE: DATABASES
+-- this is what it's content is supposed to look like
+-- vim.g.dbs = {
+--   { name = "dev", url = "postgres://<username>:<password>@<host>:<port>/<database>" },
+-- }
+require("config.dbs")
