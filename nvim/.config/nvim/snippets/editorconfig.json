@@ -1,5 +1,5 @@
 {
-  "Sensible default .editorconfig content": {
+  "sensible default .editorconfig": {
     "prefix": "snip_default",
     "body": [
       "root = true",
@@ -12,6 +12,6 @@
       "charset = utf-8",
       "insert_final_newline = true"
     ],
-    "description": "Sensible default .editorconfig content"
+    "description": "sensible default .editorconfig"
   }
 }
