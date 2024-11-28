@@ -29,7 +29,7 @@
 - git
 - stow
 
-## What does all of this do? it:
+## What does all of this do? it
 
 - Downloads useful and necessary apt and snap packages
 - Downloads nerd font: Hack nerd font
@@ -43,7 +43,7 @@ And possibly more.
 For full info, check scripts themselves at
 [start.sh](./start.sh)
 and
-[install.sh](./install.sh)
+install_scripts directory
 
 ## Installation
 
