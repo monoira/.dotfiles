@@ -6,6 +6,8 @@
 sudo dpkg --add-architecture i386
 
 # NOTE: FOR SOME REASON, IT DIDN'T WORKED. TRY AGAIN ON NEW PC.
+# if it still doesn't work, install it with wget or curl.
+
 # echo "<--- installing heroicgameslauncher... --->"
 # flatpak install flathub com.heroicgameslauncher.hgl
 
