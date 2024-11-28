@@ -7,7 +7,7 @@ sudo dpkg --add-architecture i386
 
 # NOTE: FOR SOME REASON, IT DIDN'T WORKED. TRY AGAIN ON NEW PC.
 # echo "<--- installing heroicgameslauncher... --->"
-# sudo flatpak install flathub com.heroicgameslauncher.hgl
+# flatpak install flathub com.heroicgameslauncher.hgl
 
 echo "<--- installing Steam... --->"
 sudo snap install steam
