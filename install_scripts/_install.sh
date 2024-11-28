@@ -15,5 +15,5 @@ bash ~/.dotfiles/install_scripts/gnome_settings.sh
 
 bash ~/.dotfiles/install_scripts/games.sh
 
-# autoremove packages that are no longer needed
-sudo apt autoremove -y
+# update everything and autoremove unnecessary apt packages
+sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && sudo apt autoremove -y
