@@ -6,7 +6,7 @@
 sudo dpkg --add-architecture i386
 
 echo "<--- installing heroicgameslauncher... --->"
-flatpak install flathub com.heroicgameslauncher.hgl
+sudo flatpak install flathub com.heroicgameslauncher.hgl
 
 echo "<--- installing Steam... --->"
 snap install steam
