@@ -5,8 +5,9 @@
 # To enable 32-bit support on your Ubuntu system, run the following command:
 sudo dpkg --add-architecture i386
 
-echo "<--- installing heroicgameslauncher... --->"
-sudo flatpak install flathub com.heroicgameslauncher.hgl
+# NOTE: FOR SOME REASON, IT DIDN'T WORKED. TRY AGAIN ON NEW PC.
+# echo "<--- installing heroicgameslauncher... --->"
+# sudo flatpak install flathub com.heroicgameslauncher.hgl
 
 echo "<--- installing Steam... --->"
 sudo snap install steam
