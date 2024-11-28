@@ -9,4 +9,4 @@ echo "<--- installing heroicgameslauncher... --->"
 sudo flatpak install flathub com.heroicgameslauncher.hgl
 
 echo "<--- installing Steam... --->"
-snap install steam
+sudo snap install steam
