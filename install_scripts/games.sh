@@ -30,4 +30,4 @@ rm "heroic_${HEROIC_VERSION}_amd64.deb"
 cd -
 
 echo "<--- installing Steam... --->"
-sudo snap install steam
+# sudo snap install steam
