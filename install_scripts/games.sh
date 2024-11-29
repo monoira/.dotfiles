@@ -30,4 +30,4 @@ rm "heroic_${HEROIC_VERSION}_amd64.deb"
 cd -
 
 echo "<--- installing Steam... --->"
-# sudo snap install steam
+flatpak install com.valvesoftware.Steam
