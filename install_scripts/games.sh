@@ -6,19 +6,13 @@
 sudo dpkg --add-architecture i386
 
 echo "<--- installing Heroic Games Launcher... --->"
-cd /tmp
+cd /tmp || exit
 
 # Get the latest release version
 HEROIC_VERSION=$(curl -s "https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 
 # Download the .deb package
 curl -sLo "heroic_${HEROIC_VERSION}_amd64.deb" "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest/download/heroic_${HEROIC_VERSION}_amd64.deb"
-
-# Check if the .deb file was downloaded successfully
-if [ ! -f "heroic_${HEROIC_VERSION}_amd64.deb" ]; then
-  echo "Error: Failed to download the .deb file."
-  exit 1
-fi
 
 # Install the .deb package
 sudo dpkg -i "heroic_${HEROIC_VERSION}_amd64.deb"
@@ -27,7 +21,8 @@ sudo dpkg -i "heroic_${HEROIC_VERSION}_amd64.deb"
 rm "heroic_${HEROIC_VERSION}_amd64.deb"
 
 # Return to the original directory
-cd -
+cd - || exit
 
 echo "<--- installing Steam... --->"
-flatpak install com.valvesoftware.Steam
+
+sudo apt install steam
