@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+bash ~/.dotfiles/install_scripts/flatpak.sh
+
 bash ~/.dotfiles/install_scripts/packages_apt.sh
 bash ~/.dotfiles/install_scripts/packages_snap.sh
 
