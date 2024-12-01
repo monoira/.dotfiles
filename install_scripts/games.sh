@@ -22,5 +22,8 @@ rm "heroic_${HEROIC_VERSION}_amd64.deb"
 # Return to the original directory
 cd - || exit
 
-echo "<--- installing Steam... --->"
+echo "<--- installing steam... --->"
 sudo snap install steam
+
+echo "<--- installing sober... --->"
+flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
