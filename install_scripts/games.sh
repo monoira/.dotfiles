@@ -12,4 +12,4 @@ echo "<--- installing Steam... --->"
 wget -O - http://repo.steampowered.com/steam/archive/precise/steam.gpg | sudo apt-key add -
 sudo sh -c 'echo "deb http://repo.steampowered.com/steam/ stable steam" >> /etc/apt/sources.list.d/steam.list'
 sudo apt update -y
-sudo apt install steam-launcher
+sudo apt install -y steam-launcher
