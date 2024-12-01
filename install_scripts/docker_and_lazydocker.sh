@@ -18,7 +18,7 @@ sudo usermod -aG docker ${USER}
 # Limit log size to avoid running out of disk
 echo '{"log-driver":"json-file","log-opts":{"max-size":"10m","max-file":"5"}}' | sudo tee /etc/docker/daemon.json
 
-echo "<--- installing lazygit... --->"
+echo "<--- installing lazydocker... --->"
 
 cd /tmp
 LAZYDOCKER_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazydocker/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
