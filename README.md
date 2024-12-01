@@ -22,15 +22,22 @@
 ## REQUIREMENTS AND REQUIRED PACKAGES
 
 - Be on Ubuntu
-- Bash (Already preinstalled on Debian based distributions)
+- Have ssh key generated and be logged in to Github with it.
+  Needed for SSH git cloning.
 - Gnome desktop environment installed and running
+- Bash (Already preinstalled on Debian based distributions)
+
 - wget
 - stow
 - git
-- Have ssh key generated and be logged in to Github with it.
-  Needed for SSH git cloning.
 
-## What does all of this do? it
+### Install required packages with this command
+
+```bash
+sudo apt install -y wget stow git
+```
+
+## What does all of this do?
 
 - Downloads useful and necessary apt and snap packages
 - Downloads nerd font: Hack nerd font
