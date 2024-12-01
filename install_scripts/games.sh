@@ -13,3 +13,6 @@ wget -O - http://repo.steampowered.com/steam/archive/precise/steam.gpg | sudo ap
 sudo sh -c 'echo "deb http://repo.steampowered.com/steam/ stable steam" >> /etc/apt/sources.list.d/steam.list'
 sudo apt update -y
 sudo apt install -y steam-launcher
+
+# HACK: for nvidia drivers
+# sudo apt install -y nvidia-driver-515
