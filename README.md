@@ -21,13 +21,14 @@
 
 ## REQUIREMENTS AND REQUIRED PACKAGES
 
+- Be on Ubuntu
 - Bash (Already preinstalled on Debian based distributions)
-- Ubuntu or any Debian based distribution with snapd
-  installed and configured for --classic flag
 - Gnome desktop environment installed and running
 - wget
-- git
 - stow
+- git
+- Have ssh key generated and be logged in to Github with it.
+  Needed for SSH git cloning.
 
 ## What does all of this do? it
 

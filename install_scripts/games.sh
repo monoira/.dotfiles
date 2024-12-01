@@ -9,4 +9,4 @@ echo "<--- installing lutris... --->"
 sudo apt install -y lutris
 
 echo "<--- installing Steam... --->"
-sudo flatpak install flathub com.valvesoftware.Steam
+sudo flatpak install -y flathub com.valvesoftware.Steam
