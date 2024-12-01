@@ -1,1 +1,3 @@
-updateSystem() { sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && sudo apt autoremove -y; }
+updateSystem() {
+  sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update && sudo apt autoremove -y
+}
