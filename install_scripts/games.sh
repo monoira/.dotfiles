@@ -3,26 +3,10 @@
 # Lower-end systems, which often run 32-bit games, particularly benefit from this support.
 # Meanwhile, high-powered systems experience no negative impact from installing additional packages.
 # To enable 32-bit support on your Ubuntu system, run the following command:
-sudo dpkg --add-architecture i386
+sudo dpkg --add-architecture i386 && sudo apt -y update && sudo apt -y upgrade
 
-echo "<--- installing Heroic Games Launcher... --->"
-cd /tmp || exit
-
-# Get the latest release version
-HEROIC_VERSION=$(curl -s "https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-
-# Download the .deb package
-curl -sLo "heroic_${HEROIC_VERSION}_amd64.deb" "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest/download/heroic_${HEROIC_VERSION}_amd64.deb"
-
-# Install the .deb package
-sudo dpkg -i "heroic_${HEROIC_VERSION}_amd64.deb"
-
-# Clean up
-rm "heroic_${HEROIC_VERSION}_amd64.deb"
-
-# Return to the original directory
-cd - || exit
+echo "<--- installing lutris... --->"
+sudo apt install -y lutris
 
 echo "<--- installing Steam... --->"
-
-sudo apt install steam
+sudo flatpak install flathub com.valvesoftware.Steam
