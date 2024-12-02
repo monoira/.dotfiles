@@ -3,7 +3,7 @@
 echo "<--- installing snap packages... --->"
 
 sudo snap install figma-linux
-sudo snap install postman
+sudo ln -s "$HOME/.local/share/fonts" "$HOME/snap/figma-linux/current/.local/share/"
 
 # snaps that need --classic flag.
 sudo snap install --classic nvim

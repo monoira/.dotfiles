@@ -4,6 +4,7 @@ bash ~/.dotfiles/install_scripts/flatpak.sh
 
 bash ~/.dotfiles/install_scripts/packages_apt.sh
 bash ~/.dotfiles/install_scripts/packages_snap.sh
+bash ~/.dotfiles/install_scripts/packages_flatpak.sh
 
 # complicated automated installations
 bash ~/.dotfiles/install_scripts/postgres_and_dbeaver.sh

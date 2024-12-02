@@ -66,6 +66,29 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 
 When scripts finish, reboot your system.
 
+## Why are you using both snap and flatpak?
+
+### I tried to only use flatpak, but had some problems with following packages
+
+- neovim
+  neovim in apt is severely outdated, PPA version is outdated and
+  flatpak version is TERRIBLE, buggy and overly sandboxed.
+
+- steam
+  installing via flatpak or apt steam-installer didn't worked, since
+  it kept giving me unmet dependencies error.
+  Building .deb package with "dpkg -i" means it won't update.
+  MIGHT GET FIXED LATER. Until then, I have to use snap version.
+
+- figma-linux
+  can't install via apt or flatpak.
+  Building .deb package with "dpkg -i" means it won't update.
+
+I would love to only use flatpak and get away from snap,
+But it is what it is.
+I will re-check in the future if I can replace those packages
+with non-snap versions and finally be snap-free.
+
 ## Manual tasks that can not be automated
 
 - install OhMyZsh
