@@ -73,12 +73,13 @@ When scripts finish, reboot your system.
 - neovim
   neovim in apt is severely outdated, PPA version is outdated and
   flatpak version is TERRIBLE, buggy and overly sandboxed.
+  Building .deb package with "dpkg -i" means it won't update.
 
 - steam
   installing via flatpak or apt steam-installer didn't worked, since
   it kept giving me unmet dependencies error.
   Building .deb package with "dpkg -i" means it won't update.
-  MIGHT GET FIXED LATER. Until then, I have to use snap version.
+  I WILL CHECK LATER. Until then, I have to use snap version.
 
 - figma-linux
   can't install via apt or flatpak.
