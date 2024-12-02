@@ -5,6 +5,8 @@ sudo apt install -y curl       # for lasygit AND lazydocker
 sudo apt install -y wget       # for dbeaver AND install_nerd_font()
 sudo apt install -y fontconfig # for install_nerd_font()
 sudo apt install -y build-essential
+# The add-apt-repository utility is included in the software-properties-common
+sudo apt install -y software-properties-common
 sudo apt install -y git
 sudo apt install -y python3
 sudo apt install -y python3-pip
