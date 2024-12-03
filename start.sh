@@ -5,8 +5,9 @@ required_packages=(
   bash
   snap
   gnome-shell
-  git
+  wget
   stow
+  git
 )
 
 all_required_packages_are_installed=true
