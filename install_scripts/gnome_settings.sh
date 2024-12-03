@@ -25,10 +25,10 @@ gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 
 # desktop icons size
 gsettings set org.gnome.shell.extensions.ding icon-size 'small'
+
 # hides home directory on desktop
 gsettings set org.gnome.shell.extensions.ding show-home false
 
+# NOTE: ubuntu specific settings
 # disable update notifications
 gsettings set com.ubuntu.update-notifier no-show-notifications true
-# disables notification banners
-gsettings set org.gnome.desktop.notifications show-banners true

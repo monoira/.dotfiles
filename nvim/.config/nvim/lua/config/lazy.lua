@@ -38,10 +38,6 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.util.project" },
 
-    { import = "lazyvim.plugins.extras.editor.telescope" },
-
-    -- HACK: use lua snip until nvim-snippets gets better documentation.
-    -- unless nvim-snippets doesn't have vscode-snippets and is too complicated.
     { import = "lazyvim.plugins.extras.coding.luasnip" },
 
     -- LATER: debugger

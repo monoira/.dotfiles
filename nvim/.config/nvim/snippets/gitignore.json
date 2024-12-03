@@ -2,7 +2,6 @@
   "snip_vite_react.gitignore": {
     "prefix": "snip_vite_react.gitignore",
     "body": [
-      "# Node modules",
       "node_modules/",
       "",
       "# Build output",

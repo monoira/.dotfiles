@@ -1,11 +1,5 @@
 [user]
-  name = Irakli_Tatarashvili
-	email = 116330974+monoira@users.noreply.github.com.
+	name = monoira
+	email = monoira@users.noreply.github.com
 [init]
 	defaultBranch = main
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential

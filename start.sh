@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# HACK: checking for gnome-desktop is too confusing, so I will ignore it.
 required_packages=(
   bash
   snap
@@ -23,8 +22,14 @@ if $all_required_packages_are_installed; then
   echo "<--- All required packages are installed. --->"
   echo "<--- Starting installation... --->"
 
+  # HACK: I need to repeat stow twice. First so that if files exist already, those files overwrite
+  # this git repo's files, then I reset this repo and run stow again.
+  # all this because git stow can't overwrite files / directories if they are already present
   git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles &&
-    bash ~/.dotfiles/_install.sh &&
+    bash ~/.dotfiles/install_scripts/_install.sh &&
+    cd ~/.dotfiles &&
+    stow -v --adopt alacritty cmus git nvim sqlfluff tmux zsh &&
+    git add . && git reset --hard &&
     stow -v --adopt alacritty cmus git nvim sqlfluff tmux zsh
 
 else

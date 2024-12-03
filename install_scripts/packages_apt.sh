@@ -17,7 +17,6 @@ sudo apt install -y nodejs
 sudo apt install -y npm
 
 sudo apt install -y alacritty
-sudo apt install -y zsh
 sudo apt install -y tmux
 
 # packages needed for neovim
@@ -30,6 +29,8 @@ sudo apt install -y xclip
 # clipboard for - wayland
 sudo apt install -y wl-clipboard
 
+# needed for mason's sqlfluff
+sudo apt install -y python3.12-venv
 echo "<--- installing general use apt packages... --->"
 
 sudo apt install -y screenfetch

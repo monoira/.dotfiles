@@ -23,7 +23,7 @@
   and possibly more configurations
 - zsh functions
 - Various installation scripts
-- VSCode settings and workspaces
+- VSCode settings & workspaces
 
   ( I no longer use VSCode, even in this scripts, but keep the settings anyway )
 
@@ -67,16 +67,31 @@ install_scripts directory
 
 ## Installation
 
-METHOD SPECIFIC REQUIREMENTS:
+**install OhMyZsh**
 
-- Must have ssh key and be signed in to Github with it
-  since this script uses git clone with ssh
+```bash
+    sudo apt install -y zsh
+```
+
+```bash
+    sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+
+```bash
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+```bash
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+**dotfiles installation**
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-When scripts finish, reboot your system.
+**When scripts finish, reboot your system.**
 
 ## Why are you using both snap and flatpak?
 
@@ -107,19 +122,13 @@ with non-snap versions and finally be snap-free.
 
 ## Manual tasks that can not be automated
 
-- install OhMyZsh
+- for vim-dadbod, create file ~/.config/nvim/lua/config/dbs.lua with such content
 
-  ```bash
-      sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-  ```
-
-  ```bash
-      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  ```
-
-  ```bash
-      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-  ```
+```lua
+vim.g.dbs = {
+  { name = "dev", url = "postgres://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME" },
+}
+```
 
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - add a keyboard layout
