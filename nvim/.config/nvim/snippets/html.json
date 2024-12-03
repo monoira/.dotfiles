@@ -23,7 +23,7 @@
       "    />",
       "    <!-- || static Facebook Open Graph tags -->",
       "    <!-- make sure og:url content doesn't start with www -->",
-      "    <meta property=\"og:url\" content=\"https://www.PLACEHOLDER_SITENAME.netlify.app/\" />",
+      "    <meta property=\"og:url\" content=\"https://www.PLACEHOLDER_SITENAME.pages.dev/\" />",
       "    <meta property=\"og:site_name\" content=\"PLACEHOLDER_SITENAME\" />",
       "    <!-- || og:image and twitter:image -->",
       "    <!-- og:image should be 1200x630 px -->",
