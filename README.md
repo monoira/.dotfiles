@@ -5,8 +5,13 @@
 - [What I keep in this repository](#what-i-keep-in-this-repository)
 
   - [REQUIREMENTS AND REQUIRED PACKAGES](#requirements-and-required-packages)
-  - [What will all of this do?](#what-will-all-of-this-do)
+    - [requirements](#requirements)
+    - [required packages](#required-packages)
+    - [Install required packages with this command](#install-required-packages-with-this-command)
+  - [What does all of this do?](#what-does-all-of-this-do)
   - [Installation](#installation)
+  - [Why are you using both snap and flatpak?](#why-are-you-using-both-snap-and-flatpak)
+    - [I tried to only use flatpak, but had some problems with following packages](#i-tried-to-only-use-flatpak-but-had-some-problems-with-following-packages)
   - [Manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   <!--toc:end-->
@@ -21,11 +26,15 @@
 
 ## REQUIREMENTS AND REQUIRED PACKAGES
 
+### requirements
+
 - Be on Ubuntu
 - Have ssh key generated and be logged in to Github with it.
   Needed for SSH git cloning.
 - Gnome desktop environment installed and running
 - Bash (Already preinstalled on Debian based distributions)
+
+### required packages
 
 - wget
 - stow
