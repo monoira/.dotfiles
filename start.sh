@@ -2,7 +2,6 @@
 
 # HACK: checking for gnome-desktop is too confusing, so I will ignore it.
 required_packages=(
-  stuff
   bash
   snap
   gnome-shell
