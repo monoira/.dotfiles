@@ -12,6 +12,9 @@
   - [Installation](#installation)
   - [Why are you using both snap and flatpak?](#why-are-you-using-both-snap-and-flatpak)
     - [I tried to only use flatpak, but had some problems with following packages](#i-tried-to-only-use-flatpak-but-had-some-problems-with-following-packages)
+      - [neovim](#neovim)
+      - [steam](#steam)
+      - [figma-linux](#figma-linux)
   - [Manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   <!--toc:end-->
@@ -79,20 +82,23 @@ When scripts finish, reboot your system.
 
 ### I tried to only use flatpak, but had some problems with following packages
 
-- neovim
-  neovim in apt is severely outdated, PPA version is outdated and
-  flatpak version is TERRIBLE, buggy and overly sandboxed.
-  Building .deb package with "dpkg -i" means it won't update.
+#### neovim
 
-- steam
-  installing via flatpak or apt steam-installer didn't worked, since
-  it kept giving me unmet dependencies error.
-  Building .deb package with "dpkg -i" means it won't update.
-  I WILL CHECK LATER. Until then, I have to use snap version.
+neovim in apt is severely outdated, PPA version is outdated and
+flatpak version is TERRIBLE, buggy and overly sandboxed.
+Building .deb package with "dpkg -i" means it won't update.
 
-- figma-linux
-  can't install via apt or flatpak.
-  Building .deb package with "dpkg -i" means it won't update.
+#### steam
+
+installing via flatpak or apt steam-installer didn't worked, since
+it kept giving me unmet dependencies error.
+Building .deb package with "dpkg -i" means it won't update.
+I WILL CHECK LATER. Until then, I have to use snap version.
+
+#### figma-linux
+
+can't install via apt or flatpak.
+Building .deb package with "dpkg -i" means it won't update.
 
 I would love to only use flatpak and get away from snap,
 But it is what it is.
