@@ -23,7 +23,7 @@
   and possibly more configurations
 - zsh functions
 - Various installation scripts
-- VSCode settings & workspaces
+- VSCode settings and workspaces
 
   ( I no longer use VSCode, even in this scripts, but keep the settings anyway )
 
