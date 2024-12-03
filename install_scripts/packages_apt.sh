@@ -30,6 +30,8 @@ sudo apt install -y xclip
 # clipboard for - wayland
 sudo apt install -y wl-clipboard
 
+# needed for mason's sqlfluff
+sudo apt install -y python3.12-venv
 echo "<--- installing general use apt packages... --->"
 
 sudo apt install -y screenfetch
