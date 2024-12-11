@@ -28,9 +28,6 @@ gsettings set org.gnome.shell.extensions.ding icon-size 'small'
 # hides home directory on desktop
 gsettings set org.gnome.shell.extensions.ding show-home false
 
-# disables notification banners
-gsettings set org.gnome.desktop.notifications show-banners true
-
 # NOTE: ubuntu specific settings
 # disable update notifications
 gsettings set com.ubuntu.update-notifier no-show-notifications true
