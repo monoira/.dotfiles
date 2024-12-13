@@ -26,10 +26,10 @@ vim.o.undodir = "/tmp/.vim/.undodir"
 -- disabling the swap file
 vim.opt.swapfile = false
 
--- Highlight the current line
+-- highlight the current line
 vim.opt.cursorline = true
 
--- Enable 24-bit RGB colors
+-- enable 24-bit RGB colors
 vim.opt.termguicolors = true
 
 -- HACK: manual root detection - if you change something here, also change it in project.nvim
