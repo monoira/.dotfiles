@@ -11,5 +11,5 @@ vim.notify = function(msg, ...)
       return
     end
   end
-  return require("notify")(msg, ...)
+  return msg, ...
 end
