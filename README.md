@@ -125,6 +125,13 @@ with non-snap versions and finally be snap-free.
 - add a keyboard layout
 - place packages based on the following image:
   ![Image of packages on Ubuntu](./_docs/packages.png)
+- create file ~/.config/nvim/lua/config/dbs.lua with following content inside
+
+```lua
+vim.g.dbs = {
+  { name = "dev", url = "postgres://<USERNAME>:<PASSWORD>@<HOST>:<PORT>/<DATABASE_NAME>" },
+}
+```
 
 ## Optional tips you might want to consider
 
