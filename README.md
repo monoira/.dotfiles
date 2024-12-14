@@ -121,11 +121,11 @@ with non-snap versions and finally be snap-free.
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
 
-- for vim-dadbod, create file ~/.config/nvim/lua/config/dbs.lua with following content inside
+- for vim-dadbod, create file ~/.config/nvim/lua/config/dbs.lua with
 
 ```lua
 vim.g.dbs = {
-  { name = "dev", url = "postgres://<USERNAME>:<PASSWORD>@<HOST>:<PORT>/<DATABASE_NAME>" },
+  { name = "dev", url = "postgres://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME" },
 }
 ```
 
