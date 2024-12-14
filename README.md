@@ -121,17 +121,18 @@ with non-snap versions and finally be snap-free.
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
 
-- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
-- add a keyboard layout
-- place packages based on the following image:
-  ![Image of packages on Ubuntu](./_docs/packages.png)
-- create file ~/.config/nvim/lua/config/dbs.lua with following content inside
+- for vim-dadbod, create file ~/.config/nvim/lua/config/dbs.lua with following content inside
 
 ```lua
 vim.g.dbs = {
   { name = "dev", url = "postgres://<USERNAME>:<PASSWORD>@<HOST>:<PORT>/<DATABASE_NAME>" },
 }
 ```
+
+- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
+- add a keyboard layout
+- place packages based on the following image:
+  ![Image of packages on Ubuntu](./_docs/packages.png)
 
 ## Optional tips you might want to consider
 
