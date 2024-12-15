@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# HACK: checking for gnome-desktop is too confusing, so I will ignore it.
 required_packages=(
   bash
   snap
