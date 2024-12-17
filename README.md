@@ -67,11 +67,6 @@ install_scripts directory
 
 ## Installation
 
-**METHOD SPECIFIC REQUIREMENTS:**
-
-- Must have ssh key and be signed in to Github with it
-  since this script uses git clone with ssh
-
 **install OhMyZsh**
 
 ```bash
