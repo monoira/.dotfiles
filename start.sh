@@ -23,7 +23,7 @@ if $all_required_packages_are_installed; then
   echo "<--- Starting installation... --->"
 
   git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles &&
-    bash ~/.dotfiles/_install.sh &&
+    bash ~/.dotfiles/install_scripts/_install.sh &&
     stow -v --adopt alacritty cmus git nvim sqlfluff tmux zsh
 
 else
