@@ -67,16 +67,32 @@ install_scripts directory
 
 ## Installation
 
-METHOD SPECIFIC REQUIREMENTS:
+**METHOD SPECIFIC REQUIREMENTS:**
 
 - Must have ssh key and be signed in to Github with it
   since this script uses git clone with ssh
+
+**install OhMyZsh**
+
+```bash
+    sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+
+```bash
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+```bash
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+**dotfiles installation**
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-When scripts finish, reboot your system.
+**When scripts finish, reboot your system.**
 
 ## Why are you using both snap and flatpak?
 
@@ -107,21 +123,7 @@ with non-snap versions and finally be snap-free.
 
 ## Manual tasks that can not be automated
 
-- install OhMyZsh
-
-  ```bash
-      sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-  ```
-
-  ```bash
-      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  ```
-
-  ```bash
-      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-  ```
-
-- for vim-dadbod, create file ~/.config/nvim/lua/config/dbs.lua with
+- for vim-dadbod, create file ~/.config/nvim/lua/config/dbs.lua with such content
 
 ```lua
 vim.g.dbs = {
