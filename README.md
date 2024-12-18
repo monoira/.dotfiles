@@ -122,7 +122,7 @@ with non-snap versions and finally be snap-free.
 
 ## Manual tasks that can not be automated
 
-- for vim-dadbod, create file ~/.config/nvim/lua/config/dbs.lua with such content
+- for vim-dadbod, create file `~/.config/nvim/lua/config/dbs.lua` with such content
 
 ```lua
 vim.g.dbs = {
