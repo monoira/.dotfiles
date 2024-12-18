@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # starting updates
-sudo apt update -y && sudo apt upgrade -y
+sudo apt update -y && sudo apt upgrade -y && sudo snap refresh
 
 bash ~/.dotfiles/install_scripts/flatpak.sh
 
