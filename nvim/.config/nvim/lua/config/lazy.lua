@@ -38,7 +38,7 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.util.project" },
 
-    { import = "lazyvim.plugins.extras.coding.luasnip" },
+    -- { import = "lazyvim.plugins.extras.coding.luasnip" },
 
     -- LATER: debugger
     -- { import = "lazyvim.plugins.extras.dap.core" },
