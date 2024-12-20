@@ -2,7 +2,6 @@
 -- Add any additional options here
 
 -- || styling options
-
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.showtabline = 2
@@ -19,7 +18,6 @@ vim.opt.cindent = true
 vim.opt.wrap = true
 
 -- || other options
-
 vim.opt.undofile = true
 vim.o.undodir = "/tmp/.vim/.undodir"
 
