@@ -1,12 +1,12 @@
-# What I keep in this repository
+# table of content
 
 <!--toc:start-->
 
-- [What I keep in this repository](#what-i-keep-in-this-repository)
-
-  - [REQUIREMENTS AND REQUIRED PACKAGES](#requirements-and-required-packages)
+- [table of content](#table-of-content)
+  - [What I keep in this repository](#what-i-keep-in-this-repository)
+  - [requirements and dependencies](#requirements-and-dependencies)
     - [requirements](#requirements)
-    - [required packages](#required-packages)
+    - [dependency packages](#dependency-packages)
     - [Install required packages with this command](#install-required-packages-with-this-command)
   - [What does all of this do?](#what-does-all-of-this-do)
   - [Installation](#installation)
@@ -19,6 +19,8 @@
   - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   <!--toc:end-->
 
+## what i keep in this repository
+
 - dotfiles managed by GNU/Stow - Neovim, Alacritty, Zsh, Cmus, gitconfig,
   and possibly more configurations
 - zsh functions
@@ -27,7 +29,7 @@
 
   ( I no longer use VSCode, even in this scripts, but keep the settings anyway )
 
-## REQUIREMENTS AND REQUIRED PACKAGES
+## requirements and dependencies
 
 ### requirements
 
@@ -37,19 +39,19 @@
 - Gnome desktop environment installed and running
 - Bash (Already preinstalled on Debian based distributions)
 
-### required packages
+### dependency packages
 
 - wget
 - stow
 - git
 
-### Install required packages with this command
+### install required packages with this command
 
 ```bash
 sudo apt install -y wget stow git
 ```
 
-## What does all of this do?
+## what does all of this do?
 
 - Downloads useful and necessary apt and snap packages
 - Downloads nerd font: Hack nerd font
@@ -65,9 +67,9 @@ For full info, check scripts themselves at
 and
 install_scripts directory
 
-## Installation
+## installation
 
-**install OhMyZsh**
+- **install OhMyZsh**
 
 ```bash
     sudo apt install -y zsh
@@ -85,7 +87,7 @@ install_scripts directory
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-**dotfiles installation**
+- **install dotfiles**
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
@@ -93,9 +95,9 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 
 **When scripts finish, reboot your system.**
 
-## Why are you using both snap and flatpak?
+## why are you using both snap and flatpak?
 
-### I tried to only use flatpak, but had some problems with following packages
+### i tried to only use flatpak, but had some problems with following packages
 
 #### neovim
 
@@ -120,7 +122,7 @@ But it is what it is.
 I will re-check in the future if I can replace those packages
 with non-snap versions and finally be snap-free.
 
-## Manual tasks that can not be automated
+## manual tasks that can not be automated
 
 - for vim-dadbod, create file `~/.config/nvim/lua/config/dbs.lua` with such content
 
