@@ -70,7 +70,7 @@
   "snip_nodejs.gitignore": {
     "prefix": "snip_nodejs.gitignore",
     "body": [
-      "# dotenv environment variable files",
+      "# environment variable files",
       ".env",
       ".env.development.local",
       ".env.test.local",
