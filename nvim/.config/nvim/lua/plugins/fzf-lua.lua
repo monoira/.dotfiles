@@ -138,15 +138,16 @@ return {
 
       -- NOTE: ignore those directories & files when searching
       file_ignore_patterns = {
-        "node_modules/",
-        "dist/",
+        "node_modules",
+        "dist",
         ".next",
-        ".git/",
-        ".gitlab/",
-        "build/",
-        "target/",
-        "yarn.lock",
+        ".git",
+        ".gitlab",
+        "build",
+        "target",
         "package-lock.json",
+        "pnpm-lock.yaml",
+        "yarn.lock",
       },
     }
   end,
