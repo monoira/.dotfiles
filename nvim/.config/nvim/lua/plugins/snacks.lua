@@ -3,6 +3,8 @@ vim.g.snacks_animate = false
 return {
   "folke/snacks.nvim",
   opts = {
+    -- need notifier for disabling "No notifications available"
+    notifier = { enabled = true },
     dashboard = {
       preset = {
         header = [[

@@ -3,7 +3,8 @@
 -- Add any additional autocmds here
 
 -- HACK: this disables stupid "No information available" notification on every hover
--- ex: shift+k on Typescript code
+-- e.g: shift+k on Typescript code
+-- THIS NEEDS snacks.notifier!!!
 local banned_messages = { "No information available" }
 vim.notify = function(msg, ...)
   for _, banned in ipairs(banned_messages) do
@@ -11,5 +12,5 @@ vim.notify = function(msg, ...)
       return
     end
   end
-  return msg, ...
+  return require("snacks.notifier")(msg, ...)
 end
