@@ -45,7 +45,7 @@
 - stow
 - git
 
-### install required packages with this command
+### install dependency packages with this one command
 
 ```bash
 sudo apt install -y wget stow git
