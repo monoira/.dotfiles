@@ -9,7 +9,7 @@ return {
       function()
         local grug = require("grug-far")
         local ignore_these =
-          "!node_modules !dist !.next, !.git !.gitlab !build !target !package-lock.json !pnpm-lock.yaml !yarn.lock"
+          "!node_modules/ !dist/ !.next/ !.git/ !.gitlab/ !build/ !target/ !package-lock.json !pnpm-lock.yaml !yarn.lock"
 
         grug.open({
           transient = true,
