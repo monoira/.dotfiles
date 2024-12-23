@@ -7,10 +7,11 @@
 # GOOD: Hack
 # BAD: hack
 install_nerd_font() {
-  nerd_font_name=$1
+  local nerd_font_name=$1
   echo "<--- Installing $nerd_font_name nerd font... --->"
 
   # Check if the font is already installed
+  local nerd_font_check
   nerd_font_check=$(fc-list : family | sort | uniq | grep "$nerd_font_name")
 
   # If the nerd font is not installed, runs the following script
@@ -18,7 +19,7 @@ install_nerd_font() {
     # Create a temporary directory
     TEMP_FONT_DIR=$(mktemp --directory)
 
-    nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
+    local nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
 
     # download the font zip file
     wget -O "$TEMP_FONT_DIR/font.zip" "$nerd_fonts_repo_url"
