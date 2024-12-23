@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# TODO: test with this once you buy better pc that can run virtual machine or find other way to test.
+# https://youtu.be/4ygaA_y1wvQ?t=924
+
+# set -euo pipefail
+
 required_packages=(
   bash
   snap
