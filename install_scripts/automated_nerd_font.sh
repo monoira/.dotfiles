@@ -31,12 +31,7 @@ install_nerd_font() {
     sudo mkdir -p /usr/local/share/fonts/
 
     # move the font files to the system fonts directory
-    # NOTE: I am repeating code instead of using *.{otf,ttf,woff,woff2} because *.{otf,ttf,woff,woff2} is not
-    # supported in sh. I tried to make THIS FILE sh compatible.
-    sudo mv "$TEMP_FONT_DIR"/*.otf /usr/local/share/fonts/
-    sudo mv "$TEMP_FONT_DIR"/*.ttf /usr/local/share/fonts/
-    sudo mv "$TEMP_FONT_DIR"/*.woff /usr/local/share/fonts/
-    sudo mv "$TEMP_FONT_DIR"/*.woff2 /usr/local/share/fonts/
+    sudo mv "$TEMP_FONT_DIR"/*.{otf,ttf,woff,woff2} /usr/local/share/fonts/
 
     # update the font cache
     fc-cache -f -v
