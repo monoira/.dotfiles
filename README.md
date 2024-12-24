@@ -3,19 +3,21 @@
 <!--toc:start-->
 
 - [table of content](#table-of-content)
-  - [What I keep in this repository](#what-i-keep-in-this-repository)
+  - [what i keep in this repository](#what-i-keep-in-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
     - [requirements](#requirements)
     - [dependency packages](#dependency-packages)
-    - [Install required packages with this command](#install-required-packages-with-this-command)
-  - [What does all of this do?](#what-does-all-of-this-do)
-  - [Installation](#installation)
-  - [Why are you using both snap and flatpak?](#why-are-you-using-both-snap-and-flatpak)
-    - [I tried to only use flatpak, but had some problems with following packages](#i-tried-to-only-use-flatpak-but-had-some-problems-with-following-packages)
+    - [install dependency packages with this one command](#install-dependency-packages-with-this-one-command)
+  - [what does all of this do?](#what-does-all-of-this-do)
+  - [installation](#installation)
+    - [install OhMyZsh](#install-ohmyzsh)
+    - [install dotfiles](#install-dotfiles)
+  - [why are you using both snap and flatpak?](#why-are-you-using-both-snap-and-flatpak)
+    - [i tried to only use flatpak, but had some problems with following packages](#i-tried-to-only-use-flatpak-but-had-some-problems-with-following-packages)
       - [neovim](#neovim)
       - [steam](#steam)
       - [figma-linux](#figma-linux)
-  - [Manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
+  - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   <!--toc:end-->
 
@@ -34,10 +36,12 @@
 ### requirements
 
 - Be on Ubuntu
-- Have ssh key generated and be logged in to Github with it.
-  Needed for SSH git cloning.
-- Gnome desktop environment installed and running
 - Bash (Already preinstalled on Debian based distributions)
+- Gnome desktop environment installed and running --
+  needed for [gnome_settings.sh](./install_scripts/gnome_settings.sh)
+
+- **OPTIONAL:** have ssh key configured w/GitHub to clone using ssh.
+  You will get prompted about.
 
 ### dependency packages
 
@@ -65,29 +69,29 @@ And possibly more.
 For full info, check scripts themselves at
 [start.sh](./start.sh)
 and
-install_scripts directory
+[install_scripts](./install_scripts/) directory
 
 ## installation
 
-- **install OhMyZsh**
+### install OhMyZsh
 
 ```bash
-    sudo apt install -y zsh
+sudo apt install -y zsh
 ```
 
 ```bash
-    sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
 ```bash
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 ```bash
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-- **install dotfiles**
+### install dotfiles
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
