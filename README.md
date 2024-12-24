@@ -12,6 +12,7 @@
   - [installation](#installation)
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
+    - [for vim-dadbod](#for-vim-dadbod)
   - [why are you using both snap and flatpak?](#why-are-you-using-both-snap-and-flatpak)
     - [i tried to only use flatpak, but had some problems with following packages](#i-tried-to-only-use-flatpak-but-had-some-problems-with-following-packages)
       - [neovim](#neovim)
@@ -97,7 +98,17 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-**When scripts finish, reboot your system.**
+### for vim-dadbod
+
+- create file `~/.config/nvim/lua/config/dbs.lua` with such content
+
+```lua
+vim.g.dbs = {
+  { name = "dev", url = "postgres://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME" },
+}
+```
+
+**When everything finishes, reboot your system!**
 
 ## why are you using both snap and flatpak?
 
@@ -127,14 +138,6 @@ I will re-check in the future if I can replace those packages
 with non-snap versions and finally be snap-free.
 
 ## manual tasks that can not be automated
-
-- for vim-dadbod, create file `~/.config/nvim/lua/config/dbs.lua` with such content
-
-```lua
-vim.g.dbs = {
-  { name = "dev", url = "postgres://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME" },
-}
-```
 
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - add a keyboard layout
