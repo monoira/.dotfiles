@@ -21,6 +21,9 @@ vim.opt.wrap = true
 vim.opt.undofile = true
 vim.o.undodir = "/tmp/.vim/.undodir"
 
+-- show mode on : command line
+vim.o.showmode = true
+
 -- disabling the swap file
 vim.opt.swapfile = false
 
