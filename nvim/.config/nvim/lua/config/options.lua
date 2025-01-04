@@ -1,7 +1,9 @@
--- Options are automatically loaded before lazy.nvim startup Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Options are automatically loaded before lazy.nvim startup Default options that are always set:
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
--- || styling options
+-- || vim.opt options
+-- styling
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.showtabline = 2
@@ -17,13 +19,6 @@ vim.opt.cindent = true
 -- enable line wrapping
 vim.opt.wrap = true
 
--- || other options
-vim.opt.undofile = true
-vim.o.undodir = "/tmp/.vim/.undodir"
-
--- show mode on : command line
-vim.o.showmode = true
-
 -- disabling the swap file
 vim.opt.swapfile = false
 
@@ -32,6 +27,13 @@ vim.opt.cursorline = true
 
 -- enable 24-bit RGB colors
 vim.opt.termguicolors = true
+
+-- || other options
+vim.opt.undofile = true
+vim.o.undodir = "/tmp/.vim/.undodir"
+
+-- show mode on : command line
+vim.o.showmode = true
 
 -- HACK: manual root detection - if you change something here, also change it in project.nvim
 vim.g.root_spec = {
