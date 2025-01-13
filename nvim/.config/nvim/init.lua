@@ -5,4 +5,6 @@ require("config.lazy")
 -- vim.g.dbs = {
 --   { name = "dev", url = "postgres://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME" },
 -- }
-require("config.dbs")
+
+-- imports dbs.lua if it exists
+pcall(require, "config.dbs")
