@@ -9,6 +9,9 @@ return {
       ".gitlab/",
       "build/",
       "target/",
+      "dadbod_ui/tmp/",
+      "dadbod_ui/dev/",
+
       "package-lock.json",
       "pnpm-lock.yaml",
       "yarn.lock",
