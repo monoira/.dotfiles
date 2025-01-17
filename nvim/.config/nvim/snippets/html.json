@@ -56,7 +56,7 @@
       "    />",
       "    <link",
       "      rel=\"manifest\"",
-      "      href=\"http://percento.netlify.app/site.webmanifest\"",
+      "      href=\"https://oraoracalc.pages.dev/site.webmanifest\"",
       "    />"
     ],
     "description": "Website head tags"
