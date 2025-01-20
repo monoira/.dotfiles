@@ -13,13 +13,9 @@
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
     - [for vim-dadbod](#for-vim-dadbod)
-  - [why are you using both snap and flatpak?](#why-are-you-using-both-snap-and-flatpak)
-    - [i tried to only use flatpak, but had some problems with following packages](#i-tried-to-only-use-flatpak-but-had-some-problems-with-following-packages)
-      - [neovim](#neovim)
-      - [steam](#steam)
-      - [figma-linux](#figma-linux)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
-  - [Optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
+  - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
+  - [Q&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
   <!--toc:end-->
 
 ## what i keep in this repository
@@ -58,11 +54,11 @@ sudo apt install -y wget stow git
 
 ## what does all of this do?
 
-- Downloads useful and necessary apt and snap packages
-- Downloads nerd font: Hack nerd font
-- Downloads and compiles lazydocker
-- Downloads and compiles lazygit
-- Downloads vimv
+- Installs useful and necessary apt and snap packages
+- Installs nerd font: Hack nerd font
+- Installs lazygit
+- Installs vimv
+- Installs lazydocker
 - Configures gnome settings with gsettings to:
   hide trash on dash-to-dock, hide home, disable notifications, etc.
 
@@ -108,34 +104,11 @@ vim.g.dbs = {
 }
 ```
 
-**When everything finishes, reboot your system!**
+- Replace
+  USERNAME, PASSWORD, HOST, PORT and DATABASE_NAME
+  with your local postgresql database data.
 
-## why are you using both snap and flatpak?
-
-### i tried to only use flatpak, but had some problems with following packages
-
-#### neovim
-
-neovim in apt is severely outdated, PPA version is outdated and
-flatpak version is TERRIBLE, buggy and overly sandboxed.
-Building .deb package with "dpkg -i" means it won't update.
-
-#### steam
-
-installing via flatpak or apt steam-installer didn't worked, since
-it kept giving me unmet dependencies error.
-Building .deb package with "dpkg -i" means it won't update.
-I WILL CHECK LATER. Until then, I have to use snap version.
-
-#### figma-linux
-
-can't install via apt or flatpak.
-Building .deb package with "dpkg -i" means it won't update.
-
-I would love to only use flatpak and get away from snap,
-But it is what it is.
-I will re-check in the future if I can replace those packages
-with non-snap versions and finally be snap-free.
+**When everything finishes, reboot your system! VERY IMPORTANT!**
 
 ## manual tasks that can not be automated
 
@@ -144,10 +117,37 @@ with non-snap versions and finally be snap-free.
 - place packages based on the following image:
   ![Image of packages on Ubuntu](./_docs/packages.png)
 
-## Optional tips you might want to consider
+## optional tips you might want to consider
 
 - pause auto update / refresh of all snap packages
 
 ```bash
 sudo snap refresh --hold
 ```
+
+## Q&A why are you using both snap and flatpak?
+
+I tried to only use flatpak, but had some problems with following packages
+
+- neovim
+
+Neovim in apt is severely outdated, PPA version is outdated and
+flatpak version is TERRIBLE, buggy and overly sandboxed.
+Building .deb package with "dpkg -i" means it won't update.
+
+- steam
+
+Installing via flatpak or apt steam-installer didn't worked, since
+it kept giving me unmet dependencies error.
+Building .deb package with "dpkg -i" means it won't update.
+I WILL CHECK LATER. Until then, I have to use snap version.
+
+- figma-linux
+
+Can't install via apt or flatpak.
+Building .deb package with "dpkg -i" means it won't update.
+
+I would love to only use flatpak and get away from snap,
+But it is what it is.
+I will re-check in the future if I can replace those packages
+with non-snap versions and finally be snap-free.
