@@ -1,6 +1,6 @@
 -- Adds extra language tools. By default LazyVim adds them when you activate extra for it.
 -- But it doesn't add some bash ones since it doesn't have bash extra for example,
--- so I have to add bash linter, language-server, etc.
+-- so I have to add bash linter, language-server, etc myself.
 return {
   "williamboman/mason.nvim",
   opts = {

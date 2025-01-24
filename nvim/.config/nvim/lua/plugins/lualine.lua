@@ -2,9 +2,9 @@
 return {
   "nvim-lualine/lualine.nvim",
   opts = function(_, opts)
-    -- time on right
+    -- removes time on right
     opts.sections.lualine_z = {}
-    -- mode on left - insert, normal
+    -- removes insert, normal mode on left
     opts.sections.lualine_a = {}
   end,
 }
