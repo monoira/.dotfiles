@@ -1,5 +1,5 @@
-# lists all mp3 songs by date modified and saves output to playlist.m3u at cmu's playlist directory
+# lists all mp3 songs by date modified and saves output to playlist.m3u8 at cmu's playlist directory
 playlistSync() {
   mkdir -p ~/.config/cmus/playlists
-  ls -t ~/Music/DriveSyncFiles/*.mp3 >~/.config/cmus/playlists/playlist.m3u
+  ls -t ~/Music/DriveSyncFiles/*.mp3 >~/.config/cmus/playlists/playlist.m3u8
 }
