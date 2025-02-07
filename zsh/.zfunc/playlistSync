@@ -1,5 +1,11 @@
-# lists all mp3 songs by date modified and saves output to playlist.m3u at cmu's playlist directory
 playlistSync() {
   mkdir -p ~/.config/cmus/playlists
-  ls -t ~/Music/DriveSyncFiles/*.mp3 >~/.config/cmus/playlists/playlist.m3u
+
+  # reading playlist
+  sed -i "s|^Music/|/home/$USER/Music/|" ~/Music/DriveSyncFiles/*.m3u
+  ln -sf ~/Music/DriveSyncFiles/*.m3u ~/.config/cmus/playlists
+
+  # general playlist
+  # lists all mp3 songs by date modified and saves output to PLAYLIST.m3u at cmu's playlist directory
+  ls -t ~/Music/DriveSyncFiles/*.mp3 >~/.config/cmus/playlists/PLAYLIST.m3u
 }
