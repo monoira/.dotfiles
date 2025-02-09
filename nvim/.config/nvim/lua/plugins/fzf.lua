@@ -1,5 +1,6 @@
 return {
   "ibhagwan/fzf-lua",
+  dependencies = { "echasnovski/mini.icons" },
   opts = {
     file_ignore_patterns = {
       "node_modules/",
