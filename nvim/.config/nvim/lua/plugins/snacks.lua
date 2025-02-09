@@ -44,7 +44,7 @@ return {
             icon = " ",
             key = "<leader>fr",
             desc = "Recent Files",
-            action = ":lua Snacks.dashboard.pick('oldfiles')",
+            action = ":FzfLua oldfiles",
           },
           {
             icon = "󰒲 ",
