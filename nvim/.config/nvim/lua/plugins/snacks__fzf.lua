@@ -10,6 +10,7 @@ local excluded = {
   "target/",
   "dadbod_ui/tmp/",
   "dadbod_ui/dev/",
+
   "package-lock.json",
   "pnpm-lock.yaml",
   "yarn.lock",
@@ -77,7 +78,6 @@ return {
   },
   {
     "ibhagwan/fzf-lua",
-    dependencies = { "echasnovski/mini.icons" },
     opts = {
       file_ignore_patterns = excluded,
     },

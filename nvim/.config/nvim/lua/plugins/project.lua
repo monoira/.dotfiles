@@ -94,8 +94,6 @@ return {
     detection_methods = { "pattern", "lsp" },
 
     -- All the patterns used to detect root dir, when **"pattern"** is in
-    -- HACK: manual root detection - if you change something here,
-    -- also change it in options.lua - vim.g.root_spec matters more
     patterns = project_patterns,
 
     ignore_lsp = {},
