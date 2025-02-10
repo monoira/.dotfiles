@@ -1,3 +1,85 @@
+local project_patterns = {
+  -- Version Control Systems
+  "_darcs",
+  ".hg",
+  ".bzr",
+  ".svn",
+  ".git",
+
+  -- Build Tools
+  "Makefile",
+  "CMakeLists.txt",
+  "build.gradle",
+  "build.gradle.kts",
+  "pom.xml",
+  "build.xml",
+
+  -- Docker
+  "Dockerfile",
+  "docker-compose.yml",
+
+  -- Node.js and JavaScript
+  "package.json",
+  "package-lock.json",
+  "yarn.lock",
+  ".nvmrc",
+  "gulpfile.js",
+  "Gruntfile.js",
+
+  -- Python
+  "requirements.txt",
+  "Pipfile",
+  "pyproject.toml",
+  "setup.py",
+  "tox.ini",
+
+  -- Rust
+  "Cargo.toml",
+
+  -- Go
+  "go.mod",
+
+  -- Elixir
+  "mix.exs",
+
+  -- Configuration Files
+  ".prettierrc",
+  ".prettierrc.json",
+  ".prettierrc.yaml",
+  ".prettierrc.yml",
+  ".eslintrc",
+  ".eslintrc.json",
+  ".eslintrc.js",
+  ".eslintrc.cjs",
+  ".eslintignore",
+  ".stylelintrc",
+  ".stylelintrc.json",
+  ".stylelintrc.yaml",
+  ".stylelintrc.yml",
+  ".editorconfig",
+  ".gitignore",
+
+  -- HTML Projects
+  "index.html",
+
+  -- Miscellaneous
+  "README.md",
+  "README.rst",
+  "LICENSE",
+  "Vagrantfile",
+  "Procfile",
+  ".env",
+  ".env.example",
+  "config.yaml",
+  "config.yml",
+  ".terraform",
+  "terraform.tfstate",
+  ".kitchen.yml",
+  "Berksfile",
+}
+
+vim.g.root_spec = { project_patterns, "cwd", "lsp" }
+
 return {
   "ahmedkhalf/project.nvim",
   opts = {
@@ -14,85 +96,7 @@ return {
     -- All the patterns used to detect root dir, when **"pattern"** is in
     -- HACK: manual root detection - if you change something here,
     -- also change it in options.lua - vim.g.root_spec matters more
-    patterns = {
-      -- Version Control Systems
-      "_darcs",
-      ".hg",
-      ".bzr",
-      ".svn",
-      ".git",
-
-      -- Build Tools
-      "Makefile",
-      "CMakeLists.txt",
-      "build.gradle",
-      "build.gradle.kts",
-      "pom.xml",
-      "build.xml",
-
-      -- Docker
-      "Dockerfile",
-      "docker-compose.yml",
-
-      -- Node.js and JavaScript
-      "package.json",
-      "package-lock.json",
-      "yarn.lock",
-      ".nvmrc",
-      "gulpfile.js",
-      "Gruntfile.js",
-
-      -- Python
-      "requirements.txt",
-      "Pipfile",
-      "pyproject.toml",
-      "setup.py",
-      "tox.ini",
-
-      -- Rust
-      "Cargo.toml",
-
-      -- Go
-      "go.mod",
-
-      -- Elixir
-      "mix.exs",
-
-      -- Configuration Files
-      ".prettierrc",
-      ".prettierrc.json",
-      ".prettierrc.yaml",
-      ".prettierrc.yml",
-      ".eslintrc",
-      ".eslintrc.json",
-      ".eslintrc.js",
-      ".eslintrc.cjs",
-      ".eslintignore",
-      ".stylelintrc",
-      ".stylelintrc.json",
-      ".stylelintrc.yaml",
-      ".stylelintrc.yml",
-      ".editorconfig",
-      ".gitignore",
-
-      -- HTML Projects
-      "index.html",
-
-      -- Miscellaneous
-      "README.md",
-      "README.rst",
-      "LICENSE",
-      "Vagrantfile",
-      "Procfile",
-      ".env",
-      ".env.example",
-      "config.yaml",
-      "config.yml",
-      ".terraform",
-      "terraform.tfstate",
-      ".kitchen.yml",
-      "Berksfile",
-    },
+    patterns = project_patterns,
 
     ignore_lsp = {},
     exclude_dirs = {},

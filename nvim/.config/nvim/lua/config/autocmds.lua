@@ -1,7 +1,3 @@
--- Autocmds are automatically loaded on the VeryLazy event
--- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
--- Add any additional autocmds here
-
 -- HACK: this disables stupid "No information available" notification on every hover
 -- e.g: shift+k on Typescript code
 -- THIS NEEDS snacks.notifier!!!
