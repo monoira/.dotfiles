@@ -4,6 +4,7 @@ local excluded = {
   "node_modules/",
   "dist/",
   ".next/",
+  ".vite",
   ".git/",
   ".gitlab/",
   "build/",
