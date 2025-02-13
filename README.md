@@ -55,10 +55,10 @@ sudo apt install -y wget stow git
 ## what does all of this do?
 
 - Installs useful and necessary apt and snap packages
-- Installs nerd font: Hack nerd font
+- Installs nerd font: Hack Nerd Font
 - Installs lazygit
-- Installs vimv
 - Installs lazydocker
+- Installs vimv
 - Configures gnome settings with gsettings to:
   hide trash on dash-to-dock, hide home, disable notifications, etc.
 

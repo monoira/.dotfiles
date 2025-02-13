@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # TODO: test with this once you buy better pc that can run virtual machine or find other way to test.
-# https://youtu.be/4ygaA_y1wvQ?t=924
+# https://www.youtube.com/watch?v=4ygaA_y1wvQ&t=924s
 
 # set -euo pipefail
 
@@ -27,28 +27,28 @@ if $all_dependency_packages_are_installed; then
   echo "<--- All dependency packages are installed. --->"
   echo "<--- Starting installation... --->"
 
-  # HACK: I need to repeat stow twice. First so that if files exist already, those files overwrite
-  # this git repo's files, then I reset this repo and run stow again.
-  # all this because git stow can't overwrite files / directories if they are already present.
+  install_and_stow() {
+    # HACK: I need to repeat stow twice. First so that if files exist already, those files overwrite
+    # this git repo's files, then I reset this repo and run stow again.
+    # all this because git stow can't overwrite files / directories if they are already present.
+
+    bash ~/.dotfiles/install_scripts/_install.sh
+    cd ~/.dotfiles || exit
+    stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh
+    git add . && git reset --hard
+    stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh
+  }
 
   # prompt to decide cloning method - https or ssh - ssh is default behavior
   read -r -p "Do you want to use ssh for cloning? (Y/n)" prompt_response
   if [[ $prompt_response == "n" ]]; then
     echo "<--- cloning using HTTPS... --->"
     git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles &&
-      bash ~/.dotfiles/install_scripts/_install.sh &&
-      cd ~/.dotfiles &&
-      stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh &&
-      git add . && git reset --hard &&
-      stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh
+      install_and_stow
   else
     echo "<--- cloning using SSH... --->"
     git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles &&
-      bash ~/.dotfiles/install_scripts/_install.sh &&
-      cd ~/.dotfiles &&
-      stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh &&
-      git add . && git reset --hard &&
-      stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh
+      install_and_stow
   fi
 
 else
@@ -65,5 +65,4 @@ else
       echo "<--- $dep_pkg - Status: NOT INSTALLED!!! --->"
     fi
   done
-
 fi
