@@ -10,3 +10,6 @@
 [submodule "vim-tmux-navigator"]
 	path = tmux/.config/tmux/plugins/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "kitty"]
+	path = kitty/.config/kitty
+	url = https://github.com/monoira/kitty-tabs.git
