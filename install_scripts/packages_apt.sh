@@ -17,6 +17,7 @@ sudo apt install -y nodejs
 sudo apt install -y npm
 
 sudo apt install -y alacritty
+sudo apt install -y kitty
 sudo apt install -y tmux
 
 # packages needed for neovim

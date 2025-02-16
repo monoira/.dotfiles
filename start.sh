@@ -34,9 +34,9 @@ if $all_dependency_packages_are_installed; then
 
     bash ~/.dotfiles/install_scripts/_install.sh
     cd ~/.dotfiles || exit
-    stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh
+    stow --verbose --adopt alacritty cmus git kitty nvim sqlfluff tmux zsh
     git add . && git reset --hard
-    stow --verbose --adopt alacritty cmus git nvim sqlfluff tmux zsh
+    stow --verbose --adopt alacritty cmus git kitty nvim sqlfluff tmux zsh
   }
 
   # prompt to decide cloning method - https or ssh - ssh is default behavior
