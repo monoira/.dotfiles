@@ -20,7 +20,7 @@
 
 ## what i keep in this repository
 
-- dotfiles managed by GNU/Stow - Neovim, Alacritty, Zsh, Cmus, gitconfig,
+- dotfiles managed by GNU/Stow - Neovim, Zsh, Cmus, gitconfig,
   and possibly more configurations
 - zsh functions
 - Various installation scripts

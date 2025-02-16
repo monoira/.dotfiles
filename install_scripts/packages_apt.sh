@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "<--- installing apt packages... --->"
+
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl       # for lasygit AND lazydocker
 sudo apt install -y wget       # for dbeaver AND install_nerd_font()
@@ -16,8 +18,8 @@ sudo apt install -y luarocks
 sudo apt install -y nodejs
 sudo apt install -y npm
 
-sudo apt install -y alacritty
 sudo apt install -y kitty
+sudo apt install -y imagemagick # to see images in kitty
 sudo apt install -y tmux
 
 # packages needed for neovim
@@ -25,15 +27,15 @@ sudo apt install -y fzf
 sudo apt install -y fd-find
 sudo apt install -y ripgrep
 
-# clipboard for - X11
+# clipboard for - x11
 sudo apt install -y xclip
 # clipboard for - wayland
 sudo apt install -y wl-clipboard
 
 # needed for mason's sqlfluff
 sudo apt install -y python3.12-venv
-echo "<--- installing general use apt packages... --->"
 
+# general use packages
 sudo apt install -y screenfetch
 sudo apt install -y cmatrix
 sudo apt install -y btop
