@@ -18,14 +18,18 @@ local excluded = {
 }
 
 local root_patterns = {
-  -- Version Control Systems
+  -- directories
+  "client",
+  "server",
+
+  -- version control systems
   "_darcs",
   ".hg",
   ".bzr",
   ".svn",
   ".git",
 
-  -- Build Tools
+  -- build tools
   "Makefile",
   "CMakeLists.txt",
   "build.gradle",
@@ -33,11 +37,11 @@ local root_patterns = {
   "pom.xml",
   "build.xml",
 
-  -- Docker
+  -- docker
   "Dockerfile",
   "docker-compose.yml",
 
-  -- Node.js and JavaScript
+  -- node.js and javascript
   "package.json",
   "package-lock.json",
   "yarn.lock",
@@ -45,23 +49,23 @@ local root_patterns = {
   "gulpfile.js",
   "Gruntfile.js",
 
-  -- Python
+  -- python
   "requirements.txt",
   "Pipfile",
   "pyproject.toml",
   "setup.py",
   "tox.ini",
 
-  -- Rust
+  -- rust
   "Cargo.toml",
 
-  -- Go
+  -- go
   "go.mod",
 
-  -- Elixir
+  -- elixir
   "mix.exs",
 
-  -- Configuration Files
+  -- configuration files
   ".prettierrc",
   ".prettierrc.json",
   ".prettierrc.yaml",
@@ -78,10 +82,10 @@ local root_patterns = {
   ".editorconfig",
   ".gitignore",
 
-  -- HTML Projects
+  -- html projects
   "index.html",
 
-  -- Miscellaneous
+  -- miscellaneous
   "README.md",
   "README.rst",
   "LICENSE",
@@ -106,38 +110,32 @@ return {
 
     image = { enabled = true },
 
-    -- show hidden files in snacks.explorer
     picker = {
       sources = {
-        explorer = {
-          -- show hidden files like .env
-          hidden = true,
-          -- show files ignored by git like node_modules
-          ignored = true,
-
-          exclude = excluded,
-        },
         projects = {
-          patterns = root_patterns,
           dev = {
-            "~/.dotfiles/",
+            "~/.dotfiles",
 
-            "~/dev/",
-            "~/dev/general/",
-            "~/dev/projects/",
-            "~/dev/general/LARGE_PROJECTS/",
-            "~/dev/general/NEW_PROJECTS/",
-            "~/dev/general/OLD_PROJECTS/",
-            "~/dev/general/TO_DO_PROJECTS/",
+            "~/dev",
+            "~/dev/general",
+            "~/dev/projects",
+            "~/dev/general/LARGE_PROJECTS",
+            "~/dev/general/NEW_PROJECTS",
+            "~/dev/general/OLD_PROJECTS",
+            "~/dev/general/TO_DO_PROJECTS",
           },
+          patterns = root_patterns,
         },
         files = {
-          -- show hidden files like .env
           hidden = true,
-          -- show files ignored by git like node_modules
           ignored = true,
         },
       },
+      -- show hidden files like .env
+      hidden = true,
+      -- show files ignored by git like node_modules
+      ignored = true,
+
       exclude = excluded,
     },
 
