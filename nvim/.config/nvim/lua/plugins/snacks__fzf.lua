@@ -24,6 +24,8 @@ return {
       -- need notifier for disabling "No notifications available"
       notifier = { enabled = true },
 
+      image = { enabled = true },
+
       -- show hidden files in snacks.explorer
       picker = {
         sources = {
