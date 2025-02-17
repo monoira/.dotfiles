@@ -22,7 +22,6 @@ sudo apt install -y kitty
 sudo apt install -y imagemagick # to see images with snacks.image
 # HACK: on older versions, magick is named convert. In latest version, I think it's fixed. Not on ubuntu yet.
 # Check later. imagemagick -v 7 should not need this anymore
-sudo ln -s /bin/convert /bin/magick
 
 sudo apt install -y tmux
 
