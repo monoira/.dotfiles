@@ -39,10 +39,6 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.linting.eslint" },
 
-    { import = "lazyvim.plugins.extras.util.project" },
-
-    { import = "lazyvim.plugins.extras.editor.fzf" },
-
     { import = "lazyvim.plugins.extras.coding.luasnip" },
 
     -- LATER: debugger
