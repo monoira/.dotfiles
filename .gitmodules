@@ -1,18 +1,3 @@
-; [submodule "tmux/.config/tmux/plugins/tmux"]
-; 	path = tmux/.config/tmux/plugins/tmux
-; 	url = https://github.com/catppuccin/tmux.git
-; [submodule "tmux/.config/tmux/plugins/tmux-sensible"]
-; 	path = tmux/.config/tmux/plugins/tmux-sensible
-; 	url = https://github.com/tmux-plugins/tmux-sensible.git
-; [submodule "tmux/.config/tmux/plugins/tpm"]
-; 	path = tmux/.config/tmux/plugins/tpm
-; 	url = https://github.com/tmux-plugins/tpm.git
-; [submodule "tmux/.config/tmux/plugins/vim-tmux-navigator"]
-; 	path = tmux/.config/tmux/plugins/vim-tmux-navigator
-; 	url = https://github.com/christoomey/vim-tmux-navigator.git
-[submodule "kitty/.config/kitty"]
-	path = kitty/.config/kitty
-	url = https://github.com/monoira/kitty-tabs.git
 [submodule "tmux/.config/tmux/plugins/tmux"]
 	path = tmux/.config/tmux/plugins/tmux
 	url = https://github.com/catppuccin/tmux.git
@@ -25,3 +10,6 @@
 [submodule "tmux/.config/tmux/plugins/vim-tmux-navigator"]
 	path = tmux/.config/tmux/plugins/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "kitty/.config/kitty"]
+  path = kitty/.config/kitty
+  url = https://github.com/monoira/kitty-tabs.git

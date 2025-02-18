@@ -20,11 +20,11 @@
 
 ## what i keep in this repository
 
-- dotfiles managed by GNU/Stow - Neovim, Zsh, Cmus, gitconfig,
-  and possibly more configurations
+- dotfiles and configs managed by GNU/Stow - Neovim, kitty, Zsh, Cmus, gitconfig,
+  and more.
 - zsh functions
 - Various installation scripts
-- VSCode settings & workspaces
+- VSCode profile
 
   ( I no longer use VSCode, even in this scripts, but keep the settings anyway )
 
@@ -115,7 +115,7 @@ vim.g.dbs = {
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - add a keyboard layout
 - place packages based on the following image:
-  ![Image of packages on Ubuntu](./_docs/packages.png)
+  ![Image of packages on Ubuntu](./docs/packages.png)
 
 ## optional tips you might want to consider
 
