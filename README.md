@@ -20,13 +20,12 @@
 
 ## what i keep in this repository
 
-- dotfiles and configs managed by GNU/Stow - Neovim, kitty, Zsh, Cmus, gitconfig,
-  and more.
+- dotfiles and configs managed by GNU/Stow - Neovim, Kitty, Zsh, Cmus, gitconfig,
+  and more
 - zsh functions
+- VSCode profile, settings and
+  setup script that shares nvim and vscode snippets via GNU/ln
 - Various installation scripts
-- VSCode profile
-
-  ( I no longer use VSCode, even in this scripts, but keep the settings anyway )
 
 ## requirements and dependencies
 
