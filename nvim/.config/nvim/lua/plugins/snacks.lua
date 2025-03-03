@@ -100,7 +100,7 @@ local root_patterns = {
   ".kitchen.yml",
   "Berksfile",
 }
-vim.g.root_spec = { root_patterns, "cwd", "lsp" }
+vim.g.root_spec = { "lsp", root_patterns, "cwd" }
 
 return {
   "folke/snacks.nvim",
@@ -125,6 +125,8 @@ return {
             "~/dev/general/TO_DO_PROJECTS",
           },
           patterns = root_patterns,
+          -- <leader>fp will always open picker_files
+          confirm = "picker_files",
         },
         files = {
           hidden = true,
