@@ -1,4 +1,3 @@
--- || vim.opt options
 -- styling
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -24,9 +23,12 @@ vim.opt.cursorline = true
 -- enable 24-bit RGB colors
 vim.opt.termguicolors = true
 
--- || other options
+-- undofile and it's location
 vim.opt.undofile = true
-vim.o.undodir = "/tmp/.vim/.undodir"
+vim.opt.undodir = "/tmp/.vim/.undodir"
 
 -- show mode on : command line
-vim.o.showmode = true
+vim.opt.showmode = true
+
+-- automatically change CWD when vim.g.root_spec detects a new root
+vim.opt.autochdir = true

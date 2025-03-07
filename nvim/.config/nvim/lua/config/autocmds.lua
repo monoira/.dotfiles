@@ -1,12 +1,22 @@
--- HACK: this disables stupid "No information available" notification on every hover
--- e.g: shift+k on Typescript code
--- THIS NEEDS snacks.notifier!!!
-local banned_messages = { "No information available" }
-vim.notify = function(msg, ...)
+-- HACK: this disables certain notifications like
+-- e.g: shift+k on typescript / tsx code says
+-- "No information available" notification on every hover.
+-- using snacks.notifier for notifications.
+local notifier = require("snacks.notifier")
+
+local banned_messages = { "No information available", "^# Conversion failed.*" }
+
+local function is_banned_message(msg)
   for _, banned in ipairs(banned_messages) do
-    if msg == banned then
-      return
+    if string.match(msg, banned) then
+      return true
     end
   end
-  return require("snacks.notifier")(msg, ...)
+  return false
+end
+
+vim.notify = function(msg, ...)
+  if not is_banned_message(msg) then
+    notifier(msg, ...)
+  end
 end
