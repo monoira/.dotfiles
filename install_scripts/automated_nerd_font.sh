@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-nerd_font_name="Hack" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
