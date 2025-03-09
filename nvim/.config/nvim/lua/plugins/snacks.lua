@@ -100,7 +100,7 @@ local root_patterns = {
   ".kitchen.yml",
   "Berksfile",
 }
-vim.g.root_spec = { "lsp", root_patterns, "cwd" }
+vim.g.root_spec = { root_patterns, "lsp", "cwd" }
 
 return {
   "folke/snacks.nvim",
