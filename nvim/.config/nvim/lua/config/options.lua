@@ -29,6 +29,3 @@ vim.opt.undodir = "/tmp/.vim/.undodir"
 
 -- show mode on : command line
 vim.opt.showmode = true
-
--- automatically change CWD when vim.g.root_spec detects a new root
-vim.opt.autochdir = true
