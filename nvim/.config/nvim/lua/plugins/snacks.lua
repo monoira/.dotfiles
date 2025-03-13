@@ -12,6 +12,7 @@ local excluded = {
   "dadbod_ui/tmp/",
   "dadbod_ui/dev/",
 
+  -- ISSUE: these FILES are being hidden from snacks.explorer too.
   "package-lock.json",
   "pnpm-lock.yaml",
   "yarn.lock",
@@ -36,10 +37,6 @@ local root_patterns = {
   "build.gradle.kts",
   "pom.xml",
   "build.xml",
-
-  -- docker
-  "Dockerfile",
-  "docker-compose.yml",
 
   -- node.js and javascript
   "package.json",
