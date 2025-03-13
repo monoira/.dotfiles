@@ -19,7 +19,6 @@ all_dependency_packages_are_installed=true
 for dep_pkg in "${dependency_packages[@]}"; do
   if [ -z "$(which "$dep_pkg")" ]; then
     all_dependency_packages_are_installed=false
-    break
   fi
 done
 

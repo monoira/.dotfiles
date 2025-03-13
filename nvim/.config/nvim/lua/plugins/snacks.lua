@@ -12,7 +12,6 @@ local excluded = {
   "dadbod_ui/tmp/",
   "dadbod_ui/dev/",
 
-  -- ISSUE: these FILES are being hidden from snacks.explorer too.
   "package-lock.json",
   "pnpm-lock.yaml",
   "yarn.lock",
@@ -109,6 +108,11 @@ return {
 
     picker = {
       sources = {
+        explorer = {
+          hidden = true,
+          ignored = true,
+          include = excluded,
+        },
         projects = {
           dev = {
             "~/.dotfiles",

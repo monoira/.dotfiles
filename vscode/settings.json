@@ -1,6 +1,7 @@
 {
   "window.newWindowProfile": "monoira",
   "security.workspace.trust.untrustedFiles": "open",
+  "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
 
   "vim.normalModeKeyBindings": [
