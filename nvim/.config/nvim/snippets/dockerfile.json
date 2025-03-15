@@ -1,0 +1,15 @@
+{
+  "snip_nodejs_dockerfile": {
+    "prefix": "snip_nodejs_dockerfile",
+    "body": [
+      "FROM node:22",
+      "WORKDIR /app",
+      "COPY package*.json .",
+      "RUN npm install",
+      "COPY . .",
+      "EXPOSE 8080",
+      "CMD [\"npm\", \"start\"]"
+    ],
+    "description": "snip_nodejs_dockerfile"
+  }
+}

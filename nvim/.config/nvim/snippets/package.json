@@ -25,6 +25,12 @@
           "editorconfig"
         ],
         "path": "./editorconfig.json"
+      },
+      {
+        "language": [
+          "dockerfile"
+        ],
+        "path": "./dockerfile.json"
       }
     ]
   }
