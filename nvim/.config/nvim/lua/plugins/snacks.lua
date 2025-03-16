@@ -132,6 +132,26 @@ return {
         files = {
           hidden = true,
           ignored = true,
+          exclude = excluded,
+        },
+        -- HACK: https://github.com/folke/snacks.nvim/discussions/1581
+        -- check later if better solution appears to filter
+        -- out excluded directories & files inside excluded directories
+        recent = {
+          filter = {
+            filter = function(item)
+              local function is_excluded(file)
+                for _, pattern in ipairs(excluded) do
+                  if string.match(file, pattern) then
+                    return true
+                  end
+                end
+                return false
+              end
+
+              return not is_excluded(item.file)
+            end,
+          },
         },
       },
       -- show hidden files like .env
