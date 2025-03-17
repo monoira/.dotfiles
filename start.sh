@@ -15,9 +15,8 @@ dependency_packages=(
 )
 
 all_dependency_packages_are_installed=true
-
 for dep_pkg in "${dependency_packages[@]}"; do
-  if [ -z "$(which "$dep_pkg")" ]; then
+  if ! command -v "$dep_pkg" &>/dev/null; then
     all_dependency_packages_are_installed=false
   fi
 done
@@ -58,10 +57,11 @@ else
   # checks each package individually to see which packages
   # are not installed and echos them out if they are not installed
   for dep_pkg in "${dependency_packages[@]}"; do
-    if [ "$(which "$dep_pkg")" ]; then
+    if command -v "$dep_pkg" &>/dev/null; then
       echo "<--- $dep_pkg - Status: Installed. --->"
     else
       echo "<--- $dep_pkg - Status: NOT INSTALLED!!! --->"
     fi
   done
+  exit 1
 fi
