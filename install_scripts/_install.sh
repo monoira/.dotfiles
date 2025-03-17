@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# starting updates
-sudo apt update -y && sudo apt upgrade -y && sudo snap refresh
+# START SCRIPT
+bash ~/.dotfiles/install_scripts/0_start_script.sh
 
-# gnome styling gsettings
-bash ~/.dotfiles/install_scripts/gnome_settings.sh
+# change gnome gsettings
+bash ~/.dotfiles/install_scripts/gsettings.sh
 
 # simple automated installations
 bash ~/.dotfiles/install_scripts/flatpak.sh
@@ -23,5 +23,5 @@ bash ~/.dotfiles/install_scripts/act.sh
 bash ~/.dotfiles/install_scripts/vimv.sh
 bash ~/.dotfiles/install_scripts/games.sh
 
-# finishing script
-bash ~/.dotfiles/install_scripts/finishing_script.sh
+# FINISH SCRIPT
+bash ~/.dotfiles/install_scripts/1_finish_script.sh
