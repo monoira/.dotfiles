@@ -31,6 +31,12 @@
           "dockerfile"
         ],
         "path": "./dockerfile.json"
+      },
+      {
+        "language": [
+          "conf"
+        ],
+        "path": "./conf.json"
       }
     ]
   }

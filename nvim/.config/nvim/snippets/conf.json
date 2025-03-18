@@ -1,0 +1,41 @@
+{
+  "snip_dockerignore": {
+    "prefix": "snip_dockerignore",
+    "body": [
+      "# Dependencies",
+      "node_modules",
+      "",
+      "# Environment variable files",
+      ".env",
+      ".env.development",
+      ".env.production",
+      ".env.local",
+      ".env.*.local",
+      "",
+      "# Build output directories",
+      ".next",
+      "out",
+      "build",
+      "dist",
+      "",
+      "# Log files and temporary files",
+      "*.log",
+      "logs/",
+      "tmp/",
+      "coverage/",
+      "",
+      "# Operating system files",
+      ".DS_Store",
+      "Thumbs.db",
+      "",
+      "# IDE/editor files and directories",
+      ".vscode/",
+      ".idea/",
+      "",
+      "# Git files (if you don't need version control history inside the container)",
+      ".git",
+      ".gitignore"
+    ],
+    "description": "snip_dockerignore"
+  }
+}
