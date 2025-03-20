@@ -32,12 +32,10 @@
 ### requirements
 
 - Be on Ubuntu
-- Bash (Already preinstalled on Debian based distributions)
-- Gnome desktop environment installed and running --
-  needed for [gnome_settings.sh](./install_scripts/gnome_settings.sh)
-
-- **OPTIONAL:** have ssh key configured w/GitHub to clone using ssh.
-  You will get prompted about.
+- Bash -- Already preinstalled on Debian based distributions
+- Gnome desktop environment installed and
+  running -- needed for [gnome_settings.sh](./install_scripts/gnome_settings.sh)
+- Have ssh key configured w/GitHub to clone using ssh.
 
 ### dependency packages
 

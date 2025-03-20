@@ -31,26 +31,18 @@ if $all_dependency_packages_are_installed; then
     # all this because git stow can't overwrite files / directories if they are already present.
 
     bash ~/.dotfiles/install_scripts/_install.sh
-    cd ~/.dotfiles || exit
+    cd ~/.dotfiles || exit 1
     stow --verbose --adopt cmus git kitty nvim sqlfluff tmux zsh
     git add . && git reset --hard
     stow --verbose --adopt cmus git kitty nvim sqlfluff tmux zsh
   }
 
-  # prompt to decide cloning method - https or ssh - ssh is default behavior
-  read -r -p "Do you want to use ssh for cloning? (Y/n)" prompt_response
-  if [[ $prompt_response == "n" ]]; then
-    echo "<--- cloning using HTTPS... --->"
-    git clone --recurse-submodules https://github.com/monoira/.dotfiles.git ~/.dotfiles &&
-      install_and_stow
-  else
-    echo "<--- cloning using SSH... --->"
-    git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles &&
-      install_and_stow
-  fi
+  echo "<--- cloning using SSH... --->"
+  git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles &&
+    install_and_stow
 
 else
-  echo "<--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --->"
+  echo "<--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --->"
   echo "<--- ONE OR MORE OF THE REQUIRED DEPENDENCY PACKAGES ARE NOT INSTALLED!!! --->"
   echo "<--- The dependency packages are: --->"
 
