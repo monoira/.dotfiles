@@ -35,6 +35,9 @@ sudo apt install -y xclip
 # clipboard for - wayland
 sudo apt install -y wl-clipboard
 
+# needed to show pictures from nautilus
+sudo apt install -y ffmpegthumbnailer
+
 # needed for mason's sqlfluff
 sudo apt install -y python3.12-venv
 
