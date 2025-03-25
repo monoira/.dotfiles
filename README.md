@@ -112,6 +112,9 @@ vim.g.dbs = {
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - change refresh rate in `settings > refresh rate` to 155 Hz
 - add a keyboard layout
+- in `about:config` of firefox, change these:
+  - `full-screen-api.warning.timeout` to `0`
+  - `extensions.pocket.enabled` to `false`
 - place packages based on the following image:
   ![Image of packages on Ubuntu](./docs/packages.png)
 
