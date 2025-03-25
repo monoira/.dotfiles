@@ -110,6 +110,7 @@ vim.g.dbs = {
 ## manual tasks that can not be automated
 
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
+- change refresh rate in `settings > refresh rate` to 155 Hz
 - add a keyboard layout
 - place packages based on the following image:
   ![Image of packages on Ubuntu](./docs/packages.png)
