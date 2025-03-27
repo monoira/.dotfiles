@@ -112,6 +112,10 @@ return {
           hidden = true,
           ignored = true,
           include = excluded,
+
+          layout = {
+            layout = { position = "right" },
+          },
         },
         projects = {
           dev = {

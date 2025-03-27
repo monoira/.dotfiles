@@ -126,6 +126,12 @@ vim.g.dbs = {
 sudo snap refresh --hold
 ```
 
+- use latest lts version of nodejs and npm via nvm
+
+```bash
+nvm install --lts && nvm use --lts
+```
+
 ## Q&A why are you using both snap and flatpak?
 
 I tried to only use flatpak, but had some problems with following packages
