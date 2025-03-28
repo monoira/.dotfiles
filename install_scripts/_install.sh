@@ -3,7 +3,7 @@
 # START SCRIPT
 bash ~/.dotfiles/install_scripts/0_start_script.sh
 
-# change gnome gsettings
+# change gnome settings via gsettings
 bash ~/.dotfiles/install_scripts/gsettings.sh
 
 # simple automated installations
