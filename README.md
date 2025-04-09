@@ -16,6 +16,7 @@
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [Q&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
+  - [DONATE](#donate)
   <!--toc:end-->
 
 ## what i keep in this repository
