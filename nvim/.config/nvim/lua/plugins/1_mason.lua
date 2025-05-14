@@ -2,7 +2,7 @@
 -- But it doesn't add some bash ones since it doesn't have bash extra for example,
 -- so I have to add bash linter, language-server, etc myself.
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   opts = {
     ensure_installed = {
       "emmet-language-server",
