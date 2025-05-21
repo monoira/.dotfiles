@@ -130,5 +130,6 @@
       "before": ["<leader>", "s", "k"],
       "commands": ["workbench.action.showCommands"]
     }
-  ]
+  ],
+  "update.showReleaseNotes": false
 }
