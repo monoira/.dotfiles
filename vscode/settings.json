@@ -129,6 +129,14 @@
     {
       "before": ["<leader>", "s", "k"],
       "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "f", "p"],
+      "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": ["<leader>", "f", "r"],
+      "commands": ["workbench.action.quickOpen"]
     }
   ],
   "update.showReleaseNotes": false

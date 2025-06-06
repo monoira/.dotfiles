@@ -1,7 +1,3 @@
-# table of content
-
-<!--toc:start-->
-
 - [table of content](#table-of-content)
   - [what i keep in this repository](#what-i-keep-in-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
@@ -12,20 +8,23 @@
   - [installation](#installation)
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
-    - [for vim-dadbod](#for-vim-dadbod)
+    - [for vim-dadbod if using neovim](#for-vim-dadbod-if-using-neovim)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
-  - [Q&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
+  - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
   - [DONATE](#donate)
-  <!--toc:end-->
+
+# table of content
 
 ## what i keep in this repository
 
+- VSCode profile / settings and workspaces as primary code editor.
+  Setup with AI Agent and vim keybindings in mind for maximum productivity.
+  [setup.sh](./vscode/setup.sh) automates sharing of nvim and vscode snippets
+  via GNU/ln and sets up global settings.json.
 - dotfiles and configs managed by GNU/Stow - Neovim, Kitty, Zsh, Cmus, gitconfig,
   and more
 - zsh functions
-- VSCode profile, settings and
-  setup script that shares nvim and vscode snippets via GNU/ln
 - Various installation scripts
 
 ## requirements and dependencies
@@ -92,7 +91,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-### for vim-dadbod
+### for vim-dadbod if using neovim
 
 - create file `~/.config/nvim/lua/config/dbs.lua` with such content
 
@@ -110,7 +109,6 @@ vim.g.dbs = {
 
 ## manual tasks that can not be automated
 
-- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - change refresh rate in `settings > refresh rate` to 155 Hz
 - add a keyboard layout
 - in `about:config` of firefox, change these:
@@ -118,6 +116,7 @@ vim.g.dbs = {
   - `extensions.pocket.enabled` to `false`
 - place packages based on the following image:
   ![Image of packages on Ubuntu](./docs/packages.png)
+- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 
 ## optional tips you might want to consider
 
@@ -172,3 +171,5 @@ you can donate here:
 | ------------------- | ------------------------------------------ |
 | Bitcoin (SegWit)    | bc1ql8sp9shx4svzlwv0ckzv8s7pphw5upvmt8m2m7 |
 | Ethereum (Ethereum) | 0xf2FCB0Af39DF7A608b76297e45181aF23fEB939F |
+
+[def]: ./v
