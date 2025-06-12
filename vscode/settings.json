@@ -83,6 +83,14 @@
       "commands": ["workbench.action.nextEditor"]
     },
     {
+      "before": ["[", "B"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
+    },
+    {
+      "before": ["]", "B"],
+      "commands": ["workbench.action.moveEditorRightInGroup"]
+    },
+    {
       "before": ["<leader>", "c", "a"],
       "commands": ["editor.action.quickFix"],
       "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
@@ -120,16 +128,6 @@
     {
       "before": ["<leader>", "f", "p"],
       "commands": ["workbench.action.openRecent"]
-    },
-    {
-      "before": ["<leader>", "g", "c"],
-      "commands": ["workbench.view.scm"],
-      "when": "workbench.scm.active"
-    },
-    {
-      "before": ["<leader>", "g", "s"],
-      "commands": ["workbench.view.scm"],
-      "when": "workbench.scm.active"
     },
     {
       "before": ["<leader>", "s", "k"],
