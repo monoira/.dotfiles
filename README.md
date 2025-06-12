@@ -171,5 +171,3 @@ you can donate here:
 | ------------------- | ------------------------------------------ |
 | Bitcoin (SegWit)    | bc1ql8sp9shx4svzlwv0ckzv8s7pphw5upvmt8m2m7 |
 | Ethereum (Ethereum) | 0xf2FCB0Af39DF7A608b76297e45181aF23fEB939F |
-
-[def]: ./v

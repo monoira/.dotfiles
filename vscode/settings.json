@@ -3,15 +3,12 @@
   "security.workspace.trust.untrustedFiles": "open",
   "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
+  "update.showReleaseNotes": false,
 
   "vim.normalModeKeyBindings": [
     {
       "before": ["g", "d"],
       "commands": ["editor.action.revealDefinition"]
-    },
-    {
-      "before": ["g", "r"],
-      "commands": ["editor.action.goToReferences"]
     },
     {
       "before": ["g", "D"],
@@ -20,6 +17,10 @@
     {
       "before": ["g", "I"],
       "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
     },
     {
       "before": ["g", "y"],
@@ -85,6 +86,10 @@
       "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
     {
+      "before": ["<leader>", "c", "p"],
+      "commands": ["markdown.showPreview"]
+    },
+    {
       "before": ["<leader>", "e"],
       "commands": ["workbench.files.action.showActiveFileInExplorer"]
     },
@@ -101,6 +106,10 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
+      "before": ["<leader>", "f", "p"],
+      "commands": ["workbench.action.openRecent"]
+    },
+    {
       "before": ["<leader>", "g", "c"],
       "commands": ["workbench.view.scm"],
       "when": "workbench.scm.active"
@@ -111,33 +120,12 @@
       "when": "workbench.scm.active"
     },
     {
-      "before": ["<leader>", "s", "C"],
+      "before": ["<leader>", "s", "k"],
       "commands": ["workbench.action.showCommands"]
     },
     {
       "before": ["<leader>", "s", "d"],
       "commands": ["workbench.actions.view.problems"]
-    },
-    {
-      "before": ["<leader>", "s", "D"],
-      "commands": ["workbench.actions.view.problems"]
-    },
-    {
-      "before": ["<leader>", "s", "h"],
-      "commands": ["workbench.action.openDocumentationUrl"]
-    },
-    {
-      "before": ["<leader>", "s", "k"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    {
-      "before": ["<leader>", "f", "p"],
-      "commands": ["workbench.action.openRecent"]
-    },
-    {
-      "before": ["<leader>", "f", "r"],
-      "commands": ["workbench.action.quickOpen"]
     }
-  ],
-  "update.showReleaseNotes": false
+  ]
 }
