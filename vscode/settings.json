@@ -96,11 +96,6 @@
       "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     },
     {
-      "before": ["<leader>", "c", "A"],
-      "commands": ["editor.action.quickFix"],
-      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    },
-    {
       "before": ["<leader>", "c", "r"],
       "commands": ["editor.action.rename"],
       "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
