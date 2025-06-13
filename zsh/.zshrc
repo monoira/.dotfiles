@@ -2,8 +2,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Setting defaults
-export EDITOR=nvim
-export TERMINAL=alacritty
+export EDITOR=code
+export TERMINAL=kitty
 export LANG=en_US.UTF-8
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -29,9 +29,9 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
 
 # Custom functions loaded automatically
-fpath=( ~/.zfunc "${fpath[@]}" )
+fpath=(~/.zfunc "${fpath[@]}")
 autoload -Uz $fpath[1]/*(.:t)
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
