@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Setting defaults
-export EDITOR=code
+export EDITOR=nvim
 export TERMINAL=kitty
 export LANG=en_US.UTF-8
 
