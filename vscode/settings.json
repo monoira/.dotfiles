@@ -91,6 +91,18 @@
       "commands": ["workbench.action.moveEditorRightInGroup"]
     },
     {
+      "before": ["<leader>", "b", "r"],
+      "commands": ["workbench.action.closeEditorsToTheRight"]
+    },
+    {
+      "before": ["<leader>", "b", "l"],
+      "commands": ["workbench.action.closeEditorsToTheLeft"]
+    },
+    {
+      "before": ["<leader>", "b", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
       "before": ["<leader>", "c", "a"],
       "commands": ["editor.action.quickFix"],
       "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
