@@ -1,8 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "../../../dev/general"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../../../dev/general"
+    }
+  ],
+  "settings": {
+    "postman.settings.dotenv-detection-notification-visibility": false
+  }
 }
