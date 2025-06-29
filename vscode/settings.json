@@ -143,6 +143,10 @@
     {
       "before": ["<leader>", "s", "d"],
       "commands": ["workbench.actions.view.problems"]
+    },
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["lazygit.openLazygit"]
     }
   ]
 }
