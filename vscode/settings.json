@@ -36,11 +36,6 @@
       "when": "editorHasSignatureHelpProvider && editorTextFocus"
     },
     {
-      "before": ["<C-k>"],
-      "commands": ["editor.action.triggerParameterHints"],
-      "when": "editorHasSignatureHelpProvider && editorTextFocus"
-    },
-    {
       "before": ["]", "d"],
       "commands": ["editor.action.marker.next"],
       "when": "editorFocus"
@@ -71,10 +66,6 @@
       "when": "editorFocus"
     },
     {
-      "before": ["<leader>", "b", "d"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
       "before": ["[", "b"],
       "commands": ["workbench.action.previousEditor"]
     },
@@ -89,6 +80,10 @@
     {
       "before": ["]", "B"],
       "commands": ["workbench.action.moveEditorRightInGroup"]
+    },
+    {
+      "before": ["<leader>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
     {
       "before": ["<leader>", "b", "r"],
@@ -121,6 +116,14 @@
       "commands": ["workbench.files.action.showActiveFileInExplorer"]
     },
     {
+      "before": ["<leader>", "s", "d"],
+      "commands": ["workbench.actions.view.problems"]
+    },
+    {
+      "before": ["<leader>", "s", "k"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
       "before": ["<leader>", "s", "r"],
       "commands": ["editor.action.startFindReplaceAction"]
     },
@@ -137,12 +140,8 @@
       "commands": ["workbench.action.openRecent"]
     },
     {
-      "before": ["<leader>", "s", "k"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    {
-      "before": ["<leader>", "s", "d"],
-      "commands": ["workbench.actions.view.problems"]
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
     }
   ]
 }
