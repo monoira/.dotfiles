@@ -149,11 +149,6 @@ it kept giving me unmet dependencies error.
 Building .deb package with "dpkg -i" means it won't update.
 I WILL CHECK LATER. Until then, I have to use snap version.
 
-- figma-linux
-
-Can't install via apt or flatpak.
-Building .deb package with "dpkg -i" means it won't update.
-
 I would love to only use flatpak and get away from snap,
 But it is what it is.
 I will re-check in the future if I can replace those packages
