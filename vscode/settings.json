@@ -136,12 +136,12 @@
       "commands": ["workbench.action.findInFiles"]
     },
     {
-      "before": ["<leader>", "f", "r"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
       "before": ["<leader>", "f", "p"],
       "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": ["<leader>", "f", "r"],
+      "commands": ["workbench.action.quickOpen"]
     },
     {
       "before": ["<leader>", "f", "f"],
