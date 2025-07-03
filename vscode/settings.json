@@ -112,6 +112,10 @@
       "commands": ["markdown.showPreview"]
     },
     {
+      "before": ["<leader>", "c", "u"],
+      "commands": ["typescript.removeUnusedImports"]
+    },
+    {
       "before": ["<leader>", "e"],
       "commands": ["workbench.files.action.showActiveFileInExplorer"]
     },
