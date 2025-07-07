@@ -146,6 +146,10 @@
     {
       "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.scm.focus"]
     }
   ]
 }
