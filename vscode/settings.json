@@ -98,24 +98,6 @@
       "commands": ["workbench.action.closeOtherEditors"]
     },
     {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"],
-      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-      "before": ["<leader>", "c", "r"],
-      "commands": ["editor.action.rename"],
-      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-      "before": ["<leader>", "c", "p"],
-      "commands": ["markdown.showPreview"]
-    },
-    {
-      "before": ["<leader>", "c", "u"],
-      "commands": ["typescript.removeUnusedImports"]
-    },
-    {
       "before": ["<leader>", "e"],
       "commands": ["workbench.files.action.focusFilesExplorer"]
     },
@@ -129,7 +111,7 @@
     },
     {
       "before": ["<leader>", "s", "r"],
-      "commands": ["editor.action.startFindReplaceAction"]
+      "commands": ["workbench.action.replaceInFiles"]
     },
     {
       "before": ["<leader>", "/"],
@@ -150,6 +132,24 @@
     {
       "before": ["<leader>", "g", "g"],
       "commands": ["workbench.scm.focus"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"],
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": ["<leader>", "c", "p"],
+      "commands": ["markdown.showPreview"]
+    },
+    {
+      "before": ["<leader>", "c", "u"],
+      "commands": ["typescript.removeUnusedImports"]
     }
   ]
 }
