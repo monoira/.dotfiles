@@ -117,7 +117,7 @@
     },
     {
       "before": ["<leader>", "e"],
-      "commands": ["workbench.files.action.showActiveFileInExplorer"]
+      "commands": ["workbench.files.action.focusFilesExplorer"]
     },
     {
       "before": ["<leader>", "s", "d"],
