@@ -37,6 +37,12 @@
           "conf"
         ],
         "path": "./conf.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./json.json"
       }
     ]
   }
