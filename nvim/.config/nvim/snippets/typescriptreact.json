@@ -4,7 +4,7 @@
     "body": [
       "import { Helmet } from \"react-helmet-async\";",
       "",
-      "type SEO_component_type = {",
+      "type SEOProps = {",
       "  title: string;",
       "  description: string;",
       "  siteName?: string;",
@@ -20,7 +20,7 @@
       "  title,",
       "  description,",
       "  siteName = \"sitename123\",",
-      "}: SEO_component_type) {",
+      "}: SEOProps) {",
       "  return (",
       "    <Helmet>",
       "      {/* || Standard metadata tags */}",
