@@ -1,6 +1,6 @@
 {
-  "SEO component with react + ts + helmet": {
-    "prefix": "snip_helmet",
+  "SEO component with react + ts": {
+    "prefix": "snip_seo",
     "body": [
       "type SEOProps = {",
       "  title: string;",
@@ -35,6 +35,6 @@
       "  );",
       "}"
     ],
-    "description": "SEO component with react + typescript + react-helmet-async"
+    "description": "SEO component with react + ts"
   }
 }

@@ -5,6 +5,17 @@
   "extensions.autoUpdate": false,
   "update.showReleaseNotes": false,
 
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-u>"],
+      "after": ["1", "5", "g", "k", "z", "z"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["1", "5", "g", "j", "z", "z"]
+    }
+  ],
+
   "vim.normalModeKeyBindings": [
     {
       "before": ["g", "d"],
@@ -137,6 +148,10 @@
       "before": ["<leader>", "c", "a"],
       "commands": ["editor.action.quickFix"],
       "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": ["<leader>", "c", "A"],
+      "commands": ["editor.action.sourceAction"]
     },
     {
       "before": ["<leader>", "c", "r"],
