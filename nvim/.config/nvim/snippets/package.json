@@ -18,25 +18,19 @@
         "language": [
           "gitignore"
         ],
-        "path": "./gitignore.json"
+        "path": "./ignore.json"
       },
       {
         "language": [
-          "editorconfig"
+          "conf"
         ],
-        "path": "./editorconfig.json"
+        "path": "./ignore.json"
       },
       {
         "language": [
           "dockerfile"
         ],
         "path": "./dockerfile.json"
-      },
-      {
-        "language": [
-          "conf"
-        ],
-        "path": "./conf.json"
       },
       {
         "language": [
