@@ -114,7 +114,7 @@
     },
     {
       "before": ["<leader>", "s", "d"],
-      "commands": ["workbench.actions.view.problems"]
+      "commands": ["workbench.actions.view.toggleProblems"]
     },
     {
       "before": ["<leader>", "s", "k"],
@@ -126,6 +126,11 @@
     },
     {
       "before": ["<leader>", "s", "s"],
+      "commands": ["workbench.action.gotoSymbol"],
+      "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    },
+    {
+      "before": ["<leader>", "s", "S"],
       "commands": ["workbench.action.showAllSymbols"]
     },
     {
@@ -164,7 +169,8 @@
     },
     {
       "before": ["<leader>", "c", "p"],
-      "commands": ["markdown.showPreview"]
+      "commands": ["markdown.showPreview"],
+      "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     },
     {
       "before": ["<leader>", "c", "u"],
