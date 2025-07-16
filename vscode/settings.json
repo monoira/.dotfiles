@@ -125,6 +125,10 @@
       "commands": ["workbench.action.replaceInFiles"]
     },
     {
+      "before": ["<leader>", "s", "s"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
       "before": ["<leader>", "/"],
       "commands": ["workbench.action.findInFiles"]
     },
