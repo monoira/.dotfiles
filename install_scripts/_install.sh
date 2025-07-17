@@ -20,7 +20,6 @@ bash ~/.dotfiles/install_scripts/automated_nerd_font.sh
 bash ~/.dotfiles/install_scripts/nvm.sh
 bash ~/.dotfiles/install_scripts/act.sh
 bash ~/.dotfiles/install_scripts/vimv.sh
-bash ~/.dotfiles/install_scripts/virt_manager.sh
 
 # flatpak packages and games
 bash ~/.dotfiles/install_scripts/packages_flatpak.sh
