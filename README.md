@@ -8,7 +8,7 @@
   - [installation](#installation)
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
-    - [for vim-dadbod if using neovim](#for-vim-dadbod-if-using-neovim)
+    - [installing vscode, setting up global settings.json and snippets](#installing-vscode-setting-up-global-settingsjson-and-snippets)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
@@ -90,19 +90,14 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-### for vim-dadbod if using neovim
+### installing vscode, setting up global settings.json and snippets
 
-- create file `~/.config/nvim/lua/config/dbs.lua` with such content
+1. open vscode and import [vscode profile](./vscode/profiles)
+2. run following script:
 
-```lua
-vim.g.dbs = {
-  { name = "dev", url = "postgres://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME" },
-}
+```bash
+bash ~/.dotfiles/vscode/setup.sh
 ```
-
-- Replace
-  USERNAME, PASSWORD, HOST, PORT and DATABASE_NAME
-  with your local postgresql database data.
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
 
