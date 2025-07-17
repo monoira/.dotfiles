@@ -1,3 +1,16 @@
 updateSystem() {
-  sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update -y && sudo apt autoremove -y
+  sudo snap refresh
+  echo "snap packages refreshed"
+
+  sudo apt update -y
+  echo "apt packages updated"
+
+  sudo apt upgrade -y
+  echo "apt packages upgraded"
+
+  flatpak update -y
+  echo "flatpak packages upgraded"
+
+  sudo apt autoremove -y
+  echo "<-- FINISHED -->"
 }
