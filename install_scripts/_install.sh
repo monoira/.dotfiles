@@ -22,7 +22,6 @@ bash ~/.dotfiles/install_scripts/act.sh
 bash ~/.dotfiles/install_scripts/vimv.sh
 
 # flatpak packages and games
-bash ~/.dotfiles/install_scripts/packages_flatpak.sh
 bash ~/.dotfiles/install_scripts/games.sh
 
 # FINISH SCRIPT

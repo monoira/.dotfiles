@@ -1,4 +1,6 @@
-- [table of contents](#table-of-contents)
+# TABLE OF CONTENTS
+
+- [TABLE OF CONTENTS](#table-of-contents)
   - [what i keep in this repository](#what-i-keep-in-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
     - [requirements](#requirements)
@@ -9,12 +11,11 @@
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
     - [installing vscode, setting up global settings.json and snippets](#installing-vscode-setting-up-global-settingsjson-and-snippets)
+    - [install flatpak packages -- after reboot](#install-flatpak-packages----after-reboot)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
   - [DONATE](#donate)
-
-# table of contents
 
 ## what i keep in this repository
 
@@ -97,6 +98,15 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 
 ```bash
 bash ~/.dotfiles/vscode/setup.sh
+```
+
+### install flatpak packages -- after reboot
+
+```bash
+flatpak install -y flathub \
+  com.discordapp.Discord \
+  com.heroicgameslauncher.hgl \
+  org.vinegarhq.Sober
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
