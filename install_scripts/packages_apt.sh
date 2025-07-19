@@ -3,9 +3,9 @@
 echo "<--- installing apt packages... --->"
 
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y curl       # for lasygit AND lazydocker
-sudo apt install -y wget       # for dbeaver AND install_nerd_font()
-sudo apt install -y fontconfig # for install_nerd_font()
+sudo apt install -y curl       # for lazygit AND lazydocker
+sudo apt install -y wget       # for dbeaver AND github.com/monoira/nefoin
+sudo apt install -y fontconfig # for github.com/monoira/nefoin
 sudo apt install -y build-essential
 # The add-apt-repository utility is included in the software-properties-common
 sudo apt install -y software-properties-common
@@ -37,9 +37,6 @@ sudo apt install -y wl-clipboard
 
 # needed to show pictures from nautilus
 sudo apt install -y ffmpegthumbnailer
-
-# needed for mason's sqlfluff
-sudo apt install -y python3.12-venv
 
 # general use packages
 sudo apt install -y screenfetch
