@@ -118,9 +118,10 @@ flatpak install -y flathub \
 - in `about:config` of firefox, change these:
   - `full-screen-api.warning.timeout` to `0`
   - `extensions.pocket.enabled` to `false`
+- `Software & Updates > Updates > Automatically check for updates` to `never`
+- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - place packages based on the following image:
   ![Image of packages on Ubuntu](./docs/packages.png)
-- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 
 ## optional tips you might want to consider
 
