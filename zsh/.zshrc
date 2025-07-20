@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Setting defaults
 export EDITOR=nvim
+export BROWSER=firefox
 export TERMINAL=kitty
 export LANG=en_US.UTF-8
 
