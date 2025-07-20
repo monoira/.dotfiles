@@ -1,7 +1,7 @@
 # TABLE OF CONTENTS
 
 - [TABLE OF CONTENTS](#table-of-contents)
-  - [what i keep in this repository](#what-i-keep-in-this-repository)
+  - [content of this repository](#content-of-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
     - [requirements](#requirements)
     - [dependency packages](#dependency-packages)
@@ -17,12 +17,11 @@
   - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
   - [DONATE](#donate)
 
-## what i keep in this repository
+## content of this repository
 
 - VSCode profile / settings and workspaces as primary code editor.
-  Setup with AI Agent and vim keybindings in mind for maximum productivity.
-  [setup.sh](./vscode/setup.sh) automates sharing of vscode and nvim snippets
-  via GNU/ln and sets up global vscode settings.json.
+  Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.
+  [setup.sh](./vscode/setup.sh) sets up global vscode settings.json and snippets.
 - dotfiles and configs managed by GNU/Stow - Neovim, Kitty, Zsh, Cmus, gitconfig,
   and more
 - zsh functions
