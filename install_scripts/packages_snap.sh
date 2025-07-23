@@ -9,6 +9,8 @@ sudo snap install chromium
 sudo snap install --classic code
 # NOTE: needed for formatting shell scripts
 sudo apt install -y shfmt
+# NOTE: needed for markdown lint extension to work
+sudo apt install -y markdownlint
 
 sudo snap install --classic nvim
 # needed for mason's sqlfluff
