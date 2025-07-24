@@ -1,6 +1,6 @@
 require("config.lazy")
 
-local notifier = require("snacks.notifier")
+-- local notifier = require("snacks.notifier")
 
 local ok, err = pcall(require, "config.dbs")
 -- if not ok then
