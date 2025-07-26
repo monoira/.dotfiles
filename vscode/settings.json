@@ -135,7 +135,7 @@
     },
     {
       "before": ["<leader>", "/"],
-      "commands": ["workbench.action.findInFiles"]
+      "commands": ["workbench.action.quickTextSearch"]
     },
     {
       "before": ["<leader>", "f", "p"],
