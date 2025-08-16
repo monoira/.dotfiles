@@ -103,9 +103,9 @@ bash ~/.dotfiles/vscode/setup.sh
 
 ```bash
 flatpak install -y flathub \
-  com.discordapp.Discord \
   com.heroicgameslauncher.hgl \
-  org.vinegarhq.Sober
+  org.vinegarhq.Sober \
+  com.discordapp.Discord
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
