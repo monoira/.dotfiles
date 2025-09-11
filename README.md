@@ -10,8 +10,8 @@
   - [installation](#installation)
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
-    - [installing vscode, setting up global settings.json and snippets](#installing-vscode-setting-up-global-settingsjson-and-snippets)
     - [install flatpak packages -- after reboot](#install-flatpak-packages----after-reboot)
+    - [installing vscode, setting up global settings.json and snippets](#installing-vscode-setting-up-global-settingsjson-and-snippets)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
@@ -90,15 +90,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-### installing vscode, setting up global settings.json and snippets
-
-1. open vscode and import [vscode profile](./vscode/profiles)
-2. run following script:
-
-```bash
-bash ~/.dotfiles/vscode/setup.sh
-```
-
 ### install flatpak packages -- after reboot
 
 ```bash
@@ -106,6 +97,16 @@ flatpak install -y flathub \
   com.heroicgameslauncher.hgl \
   org.vinegarhq.Sober \
   com.discordapp.Discord
+```
+
+### installing vscode, setting up global settings.json and snippets
+
+1. open vscode and import [vscode profile](./vscode/profiles)
+1. clone and open workspaces
+1. run following script:
+
+```bash
+bash ~/.dotfiles/vscode/setup.sh
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
