@@ -47,3 +47,4 @@ sudo apt install -y qbittorrent
 sudo apt install -y cmus
 sudo apt install -y rclone
 sudo apt install -y rclone-browser
+sudo apt install -y obs-studio
