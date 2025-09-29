@@ -94,9 +94,9 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 
 ```bash
 flatpak install -y flathub \
+  com.discordapp.Discord \
   com.heroicgameslauncher.hgl \
-  org.vinegarhq.Sober \
-  com.discordapp.Discord
+  org.vinegarhq.Sober
 ```
 
 ### installing vscode, setting up global settings.json and snippets
