@@ -31,7 +31,7 @@ sudo apt install -y xclip
 # clipboard for - wayland
 sudo apt install -y wl-clipboard
 
-# needed to show pictures from nautilus
+# to show thumbnails on video files in nautilus file manager
 sudo apt install -y ffmpegthumbnailer
 
 # general use packages
