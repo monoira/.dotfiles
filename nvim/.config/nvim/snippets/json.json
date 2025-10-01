@@ -1,7 +1,0 @@
-{
-  "snip_prettierrc_v2_fix": {
-    "prefix": "snip_prettierrc_v2_fix",
-    "body": ["{", "  \"trailingComma\": \"all\"", "}", ""],
-    "description": "snip_prettierrc_v2_fix"
-  }
-}
