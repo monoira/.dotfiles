@@ -2,6 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Setting defaults
+# my actual editor is vscode, but I need it to be nvim here for vimv
 export EDITOR=nvim
 export BROWSER=firefox
 export TERMINAL=kitty
