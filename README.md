@@ -22,10 +22,10 @@
 - VSCode profile / settings and workspaces as primary code editor.
   Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.
   [setup.sh](./vscode/setup.sh) sets up global vscode settings.json and snippets.
-- dotfiles and configs managed by GNU/Stow - Neovim, Kitty, Zsh, Cmus, gitconfig,
-  and more
-- zsh functions
-- Various installation scripts
+- dotfiles and configs managed by GNU/Stow - Kitty, Zsh, Cmus, gitconfig,
+  and more.
+- zsh functions.
+- Various installation scripts.
 
 ## requirements and dependencies
 
