@@ -1,0 +1,22 @@
+idea() {
+  local ideas_dir="$HOME/Documents/personal/3_media/1_ideas"
+  local dirs=()
+  while IFS= read -r dir; do
+    dirs+=("$dir")
+  done < <(find "$ideas_dir" -maxdepth 1 -type d -not -path '*/\.*' -not -path "$ideas_dir")
+
+  local names=()
+  for dir in "${dirs[@]}"; do
+    names+=("$(basename "$dir")")
+  done
+
+  local selected
+  selected=$(printf '%s\n' "${names[@]}" | fzf --prompt="PROJECT: ")
+  if [ -n "$selected" ]; then
+    for dir in "${dirs[@]}"; do
+      if [ "$(basename "$dir")" = "$selected" ]; then
+        exec nvim -c "Explore" "$dir"
+      fi
+    done
+  fi
+}

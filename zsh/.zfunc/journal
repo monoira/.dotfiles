@@ -1,0 +1,3 @@
+journal() {
+  nvim -c "Explore" "$HOME/Documents/personal/1_journal"
+}
