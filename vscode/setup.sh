@@ -15,6 +15,5 @@ for profile in ~/.config/Code/User/profiles/*/; do
   fi
 done
 
-
 # -sf for files
 ln -sf "$DOTFILES_DIR/vscode/settings.json" ~/.config/Code/User/settings.json
