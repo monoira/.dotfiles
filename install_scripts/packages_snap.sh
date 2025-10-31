@@ -14,5 +14,3 @@ sudo apt install -y shellcheck
 sudo apt install -y markdownlint
 
 sudo snap install --classic nvim
-# needed for mason's sqlfluff
-sudo apt install -y python3.12-venv
