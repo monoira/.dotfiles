@@ -10,3 +10,6 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 # turning on "Accessibility > Large Text" automatically
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
+
+# set 'kitty' as default terminal
+gsettings set org.gnome.desktop.default-applications.terminal exec 'kitty'
