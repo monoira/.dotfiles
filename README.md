@@ -11,7 +11,7 @@
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
     - [install flatpak packages -- after reboot](#install-flatpak-packages----after-reboot)
-    - [installing vscode, setting up global settings.json and snippets](#installing-vscode-setting-up-global-settingsjson-and-snippets)
+    - [installing vscode and setting up global settings.json](#installing-vscode-and-setting-up-global-settingsjson)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
@@ -99,14 +99,15 @@ flatpak install -y flathub \
   org.vinegarhq.Sober
 ```
 
-### installing vscode, setting up global settings.json and snippets
+### installing vscode and setting up global settings.json
 
-1. open vscode and import [vscode profile](./vscode/profiles)
-1. clone and open workspaces
-1. run following script:
+1. open vscode - required so $HOME/.config/Code/User gets created
+2. import [vscode profile](./vscode/profiles)
+3. clone and open workspaces
+4. run following script to symlinking vscode global settings.json, which includes vscode-vim extension keymaps
 
 ```bash
-bash ~/.dotfiles/vscode/setup.sh
+ln -sf "$HOME/.dotfiles/vscode/settings.json" $HOME/.config/Code/User/settings.json
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
