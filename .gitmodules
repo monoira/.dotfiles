@@ -3,4 +3,4 @@
   url = https://github.com/monoira/kitty-tabs.git
 [submodule "VSCLazy"]
 	path = VSCLazy
-	url = git@github.com:monoira/VSCLazy.git
+  url = https://github.com/monoira/VSCLazy.git
