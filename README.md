@@ -101,10 +101,10 @@ flatpak install -y flathub \
 
 ### installing vscode and setting up global settings.json
 
-1. open vscode - required so $HOME/.config/Code/User gets created
+1. open vscode - required so `$HOME/.config/Code/User` gets created
 2. import [vscode profile](./vscode/profiles)
 3. clone and open workspaces
-4. run following script to symlinking vscode global settings.json, which includes vscode-vim extension keymaps
+4. run following script to symlinking vscode global settings.json, which includes vscode-vim extension keybindings
 
 ```bash
 ln -sf "$HOME/.dotfiles/vscode/settings.json" $HOME/.config/Code/User/settings.json
