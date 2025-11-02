@@ -133,7 +133,7 @@ ln -sf "$HOME/.dotfiles/vscode/settings.json" $HOME/.config/Code/User/settings.j
 sudo snap refresh --hold
 ```
 
-- use latest lts version of nodejs and npm via nvm
+- use latest LTS version of nodejs and npm via nvm
 
 ```bash
 nvm install --lts && nvm use --lts
