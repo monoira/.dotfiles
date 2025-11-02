@@ -14,6 +14,7 @@
     - [installing vscode and setting up global settings.json](#installing-vscode-and-setting-up-global-settingsjson)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
+  - [update submodules](#update-submodules)
   - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
   - [DONATE](#donate)
 
@@ -136,6 +137,12 @@ sudo snap refresh --hold
 
 ```bash
 nvm install --lts && nvm use --lts
+```
+
+## update submodules
+
+```bash
+git submodule update --remote --merge
 ```
 
 ## Q&A why are you using both snap and flatpak?
