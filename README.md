@@ -108,7 +108,7 @@ flatpak install -y flathub \
 4. run following script to symlinking vscode global settings.json, which includes vscode-vim extension keybindings
 
 ```bash
-ln -sf "$HOME/.dotfiles/vscode/settings.json" $HOME/.config/Code/User/settings.json
+ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings.json"
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
