@@ -14,7 +14,6 @@ bash ~/.dotfiles/install_scripts/packages_snap.sh
 
 # complicated automated installations
 bash ~/.dotfiles/install_scripts/postgres_and_dbeaver.sh
-bash ~/.dotfiles/install_scripts/beekeeper-studio.sh
 bash ~/.dotfiles/install_scripts/lazygit.sh
 bash ~/.dotfiles/install_scripts/docker_and_lazydocker.sh
 bash ~/.dotfiles/install_scripts/automated_nerd_font.sh
