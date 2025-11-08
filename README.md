@@ -143,6 +143,7 @@ nvm install --lts && nvm use --lts
 
 ```bash
 git submodule update --remote --merge
+git add . && git commit -m "chore: updated submodules" && git push
 ```
 
 ## Q&A why are you using both snap and flatpak?
