@@ -107,11 +107,9 @@ flatpak install -y flathub \
 3. clone and open workspaces
 4. run following scripts to
    - symlinking vscode global settings.json, which includes vscode-vim extension keybindings.
-   - symlink workspaces
 
 ```bash
 ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings.json"
-rm -rf "$HOME/.config/Code/Workspaces" && ln -snfT "$HOME/.dotfiles/Workspaces" "$HOME/.config/Code/Workspaces"
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
