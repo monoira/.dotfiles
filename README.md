@@ -21,8 +21,8 @@
 ## content of this repository
 
 - VSCode profile / settings and workspaces as primary code editor.
-  Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.
-  [setup.sh](./vscode/setup.sh) sets up global vscode settings.json and snippets.
+  Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.  
+  Powered by [VSCLazy](https://github.com/monoira/VSCLazy).
 - dotfiles and configs managed by GNU/Stow - Kitty, Zsh, Cmus, gitconfig,
   and more.
 - zsh functions.
@@ -105,10 +105,13 @@ flatpak install -y flathub \
 1. open vscode - required so `$HOME/.config/Code/User` gets created
 2. import [vscode profile](./vscode/profiles)
 3. clone and open workspaces
-4. run following script to symlinking vscode global settings.json, which includes vscode-vim extension keybindings
+4. run following scripts to
+   - symlinking vscode global settings.json, which includes vscode-vim extension keybindings.
+   - symlink workspaces
 
 ```bash
 ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings.json"
+rm -rf "$HOME/.config/Code/Workspaces" && ln -snfT "$HOME/.dotfiles/Workspaces" "$HOME/.config/Code/Workspaces"
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
