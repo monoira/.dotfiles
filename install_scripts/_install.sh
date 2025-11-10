@@ -22,6 +22,9 @@ bash ~/.dotfiles/install_scripts/act.sh
 bash ~/.dotfiles/install_scripts/vimv.sh
 bash ~/.dotfiles/install_scripts/virt_manager.sh
 
+# git repositories
+bash ~/.dotfiles/install_scripts/dev-clone.sh
+
 # flatpak packages and games
 bash ~/.dotfiles/install_scripts/games.sh
 
