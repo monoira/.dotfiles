@@ -105,7 +105,7 @@ flatpak install -y flathub \
 1. open vscode - required so `$HOME/.config/Code/User` gets created
 2. import [vscode profile](./vscode/profiles)
 3. clone and open workspaces
-4. run following scripts to
+4. run following script to
    - symlinking vscode global settings.json, which includes vscode-vim extension keybindings.
 
 ```bash
