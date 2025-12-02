@@ -10,6 +10,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 6.
 gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4000
 
 gsettings set org.gnome.desktop.interface clock-show-date false
+gsettings set org.gnome.desktop.interface clock-format '24h'
 
 # shows apps from current workspace only
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
