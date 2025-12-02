@@ -16,6 +16,9 @@ gsettings set org.gnome.desktop.interface clock-format '24h'
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.shell.window-switcher current-workspace-only true
 
+# turn off annoying top left corner mouseover hot corner event
+gsettings set org.gnome.desktop.interface enable-hot-corners false
+
 # turns off mouse acceleration
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 
