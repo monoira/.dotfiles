@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 echo "<--- installing postgresql... --->"
-sudo apt install -y postgresql
+sudo dnf install postgresql-server postgresql-contrib
+sudo systemctl enable postgresql
+sudo postgresql-setup --initdb --unit postgresql
+sudo systemctl start postgresql
 
 echo "<--- installing dbeaver... --->"
-sudo wget -O /usr/share/keyrings/dbeaver.gpg.key https://dbeaver.io/debs/dbeaver.gpg.key
-echo "deb [signed-by=/usr/share/keyrings/dbeaver.gpg.key] https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
-sudo apt update -y && sudo apt install -y dbeaver-ce
+flatpak install -y io.dbeaver.DBeaverCommunity

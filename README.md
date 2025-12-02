@@ -10,12 +10,10 @@
   - [installation](#installation)
     - [install OhMyZsh](#install-ohmyzsh)
     - [install dotfiles](#install-dotfiles)
-    - [install flatpak packages -- after reboot](#install-flatpak-packages----after-reboot)
     - [installing vscode and setting up global settings.json](#installing-vscode-and-setting-up-global-settingsjson)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [update submodules](#update-submodules)
-  - [Q\&A why are you using both snap and flatpak?](#qa-why-are-you-using-both-snap-and-flatpak)
   - [DONATE](#donate)
 
 ## content of this repository
@@ -32,10 +30,10 @@
 
 ### requirements
 
-- Be on Ubuntu
-- Bash -- Already preinstalled on Debian based distributions
+- Be on Fedora
+- Bash
 - Gnome desktop environment installed and
-  running -- needed for [slickgnome](https://github.com/monoira/slickgnome)
+  running -- required for [slickgnome](https://github.com/monoira/slickgnome)
 - Have ssh key configured w/GitHub to clone using ssh.
 
 ### dependency packages
@@ -47,15 +45,14 @@
 ### install dependency packages with this one command
 
 ```bash
-sudo apt install -y wget stow git
+sudo dnf install -y stow git wget
 ```
 
 ## what does start.sh script do
 
-- Installs useful and necessary apt and snap packages
+- Installs useful and necessary packages
 - Installs nerd font: Hack Nerd Font
 - Installs lazygit
-- Installs lazydocker
 - Installs vimv
 - Configures gnome settings with gsettings via [slickgnome](https://github.com/monoira/slickgnome)
 
@@ -70,7 +67,7 @@ and
 ### install OhMyZsh
 
 ```bash
-sudo apt install -y zsh
+sudo dnf install -y zsh
 ```
 
 ```bash
@@ -89,15 +86,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
-```
-
-### install flatpak packages -- after reboot
-
-```bash
-flatpak install -y flathub \
-  com.discordapp.Discord \
-  com.heroicgameslauncher.hgl \
-  org.vinegarhq.Sober
 ```
 
 ### installing vscode and setting up global settings.json
@@ -124,7 +112,7 @@ ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings
 - `Software & Updates > Updates > Automatically check for updates` to `never`
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - place packages based on the following image:
-  ![Image of packages on Ubuntu](./docs/packages.png)
+  ![Image of packages on Fedora](./docs/packages.png)
 
 ## optional tips you might want to consider
 
@@ -146,28 +134,6 @@ nvm install --lts && nvm use --lts
 git submodule update --remote --merge
 git add . && git commit -m "chore: updated submodules" && git push
 ```
-
-## Q&A why are you using both snap and flatpak?
-
-I tried to only use flatpak, but had some problems with following packages
-
-- steam
-
-Installing via flatpak or apt steam-installer didn't worked, since
-it kept giving me unmet dependencies error.
-Building .deb package with "dpkg -i" means it won't update.
-I WILL CHECK LATER. Until then, I have to use snap version.
-
-I would love to only use flatpak and get away from snap,
-But it is what it is.
-I will re-check in the future if I can replace those packages
-with non-snap versions and finally be snap-free.
-
-- neovim
-
-Neovim in apt is severely outdated, PPA version is outdated and
-flatpak version is TERRIBLE, buggy and overly sandboxed.
-Building .deb package with "dpkg -i" means it won't update.
 
 ## DONATE
 

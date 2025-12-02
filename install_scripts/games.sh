@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
- echo "<--- installing steam... --->"
-sudo snap install steam
+echo "<--- installing steam... --->"
+sudo dnf install -y steam

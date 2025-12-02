@@ -7,7 +7,6 @@
 
 dependency_packages=(
   bash
-  snap
   gnome-shell
   wget
   stow
