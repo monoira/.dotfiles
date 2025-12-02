@@ -17,7 +17,6 @@ bash ~/.dotfiles/install_scripts/automated_nerd_font.sh
 bash ~/.dotfiles/install_scripts/nvm.sh
 bash ~/.dotfiles/install_scripts/act.sh
 bash ~/.dotfiles/install_scripts/vimv.sh
-bash ~/.dotfiles/install_scripts/virt_manager.sh
 bash ~/.dotfiles/install_scripts/vscode.sh
 
 # git repositories
