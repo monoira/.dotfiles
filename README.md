@@ -116,12 +116,6 @@ ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings
 
 ## optional tips you might want to consider
 
-- pause auto update / refresh of all snap packages
-
-```bash
-sudo snap refresh --hold
-```
-
 - use latest LTS version of nodejs and npm via nvm
 
 ```bash
