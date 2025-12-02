@@ -4,8 +4,6 @@
   - [content of this repository](#content-of-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
     - [requirements](#requirements)
-    - [dependency packages](#dependency-packages)
-    - [install dependency packages with this one command](#install-dependency-packages-with-this-one-command)
   - [what does start.sh script do](#what-does-startsh-script-do)
   - [installation](#installation)
     - [install OhMyZsh](#install-ohmyzsh)
@@ -36,18 +34,6 @@
   running -- required for [slickgnome](https://github.com/monoira/slickgnome)
 - Have ssh key configured w/GitHub to clone using ssh.
 
-### dependency packages
-
-- wget
-- stow
-- git
-
-### install dependency packages with this one command
-
-```bash
-sudo dnf install -y stow git wget
-```
-
 ## what does start.sh script do
 
 - Installs useful and necessary packages
@@ -67,19 +53,11 @@ and
 ### install OhMyZsh
 
 ```bash
-sudo dnf install -y zsh
+sudo dnf install -y zsh & sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
 ```bash
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-```
-
-```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ### install dotfiles
