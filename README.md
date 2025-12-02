@@ -6,7 +6,7 @@
     - [requirements](#requirements)
   - [what does start.sh script do](#what-does-startsh-script-do)
   - [installation](#installation)
-    - [install OhMyZsh](#install-ohmyzsh)
+    - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
     - [install dotfiles](#install-dotfiles)
     - [installing vscode and setting up global settings.json](#installing-vscode-and-setting-up-global-settingsjson)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
@@ -50,7 +50,7 @@ and
 
 ## installation
 
-### install OhMyZsh
+### install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting
 
 ```bash
 sudo dnf install -y zsh & sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
