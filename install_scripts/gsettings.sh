@@ -18,6 +18,9 @@ gsettings set org.gnome.shell.window-switcher current-workspace-only true
 # turns off mouse acceleration
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 
+# turn off ANNOYING droplet error notification sound
+gsettings set org.gnome.desktop.sound event-sounds false
+
 # || note: EXTRA - SPECIFIC TO MY PC.
 # disable "screen locking after period of inactivity"
 gsettings set org.gnome.desktop.session idle-delay 0
