@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# START SCRIPT
-bash ~/.dotfiles/install_scripts/0_start_script.sh
+# DEPENDENCIES
+sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y
+sudo dnf install -y stow git wget
 
 # change gnome settings via gsettings
 bash ~/.dotfiles/install_scripts/gsettings.sh
@@ -25,5 +26,5 @@ bash ~/.dotfiles/install_scripts/dev-clone.sh
 # flatpak packages and games
 bash ~/.dotfiles/install_scripts/games.sh
 
-# FINISH SCRIPT
-bash ~/.dotfiles/install_scripts/1_finish_script.sh
+# finish.
+sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y
