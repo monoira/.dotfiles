@@ -36,7 +36,6 @@ sudo dnf install -y xclip
 sudo dnf install -y wl-clipboard # for Wayland
 
 # general packages
-sudo dnf install -y screenfetch
 sudo dnf install -y cmatrix
 sudo dnf install -y btop
 sudo dnf install -y shotwell
