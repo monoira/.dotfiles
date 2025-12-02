@@ -9,6 +9,7 @@ bash ~/.dotfiles/install_scripts/gsettings.sh
 
 # simple automated installations
 bash ~/.dotfiles/install_scripts/packages.sh
+bash ~/.dotfiles/install_scripts/packages_flatpak.sh
 
 # complicated automated installations
 bash ~/.dotfiles/install_scripts/postgres_and_dbeaver.sh
