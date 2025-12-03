@@ -16,9 +16,9 @@
 
 ## content of this repository
 
-- VSCode profile / settings and workspaces as primary code editor.
+- VSCode profile / settings as primary code editor and it's workspaces.
   Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.  
-  Powered by [VSCLazy](https://github.com/monoira/VSCLazy).
+  Powered by [VSCLazy](https://github.com/monoira/VSCLazy), which I wrote.
 - dotfiles and configs managed by GNU/Stow - Kitty, Zsh, Cmus, gitconfig,
   and more.
 - zsh functions.
@@ -86,8 +86,7 @@ ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings
 - add a keyboard layout
 - in `about:config` of firefox, change these:
   - `full-screen-api.warning.timeout` to `0`
-  - `extensions.pocket.enabled` to `false`
-- `Software & Updates > Updates > Automatically check for updates` to `never`
+- `software > preferences > software updates > manual`
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 - place packages based on the following image:
   ![Image of packages on Fedora](./docs/packages.png)
