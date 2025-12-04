@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# DEPENDENCIES
-sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y
+# dependencies
+sudo dnf upgrade -y --refresh && flatpak update -y
 sudo dnf install -y stow git wget
 
 # change gnome settings via gsettings
@@ -21,11 +21,11 @@ bash ~/.dotfiles/install_scripts/act.sh
 bash ~/.dotfiles/install_scripts/vimv.sh
 bash ~/.dotfiles/install_scripts/vscode.sh
 
-# git repositories
+# clone git repositories
 bash ~/.dotfiles/install_scripts/dev-clone.sh
 
 # flatpak packages and games
 bash ~/.dotfiles/install_scripts/games.sh
 
-# finish.
+# finish
 sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y
