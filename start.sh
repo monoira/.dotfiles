@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# TODO: test with this once you buy better pc that can run virtual machine or find other way to test.
-# https://www.youtube.com/watch?v=4ygaA_y1wvQ&t=924s
-
 set -euo pipefail
 
 dependency_packages=(
