@@ -26,9 +26,6 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 gsettings set org.gnome.desktop.sound event-sounds false
 
 # || note: EXTRA - SPECIFIC TO MY PC.
-# disable "screen locking after period of inactivity"
-gsettings set org.gnome.desktop.session idle-delay 0
-
 # turning on "Accessibility > Large Text" automatically
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
 
