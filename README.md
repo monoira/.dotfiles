@@ -11,7 +11,6 @@
     - [setting up vscode and global settings.json](#setting-up-vscode-and-global-settingsjson)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
-  - [update submodules](#update-submodules)
   - [DONATE](#donate)
 
 ## content of this repository
@@ -100,7 +99,7 @@ ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings
 nvm install --lts && nvm use --lts
 ```
 
-## update submodules
+- update submodules when necessary
 
 ```bash
 git submodule update --remote --merge
