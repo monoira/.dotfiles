@@ -28,10 +28,9 @@
 
 ### requirements
 
-- Be on Fedora
-- Bash
-- Gnome desktop environment installed and
-  running -- required for [slickgnome](https://github.com/monoira/slickgnome)
+- Be on Fedora.
+- Bash.
+- Using gnome desktop environment while using this for `gsettings`.
 - Have ssh key configured w/GitHub to clone using ssh.
 
 ## what does start.sh script automate
