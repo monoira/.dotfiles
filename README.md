@@ -82,14 +82,16 @@ ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings
 
 ## manual tasks that can not be automated
 
+- place packages based on the following image:  
+  ![Image of packages on Fedora](./docs/packages.png)
+- Software program preferences:  
+  ![Software program preferences](./docs/software.png)
 - change refresh rate in `settings > refresh rate` to 155 Hz
 - add a keyboard layout
 - in `about:config` of firefox, change these:
-  - `full-screen-api.warning.timeout` to `0`
-- `software > preferences > software updates > manual`
+  - `full-screen-api.warning.timeout`  
+    to `0`
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
-- place packages based on the following image:
-  ![Image of packages on Fedora](./docs/packages.png)
 
 ## optional tips you might want to consider
 
