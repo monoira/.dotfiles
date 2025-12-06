@@ -8,7 +8,7 @@
   - [installation](#installation)
     - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
     - [install dotfiles](#install-dotfiles)
-    - [installing vscode and setting up global settings.json](#installing-vscode-and-setting-up-global-settingsjson)
+    - [setting up vscode and global settings.json](#setting-up-vscode-and-global-settingsjson)
   - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
   - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
   - [update submodules](#update-submodules)
@@ -65,7 +65,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
 ```
 
-### installing vscode and setting up global settings.json
+### setting up vscode and global settings.json
 
 1. open vscode - required so `$HOME/.config/Code/User` gets created
 2. import [vscode profile](./vscode/profiles)
