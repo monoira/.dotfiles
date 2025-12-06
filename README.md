@@ -4,7 +4,7 @@
   - [content of this repository](#content-of-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
     - [requirements](#requirements)
-  - [what does start.sh script do](#what-does-startsh-script-do)
+  - [what does start.sh script automate](#what-does-startsh-script-automate)
   - [installation](#installation)
     - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
     - [install dotfiles](#install-dotfiles)
@@ -34,15 +34,15 @@
   running -- required for [slickgnome](https://github.com/monoira/slickgnome)
 - Have ssh key configured w/GitHub to clone using ssh.
 
-## what does start.sh script do
+## what does start.sh script automate
 
-- Installs useful and necessary packages
-- Installs nerd font: Hack Nerd Font
-- Installs lazygit
-- Installs vimv
-- Configures gnome settings with gsettings via [slickgnome](https://github.com/monoira/slickgnome)
+- Installs `dnf` and `flatpak` packages
+- Installs nerd font: `Hack Nerd Font`
+- Installs `lazygit`
+- Installs `vimv`
+- Configures gnome settings with `gsettings`
 
-And possibly more.
+And likely more.
 For full info, check scripts themselves at
 [start.sh](./start.sh)
 and
@@ -72,7 +72,7 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 2. import [vscode profile](./vscode/profiles)
 3. clone and open workspaces
 4. run following script to
-   - symlinking vscode global settings.json, which includes vscode-vim extension keybindings.
+   - symlink vscode global settings.json, which includes `vscode-vim` extension keybindings.
 
 ```bash
 ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings.json"
@@ -84,9 +84,9 @@ ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings
 
 - place packages based on the following image:  
   ![Image of packages on Fedora](./docs/packages.png)
-- Software program preferences:  
+- software program preferences:  
   ![Software program preferences](./docs/software.png)
-- change refresh rate in `settings > refresh rate` to 155 Hz
+- change refresh rate in `settings > refresh rate` to `155 Hz`
 - add a keyboard layout
 - in `about:config` of firefox, change these:
   - `full-screen-api.warning.timeout`  
