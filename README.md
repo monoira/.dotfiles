@@ -84,7 +84,7 @@ ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings
   ![Image of packages on Fedora](./docs/packages.png)
 - software program preferences:  
   ![Software program preferences](./docs/software.png)
-- change refresh rate in `settings > refresh rate` to `155 Hz`
+- change refresh rate in `settings > refresh rate` to `120 Hz`
 - add a keyboard layout
 - in `about:config` of firefox, change these:
   - `full-screen-api.warning.timeout`  
