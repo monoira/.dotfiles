@@ -1,6 +1,6 @@
 [submodule "kitty/.config/kitty"]
   path = kitty/.config/kitty
   url = https://github.com/monoira/kitty-tabs.git
-[submodule "VSCLazy"]
-	path = VSCLazy
-  url = https://github.com/monoira/VSCLazy.git
+[submodule "CVIMU"]
+	path = CVIMU
+  url = https://github.com/monoira/CVIMU.git

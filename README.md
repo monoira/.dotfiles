@@ -17,7 +17,7 @@
 
 - VSCode profile / settings as primary code editor and it's workspaces.
   Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.  
-  Powered by [VSCLazy](https://github.com/monoira/VSCLazy), which I wrote.
+  Powered by [CVIMU](https://github.com/monoira/CVIMU), which I wrote.
 - dotfiles and configs managed by GNU/Stow - Kitty, Zsh, Cmus, gitconfig,
   and more.
 - zsh functions.
@@ -73,7 +73,7 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
    - symlink vscode global settings.json, which includes `vscode-vim` extension keybindings.
 
 ```bash
-ln -sf "$HOME/.dotfiles/VSCLazy/settings.json" "$HOME/.config/Code/User/settings.json"
+ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.json"
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**

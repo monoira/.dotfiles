@@ -1,8 +1,8 @@
 {
-	"folders": [
-		{
-			"path": "../../dev/VSCLazy"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../../dev/CVIMU",
+    },
+  ],
+  "settings": {},
 }
