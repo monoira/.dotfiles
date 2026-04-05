@@ -28,9 +28,9 @@ if $all_dependency_packages_are_installed; then
 
     bash ~/.dotfiles/install_scripts/_install.sh
     cd ~/.dotfiles || exit 1
-    stow --verbose --adopt cmus git kitty zsh
+    stow --verbose --adopt cmus git kitty zsh nvim
     git add . && git reset --hard
-    stow --verbose --adopt cmus git kitty zsh
+    stow --verbose --adopt cmus git kitty zsh nvim
   }
 
   echo "<--- cloning using SSH... --->"
