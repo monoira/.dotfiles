@@ -6,6 +6,8 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 
+vim.opt.hlsearch = false
+
 -- system clipboard integration
 vim.opt.clipboard = "unnamedplus"
 
