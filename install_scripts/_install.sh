@@ -27,5 +27,8 @@ bash ~/.dotfiles/install_scripts/dev-clone.sh
 # flatpak packages and games
 bash ~/.dotfiles/install_scripts/games.sh
 
+# obsidian and syncthing
+bash ~/.dotfiles/obsidian_and_syncthing.sh
+
 # finish
 sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y
