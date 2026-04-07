@@ -4,6 +4,3 @@
 [submodule "CVIMU"]
 	path = CVIMU
   url = https://github.com/monoira/CVIMU.git
-[submodule "monoira/CVIMU"]
-	path = monoira/CVIMU
-	url = https://github.com/monoira/CVIMU.git

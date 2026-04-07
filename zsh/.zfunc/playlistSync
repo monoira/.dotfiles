@@ -3,11 +3,12 @@ playlistSync() {
 
   songs_location="$HOME/Documents/personal/songs"
 
-  # reading playlist
-  sed -i "s|^Music/|$HOME/Documents/songs/|" "$songs_location"/*.m3u
+  # rewrite playlist entries so they point to the real song directory
+  sed -i "s|^Music/|$songs_location/|" "$songs_location"/*.m3u
+
+  # link the playlists into cmus’s playlists directory
   ln -sf "$songs_location"/*.m3u ~/.config/cmus/playlists
 
-  # general playlist
-  # lists all mp3 songs by date modified and saves output to PLAYLIST.m3u at cmu's playlist directory
+  # create a GENERAL playlist with all mp3s by modification date
   ls -t "$songs_location"/*.mp3 >~/.config/cmus/playlists/PLAYLIST.m3u
 }
