@@ -1,4 +1,0 @@
-journal() {
-  cd "$HOME/Documents/personal/1_journal" || return
-  nvim -c "Explore"
-}

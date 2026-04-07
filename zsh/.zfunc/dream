@@ -1,4 +1,0 @@
-dream() {
-  cd "$HOME/Documents/personal/2_dreams" || return
-  nvim -c "Explore"
-}
