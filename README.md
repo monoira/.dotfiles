@@ -9,8 +9,10 @@
     - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
     - [install dotfiles](#install-dotfiles)
     - [setting up vscode and global settings.json](#setting-up-vscode-and-global-settingsjson)
-  - [manual tasks that can not be automated](#manual-tasks-that-can-not-be-automated)
-  - [optional tips you might want to consider](#optional-tips-you-might-want-to-consider)
+  - [manual tasks](#manual-tasks)
+  - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
+    - [use latest LTS version of nodejs and npm via nvm](#use-latest-lts-version-of-nodejs-and-npm-via-nvm)
+    - [update submodules when necessary](#update-submodules-when-necessary)
   - [DONATE](#donate)
 
 ## content of this repository
@@ -67,10 +69,10 @@ wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | ba
 ### setting up vscode and global settings.json
 
 1. open vscode - required so `$HOME/.config/Code/User` gets created
-2. import [vscode profile](./vscode/profiles)
+2. import [vscode profile](./CVIMU/profiles/prof.code-profile)
 3. clone and open workspaces
-4. run following script to
-   - symlink vscode global settings.json, which includes `vscode-vim` extension keybindings.
+4. run following script to symlink vscode global settings.json,
+   which includes `vscode-vim` extension keybindings.
 
 ```bash
 ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.json"
@@ -78,7 +80,7 @@ ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.j
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
 
-## manual tasks that can not be automated
+## manual tasks
 
 - place packages based on the following image:  
   ![Image of packages on Fedora](./docs/packages.png)
@@ -86,20 +88,21 @@ ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.j
   ![Software program preferences](./docs/software.png)
 - change refresh rate in `settings > refresh rate` to `120 Hz`
 - add a keyboard layout
-- in `about:config` of firefox, change these:
-  - `full-screen-api.warning.timeout`  
-    to `0`
+- in `about:config` of firefox, change  
+  `full-screen-api.warning.timeout`  
+  to  
+  `0`
 - add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 
-## optional tips you might want to consider
+## optional tips and commands you might want to consider
 
-- use latest LTS version of nodejs and npm via nvm
+### use latest LTS version of nodejs and npm via nvm
 
 ```bash
 nvm install --lts && nvm use --lts
 ```
 
-- update submodules when necessary
+### update submodules when necessary
 
 ```bash
 git submodule update --remote --merge
