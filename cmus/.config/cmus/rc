@@ -1,16 +1,16 @@
-clear
 add ~/Documents/personal/songs
-update-cache -f
-
-set lib_sort=-filemtime
-set start_view=sorted
-set resume=true
+bind -f common u win-update
+bind -f common q quit
 
 set format_current=%t
 set format_playlist=%t %= %d
 
+set lib_sort=-filemtime
+set start_view=sorted
+set resume=true
+set shuffle=false
+set follow=true
+
 set repeat_current=true
 
 colorscheme dracula
-
-bind -f common q quit
