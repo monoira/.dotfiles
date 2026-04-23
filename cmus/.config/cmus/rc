@@ -1,3 +1,8 @@
+add ~/Documents/personal/songs
+set lib_sort=-filemtime
+set start_view=sorted
+set resume=true
+
 set format_playlist=%t %= %d
 
 set repeat_current=true
