@@ -1,6 +1,0 @@
-playlistSync() {
-  mkdir -p ~/.config/cmus/playlists
-  songs_location="$HOME/Documents/personal/songs"
-  # creates playlist with all mp4's by modification date newest to oldest
-  ls -t "$songs_location"/*.mp3 >~/.config/cmus/playlists/PLAYLIST.m3u
-}
