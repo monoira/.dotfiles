@@ -4,6 +4,7 @@ bind -f common q quit
 
 set format_current=%t
 set format_playlist=%t %= %d
+set format_title=%t
 
 set lib_sort=-filemtime
 set start_view=sorted
