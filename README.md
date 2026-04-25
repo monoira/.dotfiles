@@ -33,7 +33,7 @@
 - Be on Fedora.
 - Bash.
 - Using gnome desktop environment while using this for `gsettings`.
-- Have ssh key configured w/GitHub to clone using ssh.
+- Have ssh key configured with GitHub to clone using ssh.
 
 ## what does this automate
 
