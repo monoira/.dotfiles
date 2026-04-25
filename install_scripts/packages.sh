@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 echo "<--- installing packages ... --->"
+
 sudo dnf upgrade -y --refresh
 
 # basics
