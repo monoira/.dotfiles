@@ -27,6 +27,7 @@ gsettings set org.gnome.desktop.sound event-sounds false
 
 # disable suspend
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
 
 # || note: EXTRA - SPECIFIC TO MY PC.
 # turning on "Accessibility > Large Text" automatically
