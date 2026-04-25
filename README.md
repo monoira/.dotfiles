@@ -4,10 +4,11 @@
   - [content of this repository](#content-of-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
     - [requirements](#requirements)
-  - [what does start.sh script automate](#what-does-startsh-script-automate)
+  - [what does this automate](#what-does-this-automate)
   - [installation](#installation)
     - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
-    - [install dotfiles](#install-dotfiles)
+    - [installation script (if you're on desktop)](#installation-script-if-youre-on-desktop)
+    - [installation script (if you're on laptop)](#installation-script-if-youre-on-laptop)
     - [setting up vscode and global settings.json](#setting-up-vscode-and-global-settingsjson)
   - [manual tasks](#manual-tasks)
   - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
@@ -34,7 +35,7 @@
 - Using gnome desktop environment while using this for `gsettings`.
 - Have ssh key configured w/GitHub to clone using ssh.
 
-## what does start.sh script automate
+## what does this automate
 
 - Installs `dnf` and `flatpak` packages
 - Installs nerd font: `Hack Nerd Font`
@@ -44,9 +45,9 @@
 
 And likely more.
 For full info, check scripts themselves at
-[start.sh](./start.sh)
-and
-[install_scripts](./install_scripts/) directory
+
+- [start_desktop](./start_desktop.sh) for desktop.
+- [start_laptop](./start_laptop.sh) for laptop.
 
 ## installation
 
@@ -60,10 +61,16 @@ sudo dnf install -y zsh & sh -c "$(wget https://raw.githubusercontent.com/ohmyzs
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-### install dotfiles
+### installation script (if you're on desktop)
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start.sh | bash
+wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start_desktop.sh | bash
+```
+
+### installation script (if you're on laptop)
+
+```bash
+wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start_laptop.sh | bash
 ```
 
 ### setting up vscode and global settings.json

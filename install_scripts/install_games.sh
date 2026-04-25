@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-echo "<--- installing steam... --->"
+
 sudo dnf install -y steam
+flatpak install -y com.heroicgameslauncher.hgl
+flatpak install -y org.vinegarhq.Sober
