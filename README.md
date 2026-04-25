@@ -54,7 +54,11 @@ For full info, check scripts themselves at
 ### install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting
 
 ```bash
-sudo dnf install -y zsh & sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sudo dnf install -y zsh
+```
+
+```bash
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
 ```bash
