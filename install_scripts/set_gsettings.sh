@@ -25,6 +25,9 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 # turn off ANNOYING droplet error notification sound
 gsettings set org.gnome.desktop.sound event-sounds false
 
+# disable suspend
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+
 # || note: EXTRA - SPECIFIC TO MY PC.
 # turning on "Accessibility > Large Text" automatically
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
