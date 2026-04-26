@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
-
 echo "<--- cloning git repositories into ~/dev... --->"
 
 mkdir -p "$HOME/dev"
@@ -12,4 +10,4 @@ git clone git@github.com:monoira/interesting.git
 git clone git@github.com:monoira/extracton.git
 git clone git@github.com:monoira/nefoin.git
 git clone git@github.com:monoira/kitty-tabs.git
-cd -
+cd - || exit

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 echo "<--- Starting installation... --->"
 git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
 
@@ -35,6 +33,7 @@ bash ~/.dotfiles/install_scripts/dev-clone.sh
 sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y
 
 cd ~/.dotfiles || exit 1
+echo "<--- CD'd into ~/.dotfiles, time to stow adopt... --->"
 
 # HACK: I need to repeat stow twice. First so that if files exist already, those files overwrite
 # this git repo's files, then I reset this repo and run stow again.
