@@ -29,6 +29,9 @@ gsettings set org.gnome.desktop.sound event-sounds false
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
 
+# set screen lock timeout to 10 minutes
+gsettings set org.gnome.desktop.session idle-delay 600
+
 # || note: EXTRA - SPECIFIC TO MY PC.
 # turning on "Accessibility > Large Text" automatically
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
