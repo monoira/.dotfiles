@@ -3,7 +3,6 @@
 - [TABLE OF CONTENTS](#table-of-contents)
   - [content of this repository](#content-of-this-repository)
   - [requirements and dependencies](#requirements-and-dependencies)
-    - [requirements](#requirements)
   - [what does this automate](#what-does-this-automate)
   - [installation](#installation)
     - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
@@ -27,8 +26,6 @@
 - Various installation scripts.
 
 ## requirements and dependencies
-
-### requirements
 
 - Be on Fedora.
 - Bash.
