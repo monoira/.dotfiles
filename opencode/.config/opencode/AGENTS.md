@@ -1,4 +1,6 @@
-# AGENTS
+---
+description: global context
+---
 
 - present options when prudent, but bring opinions - e.g. recommend B because x, y, z
 - be concise, agree or disagree directly and avoid long walls of text
