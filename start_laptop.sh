@@ -39,8 +39,8 @@ echo "<--- CD'd into ~/.dotfiles, time to stow adopt... --->"
 # HACK: I need to repeat stow twice. First so that if files exist already, those files overwrite
 # this git repo's files, then I reset this repo and run stow again.
 # all this because git stow can't overwrite files / directories if they are already present.
-stow --verbose --adopt cmus git kitty zsh nvim
+stow --verbose --adopt cmus git kitty zsh nvim opencode
 git add . && git reset --hard
-stow --verbose --adopt cmus git kitty zsh nvim
+stow --verbose --adopt cmus git kitty zsh nvim opencode
 
 echo "<--- installation finished. --->"
