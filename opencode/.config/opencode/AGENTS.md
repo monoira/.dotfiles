@@ -1,5 +1,6 @@
 ---
 description: global context
+applyTo: "**"
 ---
 
 # AGENTS
