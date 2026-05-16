@@ -20,6 +20,7 @@ bash ~/.dotfiles/install_scripts/install_lazygit.sh
 bash ~/.dotfiles/install_scripts/install_docker.sh
 bash ~/.dotfiles/install_scripts/install_nvm.sh
 bash ~/.dotfiles/install_scripts/install_act.sh
+bash ~/.dotfiles/install_scripts/install_opencode.sh
 bash ~/.dotfiles/install_scripts/install_cmus.sh
 bash ~/.dotfiles/install_scripts/install_vimv.sh
 bash ~/.dotfiles/install_scripts/install_vscode.sh
