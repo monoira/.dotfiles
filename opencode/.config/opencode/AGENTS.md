@@ -31,16 +31,16 @@ add ! to abbr when committing breaking change:
 
 ## git branch names
 
-| branch name | description                | example                           |
-| ----------- | -------------------------- | --------------------------------- |
-| main        | Production-ready code      | main                              |
-| develop     | Ongoing development branch | develop                           |
-| feature/    | New feature                | feature/user-authentication       |
-| refactor/   | Refactoring                | refactor/extract-common-functions |
-| bugfix/     | Bug fix                    | bugfix/fix-header-styling         |
-| hotfix/     | Critical bug fix in prod   | hotfix/security-patch             |
-| docs/       | Documentation updates      | docs/update-readme                |
-| release/    | Preparing for new version  | release/v2.0.1                    |
+| name      | description                | example                           |
+| --------- | -------------------------- | --------------------------------- |
+| main      | Production-ready code      | main                              |
+| develop   | Ongoing development branch | develop                           |
+| feature/  | New feature                | feature/user-authentication       |
+| refactor/ | Refactoring                | refactor/extract-common-functions |
+| bugfix/   | Bug fix                    | bugfix/fix-header-styling         |
+| hotfix/   | Critical bug fix in prod   | hotfix/security-patch             |
+| docs/     | Documentation updates      | docs/update-readme                |
+| release/  | Preparing for new version  | release/v2.0.1                    |
 
 ## code, git and testing
 
