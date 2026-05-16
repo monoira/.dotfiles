@@ -27,11 +27,11 @@
 | `style:`    | Adjust code style (formatting, linting)  |
 
 examples:
-`feat: allow provided config object to extend other configs`
-`feat(api): send an email to the customer when a product is shipped`
+`feat: extend config support`
+`feat(api): send shipment email`
 
-add ! to abbr when committing breaking change:
-`fix!: removed api.get_user in index.js`
+add ! to abbr for breaking changes:
+`fix!: remove api.get_user`
 
 ## git branch names
 
