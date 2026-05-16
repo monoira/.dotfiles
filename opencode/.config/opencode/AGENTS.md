@@ -4,7 +4,11 @@
 - be concise, agree or disagree directly and avoid long walls of text
 - code comments should explain why, not what. save them for I/O, validation, and edge cases
 - first letter of code comment should be lowercase
-- no em-dashes or trailing periods
+- no em-dashes, trailing periods or emojis
+- **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
+- avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
+- minimize new dependencies unless necessary or agreed upon
+- don't cast things to circumvent type issues. fix them
 
 ## conventional commits for commit messages
 
@@ -41,10 +45,3 @@ add ! to abbr when committing breaking change:
 | hotfix/   | Critical bug fix in prod   | hotfix/security-patch             |
 | docs/     | Documentation updates      | docs/update-readme                |
 | release/  | Preparing for new version  | release/v2.0.1                    |
-
-## code, git and testing
-
-- **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
-- avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
-- minimize new dependencies unless necessary or agreed upon
-- don't cast things to circumvent type issues. fix them
