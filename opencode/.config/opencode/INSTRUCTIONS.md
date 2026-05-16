@@ -1,6 +1,12 @@
 # INSTRUCTIONS
 
-## conventional commits
+- present options when prudent, but bring opinions - e.g. recommend B because x, y, z
+- be concise, agree or disagree directly and avoid long walls of text
+- code comments should explain why, not what. save them for I/O, validation, and edge cases
+- first letter of code comment should be lowercase
+- no em-dashes or trailing periods
+
+## conventional commits for commit messages
 
 | abbr        | description                              |
 | ----------- | ---------------------------------------- |
@@ -36,44 +42,9 @@ add ! to abbr when committing breaking change:
 | docs/       | Documentation updates      | docs/update-readme                |
 | release/    | Preparing for new version  | release/v2.0.1                    |
 
-## todo-comments
-
-- code comments should explain why, not what. save them for I/O, validation, and edge cases.
-- first letter of code comment, after todo-comments prefix, should be lowercase.
-- no em-dashes and no dot at the end.
-
-use todo-comments convention for code comments:
-
-- FIX: BUG:
-- TODO:
-- HACK:
-- WARN:
-- PERF: PERFORMANCE:
-- NOTE: HINT: INFO:
-- TEST: TESTING: PASSED: FAILED:
-
-example:
-`// PERF: using it this way is faster`
-
 ## code, git and testing
 
-- **DO NOT** list out the files changed in a PR.
-- **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply.
-- minimize new dependencies unless necessary or agreed upon.
-- install dependencies using the toolchain for the current project (e.g. npm i)
-- don't cast things to circumvent type issues. fix them.
+- **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
 - avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
-- PRs should follow this structure:
-  - short opening sentence describing the fix/feature
-  - explain the issue with concrete context
-  - (optional) show real-world data or code demonstrating the problem
-  - bullet points that show the major / material functional changes
-  - code snippet showing the user-facing result (if applicable)
-  - brief mention of (docs, tests, etc) as applicable
-- when using nestjs, prefer built-in patterns (guards, pipes, interceptors) over custom middleware and use class-validator or Zod for validation (whichever is installed and used), not manual checks.
-
-## general
-
-- be blunt - agree or disagree directly.
-- present options when prudent, but bring opinions - e.g. "recommend B because x, y, z."
-- be concise and avoid long walls of text.
+- minimize new dependencies unless necessary or agreed upon
+- don't cast things to circumvent type issues. fix them
