@@ -1,4 +1,11 @@
 {
   "$schema": "https://opencode.ai/tui.json",
-  "theme": "catppuccin"
+  "theme": "catppuccin",
+  "keybinds": {
+    "app_exit": "ctrl+c,<leader>q",
+    "variant_cycle": "<leader>v",
+    "messages_half_page_up": "ctrl+u",
+    "messages_half_page_down": "ctrl+d",
+    "app_toggle_file_context": "<leader>fc"
+  }
 }
