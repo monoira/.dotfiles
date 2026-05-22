@@ -1,37 +1,49 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
+run_script() {
+	echo "<--- Running $1... --->"
+	if bash "$1"; then
+		echo "<--- Finished $1. --->"
+	else
+		echo "<--- FAILED $1. Stopping. --->"
+		exit 1
+	fi
+}
+
 echo "<--- Starting installation... --->"
-git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles
+git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles || true
 
 # dependencies
 sudo dnf upgrade -y --refresh && flatpak update -y
 sudo dnf install -y stow git wget
 
 # change gnome settings via gsettings
-bash ~/.dotfiles/install_scripts/set_gsettings.sh
+run_script ~/.dotfiles/install_scripts/set_gsettings.sh
 
 # simple automated installations
-bash ~/.dotfiles/install_scripts/packages.sh
-bash ~/.dotfiles/install_scripts/packages_flatpak.sh
+run_script ~/.dotfiles/install_scripts/packages.sh
+run_script ~/.dotfiles/install_scripts/packages_flatpak.sh
 
 # complicated automated installations
-bash ~/.dotfiles/install_scripts/install_nerd_font.sh
-bash ~/.dotfiles/install_scripts/install_lazygit.sh
-bash ~/.dotfiles/install_scripts/install_docker.sh
-bash ~/.dotfiles/install_scripts/install_nvm.sh
-bash ~/.dotfiles/install_scripts/install_act.sh
-bash ~/.dotfiles/install_scripts/install_opencode.sh
-bash ~/.dotfiles/install_scripts/install_cmus.sh
-bash ~/.dotfiles/install_scripts/install_vimv.sh
-bash ~/.dotfiles/install_scripts/install_vscode.sh
-bash ~/.dotfiles/install_scripts/install_postgres_and_dbeaver.sh
-bash ~/.dotfiles/install_scripts/install_obsidian_and_syncthing.sh
+run_script ~/.dotfiles/install_scripts/install_nerd_font.sh
+run_script ~/.dotfiles/install_scripts/install_lazygit.sh
+run_script ~/.dotfiles/install_scripts/install_docker.sh
+run_script ~/.dotfiles/install_scripts/install_nvm.sh
+run_script ~/.dotfiles/install_scripts/install_act.sh
+run_script ~/.dotfiles/install_scripts/install_opencode.sh
+run_script ~/.dotfiles/install_scripts/install_cmus.sh
+run_script ~/.dotfiles/install_scripts/install_vimv.sh
+run_script ~/.dotfiles/install_scripts/install_vscode.sh
+run_script ~/.dotfiles/install_scripts/install_postgres_and_dbeaver.sh
+run_script ~/.dotfiles/install_scripts/install_obsidian_and_syncthing.sh
 
 # flatpak packages and games
-bash ~/.dotfiles/install_scripts/install_games.sh
+run_script ~/.dotfiles/install_scripts/install_games.sh
 
 # clone git repositories
-bash ~/.dotfiles/install_scripts/dev-clone.sh
+run_script ~/.dotfiles/install_scripts/dev-clone.sh
 
 # finish
 sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y

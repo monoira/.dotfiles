@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 echo "<--- installing Hack nerd font via monoira/nefoin... --->"
 

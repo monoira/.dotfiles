@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # NOTE: cargo required for vimv.
 echo "<--- installing vimv... --->"
