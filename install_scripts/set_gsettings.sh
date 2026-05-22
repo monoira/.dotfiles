@@ -25,6 +25,9 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 # turn off ANNOYING droplet error notification sound
 gsettings set org.gnome.desktop.sound event-sounds false
 
+# power button action
+gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'interactive'
+
 # disable suspend
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
