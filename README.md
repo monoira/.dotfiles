@@ -101,7 +101,6 @@ ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.j
   to  
   `0`
 - change gnome video player from `dnf` to `flatpak`, since flatpak version includes all codecs, free and proprietary
-- add [Vim extension to Dbeaver manually](https://www.youtube.com/watch?v=soznrFTtL2s)
 
 ## optional tips and commands you might want to consider
 
