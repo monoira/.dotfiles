@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+sudo -v
+
 run_script() {
 	echo "<--- Running $1... --->"
 	if bash "$1"; then
