@@ -17,11 +17,10 @@
 
 ## content of this repository
 
-- VSCode profile / settings as primary code editor and it's workspaces.
+- VSCode as primary code editor.
   Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.  
   Powered by [CVIMU](https://github.com/monoira/CVIMU), which I wrote.
-- dotfiles and configs managed by GNU/Stow - Kitty, Zsh, Cmus, gitconfig,
-  and more.
+- dotfiles and configs managed by `GNU/Stow` - Zsh, Kitty, Cmus, gitconfig, OpenCode and more.
 - zsh functions.
 - Various installation scripts.
 
@@ -37,7 +36,12 @@
 - Installs `dnf` and `flatpak` packages
 - Installs nerd font: `Hack Nerd Font`
 - Installs `lazygit`
+- Installs `act`
 - Installs `vimv`
+- Installs `docker` and `docker compose`
+- Installs `postgres` and `dbeaver`
+- Installs `obsidian` and `syncthing`
+- Installs `opencode`
 - Configures gnome settings with `gsettings`
 
 And likely more.
@@ -90,9 +94,9 @@ ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.j
 
 ## manual tasks
 
-- place packages based on the following image:  
+- change placement of packages based on this:
   ![Image of packages on Fedora](./docs/packages.png)
-- software program preferences:  
+- change software program preferences to this:  
   ![Software program preferences](./docs/software.png)
 - change refresh rate in `settings > refresh rate` to `120 Hz`
 - add a keyboard layout
@@ -100,11 +104,11 @@ ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.j
   `full-screen-api.warning.timeout`  
   to  
   `0`
-- change gnome video player from `dnf` to `flatpak`, since flatpak version includes all codecs, free and proprietary
+- in Software, change gnome video player from `dnf` to `flatpak`, since flatpak version includes all codecs, free and proprietary
 
 ## optional tips and commands you might want to consider
 
-### use latest LTS version of nodejs and npm via nvm
+### install & use latest LTS version of nodejs and npm via nvm
 
 ```bash
 nvm install --lts && nvm use --lts
