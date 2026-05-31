@@ -11,7 +11,7 @@
     - [setting up vscode and global settings.json](#setting-up-vscode-and-global-settingsjson)
   - [manual tasks](#manual-tasks)
   - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
-    - [use latest LTS version of nodejs and npm via nvm](#use-latest-lts-version-of-nodejs-and-npm-via-nvm)
+    - [install \& use latest LTS version of nodejs and npm via nvm](#install--use-latest-lts-version-of-nodejs-and-npm-via-nvm)
     - [update submodules when necessary](#update-submodules-when-necessary)
   - [DONATE](#donate)
 
