@@ -19,6 +19,8 @@ sudo dnf install -y python3-pip
 sudo dnf install -y golang
 sudo dnf install -y rust
 sudo dnf install -y cargo
+# java compiler + runtime
+sudo dnf install -y java-25-openjdk-devel
 
 # terminal
 sudo dnf install -y kitty

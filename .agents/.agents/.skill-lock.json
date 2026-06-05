@@ -17,6 +17,7 @@
     "github-copilot",
     "kimi-cli",
     "opencode",
-    "warp"
+    "warp",
+    "zed"
   ]
 }
