@@ -7,6 +7,8 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 
 vim.opt.hlsearch = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- system clipboard integration
 vim.opt.clipboard = "unnamedplus"
