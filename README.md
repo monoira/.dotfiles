@@ -69,13 +69,13 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ### installation script (if you're on desktop)
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start_desktop.sh | bash
+curl -fsSL https://raw.githubusercontent.com/monoira/.dotfiles/main/start_desktop.sh | bash
 ```
 
 ### installation script (if you're on laptop)
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/monoira/.dotfiles/main/start_laptop.sh | bash
+curl -fsSL https://raw.githubusercontent.com/monoira/.dotfiles/main/start_laptop.sh | bash
 ```
 
 ### setting up vscode and global settings.json
