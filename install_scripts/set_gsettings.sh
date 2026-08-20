@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 echo "<--- changing gsettings to customize gnome desktop environment to my taste... --->"
 

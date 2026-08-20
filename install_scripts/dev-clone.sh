@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 echo "<--- cloning git repositories into ~/dev... --->"
 
