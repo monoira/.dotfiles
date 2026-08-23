@@ -99,7 +99,7 @@ ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.j
 - change software program preferences to this:  
   ![Software program preferences](./docs/software.png)
 - change refresh rate in `settings > refresh rate` to `120 Hz`
-- add a keyboard layout
+- add `Georgian` keyboard layout
 - in `about:config` of firefox, change  
   `full-screen-api.warning.timeout`  
   to  
