@@ -44,7 +44,7 @@ add ! to abbr for breaking changes:
 | --------- | -------------------------- | --------------------------------- |
 | main      | Production-ready code      | main                              |
 | develop   | Ongoing development branch | develop                           |
-| feature/  | New feature                | feature/user-authentication       |
+| feature/  | New feature                | feature/auth                      |
 | refactor/ | Refactoring                | refactor/extract-common-functions |
 | bugfix/   | Bug fix                    | bugfix/fix-header-styling         |
 | hotfix/   | Critical bug fix in prod   | hotfix/security-patch             |
