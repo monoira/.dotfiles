@@ -5,5 +5,7 @@
 	defaultBranch = main
 [core]
   editor = code
+[fetch]
+    prune = true
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
