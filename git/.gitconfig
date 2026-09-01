@@ -5,3 +5,5 @@
 	defaultBranch = main
 [core]
   editor = code
+[push]
+	autoSetupRemote = true
