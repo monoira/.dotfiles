@@ -1,4 +1,5 @@
 postrecord() {
+  # encode OpenH264 mkv video into av1 using CPU.
   # uses 6 threads. That's max for ffmpeg av1 (svtav1).
   # CRF: increasing it makes the file smaller and lower quality.
   # preset: increasing it makes encoding faster but less efficient, meaning bigger files at the same CRF.
