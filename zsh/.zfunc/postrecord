@@ -1,0 +1,6 @@
+postrecord() {
+  # uses 6 threads. That's max for ffmpeg av1 (svtav1).
+  # CRF: increasing it makes the file smaller and lower quality.
+  # preset: increasing it makes encoding faster but less efficient, meaning bigger files at the same CRF.
+  VIDEO_NAME="$1" && CRF=18 && PRESET=8 && ffmpeg -hide_banner -loglevel warning -stats -i "$VIDEO_NAME" -c:v libsvtav1 -crf "$CRF" -preset "$PRESET" -svtav1-params lp=6 -pix_fmt yuv420p -c:a copy "${VIDEO_NAME%.*}_av1_crf${CRF}_preset${PRESET}.mkv"
+}
