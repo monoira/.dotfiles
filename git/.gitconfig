@@ -1,11 +1,22 @@
 [user]
 	name = monoira
 	email = monoira@users.noreply.github.com
-[init]
-	defaultBranch = main
 [core]
-  editor = code
+  editor = code --wait
+
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
+[init]
+  defaultBranch = main
 [fetch]
-    prune = true
+  prune = true
 [push]
   autoSetupRemote = true
