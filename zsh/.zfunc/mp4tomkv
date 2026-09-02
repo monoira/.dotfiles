@@ -1,0 +1,1 @@
+mp4tomkv() { VIDEO_NAME="$1" && ffmpeg -hide_banner -loglevel info -i "$VIDEO_NAME" -c copy "${VIDEO_NAME%.*}.mkv"; }
