@@ -8,12 +8,13 @@ applyTo: "**"
 - present options when prudent, but bring opinions - e.g. recommend B because x, y, z
 - be concise, agree or disagree directly and avoid long walls of text
 - code comments should explain why, not what. save them for I/O, validation, and edge cases
-- first letter of code comment should be lowercase
+- first letter of a code comment should be lowercase
 - no em-dashes, trailing periods or emojis
-- **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
-- avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
 - minimize new dependencies unless necessary or agreed upon
 - don't cast things to circumvent type issues. fix them
+- avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
+- don't write any tests unless explicitly told
+- **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
 
 ## conventional commits for commit messages
 
