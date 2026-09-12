@@ -8,7 +8,7 @@
     - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
     - [installation script (if you're on desktop)](#installation-script-if-youre-on-desktop)
     - [installation script (if you're on laptop)](#installation-script-if-youre-on-laptop)
-    - [setting up vscode and global settings.json](#setting-up-vscode-and-global-settingsjson)
+    - [setting up vscode and global settings.json and symlinking global AGENTS file](#setting-up-vscode-and-global-settingsjson-and-symlinking-global-agents-file)
   - [manual tasks](#manual-tasks)
   - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
     - [install \& use latest LTS version of nodejs and npm via nvm](#install--use-latest-lts-version-of-nodejs-and-npm-via-nvm)
@@ -78,7 +78,7 @@ curl -fsSL https://raw.githubusercontent.com/monoira/.dotfiles/main/start_deskto
 curl -fsSL https://raw.githubusercontent.com/monoira/.dotfiles/main/start_laptop.sh | bash
 ```
 
-### setting up vscode and global settings.json
+### setting up vscode and global settings.json and symlinking global AGENTS file
 
 1. open vscode - required so `$HOME/.config/Code/User` gets created
 2. import [vscode profile](./CVIMU/profiles/prof.code-profile)
@@ -88,6 +88,10 @@ curl -fsSL https://raw.githubusercontent.com/monoira/.dotfiles/main/start_laptop
 
 ```bash
 ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.json"
+```
+
+```bash
+ln -sf "$HOME/.config/opencode/AGENTS.md" "$HOME/.copilot/copilot-instructions.md"
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
