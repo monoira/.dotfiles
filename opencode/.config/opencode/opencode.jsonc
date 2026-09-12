@@ -15,10 +15,5 @@
     },
   },
   "lsp": true,
-  "formatter": {
-    // using prettier instead
-    "biome": {
-      "disabled": true,
-    },
-  },
+  "formatter": true,
 }
