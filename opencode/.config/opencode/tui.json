@@ -6,6 +6,7 @@
     "variant_cycle": "<leader>v",
     "messages_half_page_up": "ctrl+u",
     "messages_half_page_down": "ctrl+d",
-    "app_toggle_file_context": "<leader>fc"
+    "app_toggle_file_context": "<leader>fc",
+    "session_timeline": "<leader>t"
   }
 }
