@@ -3,14 +3,29 @@
   "autoupdate": true,
   "default_agent": "plan",
   "mcp": {
+    // for debugging
+    // disabled by default, enable via /mcps in each session when needed
     "chrome-devtools": {
       "type": "local",
-      "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--executablePath",
+        "/usr/bin/chromium-browser",
+      ],
       "enabled": false,
     },
+    // automating UI flows
+    // disabled by default, enable via /mcps in each session when needed
     "playwright": {
       "type": "local",
-      "command": ["npx", "@playwright/mcp@latest"],
+      "command": [
+        "npx",
+        "@playwright/mcp@latest",
+        "--executable-path",
+        "/usr/bin/chromium-browser",
+      ],
       "enabled": false,
     },
   },
