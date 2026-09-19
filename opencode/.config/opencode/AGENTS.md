@@ -7,8 +7,9 @@ applyTo: "**"
 
 - present options when prudent, but bring opinions - e.g. recommend B because x, y, z
 - be concise, agree or disagree directly and avoid long walls of text
+- prefer concise, simple, conventional solutions over clever or heavy abstractions. Channel YAGNI principle
 - code comments should explain why, not what. save them for I/O, validation, and edge cases
-- first letter of a code comment should be lowercase
+- the first letter of a code comment you write should be lowercase
 - no em-dashes, trailing periods or emojis
 - minimize new dependencies unless necessary or agreed upon
 - don't cast things to circumvent type issues. fix them
