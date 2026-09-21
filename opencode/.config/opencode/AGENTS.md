@@ -21,19 +21,19 @@ applyTo: "**"
 
 ## conventional commits for commit messages
 
-| abbr        | description                              |
+| commit type | description                              |
 | ----------- | ---------------------------------------- |
-| `feat:`     | introduce new feature                    |
-| `fix:`      | fix a bug                                |
-| `docs:`     | update documentation                     |
-| `refactor:` | refactor code without changing behavior  |
-| `chore:`    | maintenance tasks and dependency updates |
-| `test:`     | add or update tests                      |
-| `build:`    | update build system or dependencies      |
-| `ci:`       | modify CI/CD configuration               |
-| `perf:`     | optimize performance                     |
-| `revert:`   | undo previous commit                     |
-| `style:`    | adjust code style (formatting, linting)  |
+| feat:       | introduce new feature                    |
+| fix:        | fix a bug                                |
+| docs:       | update documentation                     |
+| refactor:   | refactor code without changing behavior  |
+| chore:      | maintenance tasks and dependency updates |
+| test:       | add or update tests                      |
+| build:      | update build system or dependencies      |
+| ci:         | modify CI/CD configuration               |
+| perf:       | optimize performance                     |
+| revert:     | undo previous commit                     |
+| style:      | adjust code style (formatting, linting)  |
 
 ### examples
 
