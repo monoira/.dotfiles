@@ -7,12 +7,14 @@ applyTo: "**"
 
 - present options when prudent, but bring opinions - e.g. recommend B because x, y, z
 - be concise, agree or disagree directly and avoid long walls of text
-- prefer concise, simple, conventional solutions over clever or heavy abstractions. Channel YAGNI principle
+- prefer conventional solutions over clever or heavy abstractions
+- prefer KISS and YAGNI engineering principles over DRY
 - code comments should explain why, not what. save them for I/O, validation, and edge cases
 - the first letter of a code comment you write should be lowercase
 - no em-dashes, trailing periods or emojis
 - minimize new dependencies unless necessary or agreed upon
-- don't cast things to circumvent type issues. fix them
+- don't cast things to circumvent Typescript type issues, fix them.
+  Use Web Search if you don't know how to fix that type issue
 - avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
 - don't write any tests unless explicitly told
 - **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
