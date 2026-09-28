@@ -44,6 +44,3 @@ sudo dnf install -y shotwell
 sudo dnf install -y cmatrix
 sudo dnf install -y qbittorrent
 sudo dnf install -y obs-studio
-
-# proprietary codecs like: H.264, H.265 (HEVC), AAC, etc
-sudo dnf install -y libavcodec-freeworld

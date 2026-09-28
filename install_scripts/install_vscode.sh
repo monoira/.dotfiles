@@ -11,5 +11,5 @@ sudo dnf install -y code
 sudo dnf install -y shfmt
 sudo dnf install -y shellcheck
 
-# NOTE: required for markdown lint extension to work
-sudo dnf install -y markdownlint
+# NOTE: required for markdownlint extension to work
+sudo dnf install -y markdownlint-cli2
