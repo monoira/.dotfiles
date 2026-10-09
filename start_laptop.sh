@@ -37,6 +37,7 @@ run_script ~/.dotfiles/install_scripts/install_cmus.sh
 run_script ~/.dotfiles/install_scripts/install_vimv.sh
 run_script ~/.dotfiles/install_scripts/install_vscode.sh
 run_script ~/.dotfiles/install_scripts/install_postgres_and_dbeaver.sh
+run_script ~/.dotfiles/install_scripts/install_aws_and_pulumi.sh
 run_script ~/.dotfiles/install_scripts/install_obsidian_and_syncthing.sh
 
 # clone git repositories
