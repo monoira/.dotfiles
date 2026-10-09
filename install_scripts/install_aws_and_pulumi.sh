@@ -10,3 +10,5 @@ echo "<--- installing Pulumi... --->"
 
 curl -fsSL https://get.pulumi.com | sh
 
+# sets login to local, so it stops asking you for login
+pulumi login --local
