@@ -34,9 +34,13 @@ source $HOME/.zsh_aliases
 fpath=(~/.zfunc "${fpath[@]}")
 autoload -Uz $fpath[1]/*(.:t)
 
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # opencode
 export PATH=/home/ira/.opencode/bin:$PATH
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/ira/.pulumi/bin
