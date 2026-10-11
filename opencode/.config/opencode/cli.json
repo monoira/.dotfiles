@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "catppuccin"
+  },
+  "keybinds": {
+    "app.exit": ["ctrl+c", "<leader>q"],
+    "variant.cycle": "<leader>v",
+    "session.half.page.up": "ctrl+u",
+    "session.half.page.down": "ctrl+d",
+    "app.toggle.file_context": "<leader>fc"
+  }
+}
