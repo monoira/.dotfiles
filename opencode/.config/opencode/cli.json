@@ -9,5 +9,8 @@
     "session.half.page.up": "ctrl+u",
     "session.half.page.down": "ctrl+d",
     "app.toggle.file_context": "<leader>fc"
+  },
+  "tabs": {
+    "mode": "off"
   }
 }
