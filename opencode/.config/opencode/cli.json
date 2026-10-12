@@ -4,7 +4,6 @@
     "name": "catppuccin"
   },
   "keybinds": {
-    "app.exit": ["ctrl+c", "<leader>q"],
     "variant.cycle": "<leader>v",
     "session.half.page.up": "ctrl+u",
     "session.half.page.down": "ctrl+d",
