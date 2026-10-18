@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
+echo "<--- installing Github cli... --->"
+
+sudo dnf install -y gh
+
 echo "<--- installing AWS cli... --->"
 
 # installs system version.
 # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 curl -fsSL https://awscli.amazonaws.com/v2/install.sh | sudo bash -s -- --system
 
-echo "<--- installing Pulumi... --->"
+echo "<--- installing Pulumi cli... --->"
 
 curl -fsSL https://get.pulumi.com | sh
 
