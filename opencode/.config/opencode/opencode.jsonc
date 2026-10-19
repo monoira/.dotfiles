@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "update": "auto",
+  "update": "disable",
   "default_agent": "plan",
   "mcp": {
     "servers": {
