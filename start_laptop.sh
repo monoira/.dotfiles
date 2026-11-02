@@ -17,7 +17,7 @@ git clone --recurse-submodules git@github.com:monoira/.dotfiles.git ~/.dotfiles 
 
 # dependencies
 sudo dnf upgrade -y --refresh && flatpak update -y
-sudo dnf install -y stow git wget
+sudo dnf install -y stow git
 
 # change gnome settings via gsettings
 run_script ~/.dotfiles/install_scripts/set_gsettings.sh

@@ -7,7 +7,6 @@ sudo dnf upgrade -y --refresh
 # basics
 sudo dnf install -y git
 sudo dnf install -y curl
-sudo dnf install -y wget
 sudo dnf install -y fontconfig # for github.com/monoira/nefoin
 
 # programming languages & tools
@@ -15,11 +14,6 @@ sudo dnf install -y nodejs
 sudo dnf install -y nodejs-npm
 sudo dnf install -y python3
 sudo dnf install -y python3-pip
-sudo dnf install -y golang
-sudo dnf install -y rust
-sudo dnf install -y cargo
-# java compiler + runtime
-sudo dnf install -y java-25-openjdk-devel
 
 # terminal
 sudo dnf install -y kitty

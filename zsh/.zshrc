@@ -34,6 +34,9 @@ source $HOME/.zsh_aliases
 fpath=(~/.zfunc "${fpath[@]}")
 autoload -Uz $fpath[1]/*(.:t)
 
+# load all system binaries
+export PATH="$HOME/.local/bin:$PATH"
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
