@@ -39,6 +39,7 @@ run_script ~/.dotfiles/install_scripts/install_vscode.sh
 run_script ~/.dotfiles/install_scripts/install_postgres_and_dbeaver.sh
 run_script ~/.dotfiles/install_scripts/install_github_aws_and_pulumi.sh
 run_script ~/.dotfiles/install_scripts/install_obsidian_and_syncthing.sh
+run_script ~/.dotfiles/install_scripts/install_global_node_packages.sh
 
 # clone git repositories
 run_script ~/.dotfiles/install_scripts/dev-clone.sh
