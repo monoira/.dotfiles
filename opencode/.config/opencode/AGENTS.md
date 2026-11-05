@@ -13,7 +13,7 @@ applyTo: "**"
 - the first letter of a code comment YOU write should be lowercase, though don't correct already uppercase comments unless explicitly told
 - no em-dashes, trailing periods or emojis
 - minimize new dependencies unless necessary or agreed upon
-- don't cast things to circumvent Typescript type issues, fix them.
+- don't cast things to circumvent type issues, fix them.
   Use Web Search if you don't know how to fix that type issue
 - A question is a request for an answer, not for changes. If the message opens with "how", "what are", "why does", "should we", "is it possible", "can we do X", etc then answer it instead of editing files
 - avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
