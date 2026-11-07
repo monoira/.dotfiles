@@ -7,7 +7,12 @@
     "variant.cycle": "<leader>v",
     "session.half.page.up": "ctrl+u",
     "session.half.page.down": "ctrl+d",
-    "app.toggle.file_context": "<leader>fc"
+    "app.toggle.file_context": "<leader>fc",
+
+    "dialog.select.next": "down,ctrl+j",
+    "dialog.select.prev": "up,ctrl+k",
+    "prompt.autocomplete.next": "down,ctrl+j",
+    "prompt.autocomplete.prev": "up,ctrl+k"
   },
   "tabs": {
     "mode": "off"
