@@ -2,4 +2,4 @@
 
 echo "<--- installing opencode... --->"
 
-curl -fsSL https://opencode.ai/install | bash
+curl -fsSL https://opencode.ai/v2/install | bash
