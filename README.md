@@ -11,6 +11,7 @@
     - [setting up vscode and global settings.json and symlinking global AGENTS file](#setting-up-vscode-and-global-settingsjson-and-symlinking-global-agents-file)
   - [manual tasks](#manual-tasks)
   - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
+    - [login locally in pulumi](#login-locally-in-pulumi)
     - [install \& use latest LTS version of nodejs and npm via nvm](#install--use-latest-lts-version-of-nodejs-and-npm-via-nvm)
     - [update submodules when necessary](#update-submodules-when-necessary)
   - [DONATE](#donate)
@@ -111,6 +112,12 @@ ln -sf "$HOME/.config/opencode/AGENTS.md" "$HOME/.copilot/copilot-instructions.m
 - in Software, change gnome video player from `dnf` to `flatpak`, since flatpak version includes all codecs, free and proprietary
 
 ## optional tips and commands you might want to consider
+
+### login locally in pulumi
+
+```bash
+pulumi login --local
+```
 
 ### install & use latest LTS version of nodejs and npm via nvm
 

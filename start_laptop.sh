@@ -44,7 +44,7 @@ run_script ~/.dotfiles/install_scripts/install_global_node_packages.sh
 run_script ~/.dotfiles/install_scripts/dev-clone.sh
 
 # finish
-sudo dnf upgrade -y --refresh && flatpak update -y && sudo dnf autoremove -y
+sudo dnf upgrade -y --refresh && flatpak update -y
 
 cd ~/.dotfiles || exit 1
 echo "<--- CD'd into ~/.dotfiles, time to stow adopt... --->"

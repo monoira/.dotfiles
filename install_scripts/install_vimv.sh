@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# NOTE: cargo required for vimv.
 echo "<--- installing vimv... --->"
 
 # https://github.com/thameera/vimv
-curl https://raw.githubusercontent.com/thameera/vimv/master/vimv >~/.local/bin/vimv && chmod +755 ~/.local/bin/vimv
+mkdir -p "$HOME/.local/bin" &&
+curl -fsSL https://raw.githubusercontent.com/thameera/vimv/master/vimv \
+  -o "$HOME/.local/bin/vimv" &&
+chmod +x "$HOME/.local/bin/vimv"

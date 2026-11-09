@@ -35,7 +35,6 @@ sudo dnf install -y wl-clipboard # for Wayland
 # general packages
 sudo dnf install -y fastfetch
 sudo dnf install -y btop
-sudo dnf install -y shotwell
 sudo dnf install -y cmatrix
 sudo dnf install -y qbittorrent
 sudo dnf install -y obs-studio
