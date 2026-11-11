@@ -14,7 +14,6 @@ sudo dnf install -y nodejs
 sudo dnf install -y nodejs-npm
 sudo dnf install -y python3
 sudo dnf install -y python3-pip
-sudo dnf install -y dotnet-sdk-10.0
 
 # terminal
 sudo dnf install -y kitty

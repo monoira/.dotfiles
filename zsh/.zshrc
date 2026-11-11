@@ -45,5 +45,11 @@ export NVM_DIR="$HOME/.nvm"
 # opencode
 export PATH=/home/ira/.opencode/bin:$PATH
 
-# add Pulumi to the PATH
+# pulumi
 export PATH=$PATH:/home/ira/.pulumi/bin
+
+# dotnet
+# export DOTNET_ROOT="$HOME/.dotnet"
+# export PATH="$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH"
+
+export PATH="/home/ira/.dotnetup:$PATH"
