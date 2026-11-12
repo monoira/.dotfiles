@@ -12,7 +12,7 @@
   - [manual tasks](#manual-tasks)
   - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
     - [nvm - install and use LTS nodejs and npm](#nvm---install-and-use-lts-nodejs-and-npm)
-    - [dotnetup - install and use LTS dotnet SDK](#dotnetup---install-and-use-lts-dotnet-sdk)
+    - [SDKMAN - install and use specific java OpenJDK](#sdkman---install-and-use-specific-java-openjdk)
     - [login locally in pulumi](#login-locally-in-pulumi)
     - [update submodules when necessary](#update-submodules-when-necessary)
   - [DONATE](#donate)
@@ -120,10 +120,10 @@ ln -sf "$HOME/.config/opencode/AGENTS.md" "$HOME/.copilot/copilot-instructions.m
 nvm install --lts && nvm use --lts
 ```
 
-### dotnetup - install and use LTS dotnet SDK
+### SDKMAN - install and use specific java OpenJDK
 
 ```bash
-dotnetup install lts
+sdk install java 25.0.2-tem && sdk default java 25.0.2-tem && sdk install maven
 ```
 
 ### login locally in pulumi

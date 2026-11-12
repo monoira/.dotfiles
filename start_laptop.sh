@@ -31,8 +31,8 @@ run_script ~/.dotfiles/install_scripts/install_nerd_font.sh
 run_script ~/.dotfiles/install_scripts/install_lazygit.sh
 run_script ~/.dotfiles/install_scripts/install_docker.sh
 run_script ~/.dotfiles/install_scripts/install_nvm.sh
-run_script ~/.dotfiles/install_scripts/install_dotnetup.sh
 run_script ~/.dotfiles/install_scripts/install_act.sh
+run_script ~/.dotfiles/install_scripts/install_sdkman.sh
 run_script ~/.dotfiles/install_scripts/install_opencode.sh
 run_script ~/.dotfiles/install_scripts/install_cmus.sh
 run_script ~/.dotfiles/install_scripts/install_vimv.sh
