@@ -11,8 +11,9 @@
     - [setting up vscode and global settings.json and symlinking global AGENTS file](#setting-up-vscode-and-global-settingsjson-and-symlinking-global-agents-file)
   - [manual tasks](#manual-tasks)
   - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
+    - [nvm - install and use LTS nodejs and npm](#nvm---install-and-use-lts-nodejs-and-npm)
+    - [dotnetup - install and use LTS dotnet SDK](#dotnetup---install-and-use-lts-dotnet-sdk)
     - [login locally in pulumi](#login-locally-in-pulumi)
-    - [install \& use latest LTS version of nodejs and npm via nvm](#install--use-latest-lts-version-of-nodejs-and-npm-via-nvm)
     - [update submodules when necessary](#update-submodules-when-necessary)
   - [DONATE](#donate)
 
@@ -113,16 +114,22 @@ ln -sf "$HOME/.config/opencode/AGENTS.md" "$HOME/.copilot/copilot-instructions.m
 
 ## optional tips and commands you might want to consider
 
+### nvm - install and use LTS nodejs and npm
+
+```bash
+nvm install --lts && nvm use --lts
+```
+
+### dotnetup - install and use LTS dotnet SDK
+
+```bash
+dotnetup install lts
+```
+
 ### login locally in pulumi
 
 ```bash
 pulumi login --local
-```
-
-### install & use latest LTS version of nodejs and npm via nvm
-
-```bash
-nvm install --lts && nvm use --lts
 ```
 
 ### update submodules when necessary

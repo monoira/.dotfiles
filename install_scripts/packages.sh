@@ -10,8 +10,6 @@ sudo dnf install -y curl
 sudo dnf install -y fontconfig # for github.com/monoira/nefoin
 
 # programming languages & tools
-sudo dnf install -y nodejs
-sudo dnf install -y nodejs-npm
 sudo dnf install -y python3
 sudo dnf install -y python3-pip
 
@@ -19,7 +17,7 @@ sudo dnf install -y python3-pip
 sudo dnf install -y kitty
 sudo dnf install -y neovim
 
-# chromium for testing outside of firefox
+# chromium - for testing outside of firefox
 sudo dnf install -y chromium
 
 # packages for CLI
