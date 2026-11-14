@@ -12,7 +12,7 @@
   - [manual tasks](#manual-tasks)
   - [optional tips and commands you might want to consider](#optional-tips-and-commands-you-might-want-to-consider)
     - [nvm - install and use LTS nodejs and npm](#nvm---install-and-use-lts-nodejs-and-npm)
-    - [SDKMAN - install and use specific java OpenJDK](#sdkman---install-and-use-specific-java-openjdk)
+    - [install LTS version of chosen dotnet version -- installs at the same location as Rider](#install-lts-version-of-chosen-dotnet-version----installs-at-the-same-location-as-rider)
     - [login locally in pulumi](#login-locally-in-pulumi)
     - [update submodules when necessary](#update-submodules-when-necessary)
   - [DONATE](#donate)
@@ -30,14 +30,15 @@
 
 - Be on Fedora.
 - Bash.
-- Using gnome desktop environment while using this for `gsettings`.
-- Have ssh key configured with GitHub to clone using ssh.
+- Use gnome desktop environment, required for [gsettings](./install_scripts/set_gsettings.sh).
+- Have ssh key configured with GitHub (cloning is done with SSH)
 
 ## what does this automate
 
 - Installs `dnf` and `flatpak` packages
 - Installs nerd font: `Hack Nerd Font`
 - Installs `lazygit`
+- Installs `nvm`
 - Installs `act`
 - Installs `vimv`
 - Installs `docker` and `docker compose`
@@ -120,10 +121,10 @@ ln -sf "$HOME/.config/opencode/AGENTS.md" "$HOME/.copilot/copilot-instructions.m
 nvm install --lts && nvm use --lts
 ```
 
-### SDKMAN - install and use specific java OpenJDK
+### install LTS version of chosen dotnet version -- installs at the same location as Rider
 
 ```bash
-sdk install java 25.0.2-tem && sdk default java 25.0.2-tem && sdk install maven
+curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 10.0.404
 ```
 
 ### login locally in pulumi
