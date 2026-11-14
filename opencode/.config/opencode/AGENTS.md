@@ -8,14 +8,14 @@ applyTo: "**"
 - present options when prudent, but bring opinions - e.g. recommend B because x, y, z
 - be concise and pragmatic, agree or disagree directly and avoid long walls of text
 - prefer conventional solutions over clever or heavy abstractions
-- prefer KISS and YAGNI engineering principles over DRY
+- prefer KISS and YAGNI engineering principles over DRY, but use OOP and SOLID principles when appropriate
 - code comments should explain why, not what. save them for I/O, validation, and edge cases
 - the first letter of a code comment YOU write should be lowercase, though don't correct already uppercase comments unless explicitly told
 - no em-dashes, trailing periods or emojis
 - minimize new dependencies unless necessary or agreed upon
 - don't cast things to circumvent type issues, fix them.
   Use Web Search if you don't know how to fix that type issue
-- A question is a request for an answer, not for changes. If the message opens with "how", "what are", "why does", "should we", "is it possible", "can we do X", etc then answer it instead of editing files
+- A question is a request for an answer, not for changes. If the message opens with "how", "what are", "why does", "should we", "is it possible", "can we do X", "so will", "will this", and such then answer it instead of editing files
 - avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
 - don't write any tests unless explicitly told
 - **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
