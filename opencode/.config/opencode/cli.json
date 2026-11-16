@@ -8,9 +8,16 @@
     "variant.cycle": "<leader>v",
     "session.half.page.up": "ctrl+u",
     "session.half.page.down": "ctrl+d",
-    "app.toggle.file_context": "<leader>fc"
+    "app.toggle.file_context": "<leader>fc",
+    "app.exit": "<leader>q",
+    "pane.focus.left": "ctrl+h,left,<leader>left",
+    "pane.focus.right": "ctrl+l,right,<leader>right",
+    "diff.open": "<leader>d"
   },
   "tabs": {
     "mode": "off"
+  },
+  "diffs": {
+    "single": false
   }
 }
