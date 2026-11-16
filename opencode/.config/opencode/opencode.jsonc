@@ -4,20 +4,7 @@
   "default_agent": "plan",
   "mcp": {
     "servers": {
-      // for debugging
-      // disabled by default, enable via /mcps in each session when needed
-      "chrome-devtools": {
-        "type": "local",
-        "command": [
-          "npx",
-          "-y",
-          "chrome-devtools-mcp@latest",
-          "--executablePath",
-          "/usr/bin/chromium-browser",
-        ],
-        "disabled": true,
-      },
-      // automating UI flows
+      // FOR: QA, automating UI flows
       // disabled by default, enable via /mcps in each session when needed
       "playwright": {
         "type": "local",
@@ -26,6 +13,19 @@
           "-y",
           "@playwright/mcp@latest",
           "--executable-path",
+          "/usr/bin/chromium-browser",
+        ],
+        "disabled": true,
+      },
+      // FOR: DevTools-level debugging (react bugs/re-renders, lighthouse, memory). NOT QA.
+      // disabled by default, enable via /mcps in each session when needed
+      "chrome-devtools": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "chrome-devtools-mcp@latest",
+          "--executablePath",
           "/usr/bin/chromium-browser",
         ],
         "disabled": true,
