@@ -4,15 +4,12 @@
     "name": "catppuccin"
   },
   "keybinds": {
-    "command.palette.show": "ctrl+shift+p",
-    "variant.cycle": "<leader>v",
-    "session.half.page.up": "ctrl+u",
-    "session.half.page.down": "ctrl+d",
-    "app.toggle.file_context": "<leader>fc",
     "app.exit": "<leader>q",
-    "pane.focus.left": "ctrl+h,left,<leader>left",
+    "variant.list": "<leader>v",
+    "diff.open": "<leader>d",
+    "command.palette.show": "ctrl+shift+p",
     "pane.focus.right": "ctrl+l,right,<leader>right",
-    "diff.open": "<leader>d"
+    "pane.focus.left": "ctrl+h,left,<leader>left"
   },
   "tabs": {
     "mode": "off"
