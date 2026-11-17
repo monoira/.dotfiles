@@ -7,6 +7,7 @@
     "app.exit": "<leader>q",
     "variant.list": "<leader>v",
     "diff.open": "<leader>d",
+
     "command.palette.show": "ctrl+shift+p",
     "pane.focus.right": "ctrl+l,right,<leader>right",
     "pane.focus.left": "ctrl+h,left,<leader>left"
@@ -17,5 +18,11 @@
   "diffs": {
     "single": false,
     "source": "turn"
+  },
+  "prompt": {
+    "image_preview": true
+  },
+  "session": {
+    "image_preview": true
   }
 }

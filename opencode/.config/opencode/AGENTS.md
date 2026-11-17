@@ -17,6 +17,7 @@ applyTo: "**"
   Use Web Search if you don't know how to fix that type issue
 - A question is a request for an answer, not for changes. If the message opens with "how", "what are", "why does", "should we", "is it possible", "can we do X", "so will", "will this", and such then answer it instead of editing files
 - avoid unit tests that simply test language functions or methods (e.g. testing that object spread works)
+- always output subagent reports **verbatim** without summarization
 - don't write any tests unless explicitly told
 - **STOP and confirm** before committing, pushing, or creating/updating PRs. Do not assume prior approval continues to apply
 

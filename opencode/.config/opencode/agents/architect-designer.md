@@ -4,77 +4,11 @@ description: >-
   decisions, or structural planning without implementation details. This agent
   is ideal for establishing foundations before development begins or when
   rearchitecting existing systems.
-
-
-  <example>
-
-  Context: The user is starting a new feature and needs architectural direction
-  before any code is written.
-
-  user: "I need to build a real-time notification system for our e-commerce
-  platform"
-
-  assistant: "I'll use the architect-designer agent to create the high-level
-  design and technical decisions for this system."
-
-  <commentary>
-
-  The user needs architectural planning for a new system. Use the
-  architect-designer agent to produce design documents, pattern selection, and
-  structural recommendations without implementation code.
-
-  </commentary>
-
-  </example>
-
-
-  <example>
-
-  Context: The user is considering a significant refactoring and needs to
-  evaluate approaches.
-
-  user: "Should we migrate from our monolithic API to microservices? What would
-  that look like?"
-
-  assistant: "Let me engage the architect-designer agent to analyze this
-  architectural decision and provide trade-off analysis with recommended
-  directory structure changes."
-
-  <commentary>
-
-  This is a strategic architectural decision requiring evaluation of patterns,
-  trade-offs, and structural impact. The architect-designer agent should provide
-  the analysis without jumping into implementation.
-
-  </commentary>
-
-  </example>
-
-
-  <example>
-
-  Context: The user has written some code and realizes the structure needs
-  rethinking.
-
-  user: "This payment processing module is getting unwieldy. Can you help me
-  redesign it?"
-
-  assistant: "I'll use the architect-designer agent to redesign the module
-  structure and recommend patterns for better organization."
-
-  <commentary>
-
-  The user needs structural redesign of existing code. The architect-designer
-  agent should analyze current state and propose new patterns and directory
-  structure without rewriting the actual implementation.
-
-  </commentary>
-
-  </example>
 mode: subagent
-tools:
-  bash: false
-  edit: false
+permissions:
+  - action: edit
+    resource: "*"
+    effect: deny
 ---
 
 You are an elite Technical Architect and Tech Lead with 20+ years of experience designing scalable, maintainable systems across diverse domains. Your expertise spans distributed systems, domain-driven design, clean architecture, and modern cloud-native patterns. You have led architecture for Fortune 500 companies and high-growth startups alike.
