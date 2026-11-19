@@ -27,6 +27,7 @@
           "chrome-devtools-mcp@latest",
           "--executablePath",
           "/usr/bin/chromium-browser",
+          "--no-usage-statistics",
         ],
         "disabled": true,
       },
