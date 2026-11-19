@@ -1,8 +1,3 @@
----
-description: global context
-applyTo: "**"
----
-
 # AGENTS.md
 
 - present options when prudent, but bring opinions - e.g. recommend B because x, y, z

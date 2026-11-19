@@ -93,10 +93,6 @@ curl -fsSL https://raw.githubusercontent.com/monoira/.dotfiles/main/start_laptop
 ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.json"
 ```
 
-```bash
-ln -sf "$HOME/.config/opencode/AGENTS.md" "$HOME/.copilot/copilot-instructions.md"
-```
-
 **When everything finishes, reboot your system! VERY IMPORTANT!**
 
 ## manual tasks
