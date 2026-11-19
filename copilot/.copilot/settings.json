@@ -1,0 +1,13 @@
+{
+  "editorMode": "vim",
+  "model": "deepseek-flash",
+  "modelProviderId": "deepseek",
+  "effortLevel": "high",
+  "enabledPlugins": {
+    "browser-use": true
+  },
+  // disable all MCPs by default
+  // enable through:
+  // /mcp enable MCP_NAME
+  "disabledMcpServers": ["microsoft/playwright-mcp", "io.github.ChromeDevTools/chrome-devtools-mcp"]
+}

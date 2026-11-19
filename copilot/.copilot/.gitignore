@@ -2,3 +2,6 @@
 !/.gitignore
 !/copilot-instructions.md
 !/agents/
+!/mcp-config.json
+!/settings.json
+!/mcp-config.json

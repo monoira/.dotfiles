@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "microsoft/playwright-mcp": {
+      "tools": ["*"],
+      "type": "stdio",
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "io.github.ChromeDevTools/chrome-devtools-mcp": {
+      "tools": ["*"],
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "--registry",
+        "https://registry.npmjs.org",
+        "chrome-devtools-mcp@1.13.0",
+        "--no-usage-statistics"
+      ]
+    }
+  }
+}
