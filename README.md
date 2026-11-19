@@ -20,8 +20,7 @@
 ## content of this repository
 
 - VSCode as primary code editor.
-  Setup with AI Agent and vim extension with LazyVim keybindings in mind for maximum productivity.  
-  Powered by [CVIMU](https://github.com/monoira/CVIMU), which I wrote.
+- [Github Copilot](./copilot/) and [opencode](./opencode/.config/opencode/) for ai.
 - dotfiles and configs managed by `GNU/Stow` - Zsh, Kitty, Cmus, gitconfig, OpenCode and more.
 - zsh functions.
 - Various installation scripts.
@@ -84,13 +83,13 @@ curl -fsSL https://raw.githubusercontent.com/monoira/.dotfiles/main/start_laptop
 ### setting up vscode and global settings.json and symlinking global AGENTS file
 
 1. open vscode - required so `$HOME/.config/Code/User` gets created
-2. import [vscode profile](./CVIMU/profiles/prof.code-profile)
+2. import [vscode profile](./code/profiles/prof.code-profile)
 3. clone and open workspaces
 4. run following script to symlink vscode global settings.json,
    which includes `vscode-vim` extension keybindings.
 
 ```bash
-ln -sf "$HOME/.dotfiles/CVIMU/settings.json" "$HOME/.config/Code/User/settings.json"
+ln -sf "$HOME/.dotfiles/code/settings.json" "$HOME/.config/Code/User/settings.json"
 ```
 
 **When everything finishes, reboot your system! VERY IMPORTANT!**
