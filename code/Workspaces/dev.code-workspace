@@ -1,8 +1,8 @@
 {
-	"folders": [
-		{
-			"path": "../../dev"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../../../dev",
+    },
+  ],
+  "settings": {},
 }
