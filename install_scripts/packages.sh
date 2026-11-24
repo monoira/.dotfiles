@@ -13,6 +13,10 @@ sudo dnf install -y fontconfig # for github.com/monoira/nefoin
 sudo dnf install -y python3
 sudo dnf install -y python3-pip
 
+## ffmpeg
+sudo dnf install -y ffmpeg
+sudo dnf install -y libavcodec-freeworld
+
 # terminal
 sudo dnf install -y kitty
 sudo dnf install -y neovim
