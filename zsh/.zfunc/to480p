@@ -1,0 +1,330 @@
+# shrink videos to 480p AV1, audio untouched.
+#
+#   to480p <input_dir> <output_dir>
+#
+# reads videos from <input_dir>, writes mkv files to <output_dir>. the output
+# dir is wiped at the start of every run so each run rebuilds it from scratch.
+#
+# policy:
+#   - video: AV1 via libsvtav1, capped at 480p and never upscaled
+#   - audio: stream copy, no re-encode, full quality (all tracks kept)
+#   - subs:  converted to srt so mp4/mkv/ass all land in one container
+#   - files already <=480p and under 1 Mbps total are remuxed, not re-encoded;
+#     re-encoding those inflates them (measured: 164 kbps h264 -> 603 kbps av1)
+#
+# why libsvtav1: AV1 gives the best compression here, and SVT-AV1 is the
+# fastest software AV1 encoder available. the RX 6600 can decode AV1 but not
+# encode it, so encoding stays on the CPU. SVT-AV1 tops out at 6 logical
+# processors, so lp is capped at 6 even though the 7500F reports 12 threads.
+to480p() {
+  if (( $# != 2 )); then
+    printf '%s\n' "usage: to480p <input_dir> <output_dir>" >&2
+    return 2
+  fi
+
+  local SRC_DIR OUT_DIR
+  SRC_DIR=$(realpath -m -- "$1")
+  OUT_DIR=$(realpath -m -- "$2")
+
+  local PRESET=10          # 10 is ~3x faster than 8 for ~2 VMAF points
+  local CRF=30             # 30 is a good size/quality tradeoff at 480p
+  local MAXRATE=1500k
+  local BUFSIZE=3000k
+  local MAX_HEIGHT=480
+  local SMALL_BPS=1000000
+  local MAX_THREADS=6
+  local THREADS
+
+  THREADS=$(nproc)
+  (( THREADS > MAX_THREADS )) && THREADS=$MAX_THREADS
+
+  local PART=""
+
+  to480p_log() {
+    printf '%s\n' "$*"
+  }
+
+  to480p_fmt_dur() {
+    local s=${1%.*} t=0
+    [[ $s =~ ^[0-9]+$ ]] && t=$s
+    if (( t >= 3600 )); then
+      printf '%dh%02dm' $((t / 3600)) $((t % 3600 / 60))
+    elif (( t >= 60 )); then
+      printf '%dm%02ds' $((t / 60)) $((t % 60))
+    else
+      printf '%ds' "$t"
+    fi
+  }
+
+  to480p_fmt_size() {
+    local bytes=$1
+    if (( bytes == 0 )); then
+      printf '0B'
+      return
+    fi
+    numfmt --to=iec --format='%.1f' "$bytes" 2>/dev/null || printf '%sB' "$bytes"
+  }
+
+  to480p_fmt_bps() {
+    local b=$1
+    if (( b >= 1000000 )); then
+      awk -v b="$b" 'BEGIN { printf "%.1f Mbps", b / 1000000 }'
+    else
+      awk -v b="$b" 'BEGIN { printf "%d kbps", b / 1000 }'
+    fi
+  }
+
+  to480p_have_encoder() {
+    ffmpeg -hide_banner -encoders 2>/dev/null | awk -v c="$1" '$2 == c { f = 1 } END { exit(f ? 0 : 1) }'
+  }
+
+  to480p_have_decoder() {
+    ffmpeg -hide_banner -decoders 2>/dev/null | awk -v c="$1" 'substr($1, 1, 1) == "V" && $2 == c { f = 1 } END { exit(f ? 0 : 1) }'
+  }
+
+  # sets codec, height, dur, size, bps and mode for the current $f
+  to480p_probe() {
+    codec=$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 "$f" 2>/dev/null | head -n1)
+    height=$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of csv=p=0 "$f" 2>/dev/null | head -n1)
+    dur=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$f" 2>/dev/null | head -n1)
+    size=$(stat -c%s -- "$f" 2>/dev/null) || size=0
+    dur=${dur%.*}
+    [[ $dur =~ ^[0-9]+$ ]] || dur=0
+    bps=0
+    (( dur > 0 )) && bps=$((size * 8 / dur))
+
+    # remux when the file is already small, since re-encoding it would inflate it
+    if [[ $height =~ ^[0-9]+$ ]] && (( height > 0 )); then
+      if (( height <= MAX_HEIGHT && bps < SMALL_BPS )); then
+        mode=remux
+      else
+        mode=encode
+      fi
+    else
+      mode=audio
+      height=0
+    fi
+  }
+
+  # --- preflight ------------------------------------------------------------
+
+  if [[ ! -d $SRC_DIR ]]; then
+    printf '%s\n' "input dir not found: $SRC_DIR" >&2
+    return 2
+  fi
+
+  # the output dir gets wiped below, so never let it hold the input dir
+  local OUT_PREFIX=${OUT_DIR%/}
+  if [[ $SRC_DIR == "$OUT_DIR" || $SRC_DIR == "$OUT_PREFIX"/* ]]; then
+    printf '%s\n' "refusing to wipe $OUT_DIR: it contains the input dir" >&2
+    return 2
+  fi
+
+  local bin
+  for bin in ffmpeg ffprobe numfmt; do
+    if ! command -v "$bin" >/dev/null; then
+      printf '%s\n' "missing dependency: $bin" >&2
+      return 2
+    fi
+  done
+
+  if ! to480p_have_encoder libsvtav1; then
+    printf '%s\n' "this ffmpeg has no libsvtav1 encoder, cannot continue" >&2
+    return 2
+  fi
+
+  # order by source modification time, oldest first (ls -ltr).
+  # no names are hardcoded, new files just slot into the right place
+  local entry f
+  local -a files
+  files=()
+  while IFS= read -r -d '' entry; do
+    files+=("${entry#* }")
+  done < <(find "$SRC_DIR" -maxdepth 1 -type f \
+    \( -iname '*.mp4' -o -iname '*.mkv' -o -iname '*.avi' -o -iname '*.mov' \
+       -o -iname '*.m4v' -o -iname '*.webm' -o -iname '*.wmv' -o -iname '*.flv' \
+       -o -iname '*.mpg' -o -iname '*.mpeg' -o -iname '*.ts' -o -iname '*.m2ts' \
+       -o -iname '*.divx' -o -iname '*.vob' -o -iname '*.ogv' \) \
+    -printf '%T@ %p\0' | sort -z -n)
+
+  if (( ${#files[@]} == 0 )); then
+    printf '%s\n' "no video files in $SRC_DIR" >&2
+    return 2
+  fi
+
+  # probe up front to decide the encode plan and which decoders are required
+  local -a needed
+  local enc_count=0 enc_secs=0 rem_count=0 rem_secs=0 src_total=0
+  local codec height dur size bps mode c known
+
+  for f in "${files[@]}"; do
+    to480p_probe
+    src_total=$((src_total + size))
+
+    # remux-only files are never decoded, so only encoded files need decoders
+    if [[ $mode == encode && -n $codec ]]; then
+      known=0
+      for c in "${needed[@]}"; do
+        if [[ $c == "$codec" ]]; then
+          known=1
+          break
+        fi
+      done
+      if (( known == 0 )); then
+        needed+=("$codec")
+      fi
+    fi
+
+    case $mode in
+      encode) enc_count=$((enc_count + 1)); enc_secs=$((enc_secs + dur)) ;;
+      remux) rem_count=$((rem_count + 1)); rem_secs=$((rem_secs + dur)) ;;
+    esac
+  done
+
+  local -a missing
+  missing=()
+  for c in "${needed[@]}"; do
+    if ! to480p_have_decoder "$c"; then
+      missing+=("$c")
+    fi
+  done
+
+  if (( ${#missing[@]} > 0 )); then
+    printf '%s\n' "ffmpeg is missing software decoders for: ${missing[*]}" >&2
+    return 2
+  fi
+
+  if ! rm -rf -- "$OUT_DIR" || ! mkdir -p -- "$OUT_DIR"; then
+    printf '%s\n' "cannot prepare output dir: $OUT_DIR" >&2
+    return 2
+  fi
+
+  to480p_log "source : $SRC_DIR"
+  to480p_log "output : $OUT_DIR"
+  to480p_log "files  : ${#files[@]}"
+  to480p_log "video  : AV1 preset $PRESET, CRF $CRF, max ${MAX_HEIGHT}p, threads $THREADS"
+  to480p_log "audio  : stream copy (untouched)"
+  to480p_log "plan   : $enc_count to encode ($(to480p_fmt_dur "$enc_secs")), $rem_count already small ($(to480p_fmt_dur "$rem_secs"), remux only)"
+  to480p_log ""
+
+  # --- main loop ------------------------------------------------------------
+
+  # dropping subs is the fallback for image-based subtitle tracks, which cannot
+  # be converted to srt; everything in this library is text so it normally works
+  to480p_attempt() {
+    local sn=$1
+    local -a submap=(-map '0:s?') subcodec=(-c:s srt)
+    if [[ $sn == 1 ]]; then
+      submap=()
+      subcodec=()
+    fi
+
+    # genpts repairs containers with missing/zero timestamps (some avi rips),
+    # which otherwise makes the matroska muxer reject the packets
+    if [[ $mode == remux ]]; then
+      ffmpeg -hide_banner -nostdin -y -loglevel warning -stats -fflags +genpts -i "$f" \
+        -map 0:v:0 -map '0:a?' "${submap[@]}" \
+        -c:v copy -c:a copy "${subcodec[@]}" \
+        -map_metadata 0 -map_chapters 0 "$PART"
+    elif [[ $mode == audio ]]; then
+      ffmpeg -hide_banner -nostdin -y -loglevel warning -stats -fflags +genpts -i "$f" \
+        -map 0:a -c:a copy -map_metadata 0 -map_chapters 0 "$PART"
+    else
+      ffmpeg -hide_banner -nostdin -y -loglevel warning -stats -fflags +genpts -i "$f" \
+        -map 0:v:0 -map '0:a?' "${submap[@]}" \
+        -vf "scale=-2:'min($MAX_HEIGHT,ih)':flags=lanczos" \
+        -c:v libsvtav1 -preset "$PRESET" -crf "$CRF" \
+        -maxrate "$MAXRATE" -bufsize "$BUFSIZE" \
+        -pix_fmt yuv420p -g 240 \
+        -svtav1-params "lp=$THREADS" \
+        -c:a copy "${subcodec[@]}" \
+        -map_metadata 0 -map_chapters 0 "$PART"
+    fi
+  }
+
+  local encoded=0 remuxed=0 failed=0
+  local start_all=$SECONDS
+  local i=0 base stem out t0 rc out_size pct note n out_total=0
+
+  trap 'if [[ -n ${PART:-} && -f $PART ]]; then rm -f -- "$PART"; fi; trap - INT TERM; return 130' INT TERM
+
+  for f in "${files[@]}"; do
+    i=$((i + 1))
+    base=${f##*/}
+    stem=${base%.*}
+
+    # never overwrite an earlier output if two inputs share a basename
+    out="$OUT_DIR/${stem}.mkv"
+    n=1
+    while [[ -e $out ]]; do
+      n=$((n + 1))
+      out="$OUT_DIR/${stem} (${n}).mkv"
+    done
+
+    to480p_probe
+
+    case $mode in
+      remux) note="already ${height}p $(to480p_fmt_bps "$bps"), remux only" ;;
+      audio) note="no video stream, audio only" ;;
+      *) note="${height}p $(to480p_fmt_bps "$bps") -> ${MAX_HEIGHT}p" ;;
+    esac
+
+    to480p_log "[$i/${#files[@]}] $base"
+    to480p_log "         $(to480p_fmt_dur "$dur") $(to480p_fmt_size "$size"), $note"
+
+    t0=$SECONDS
+    PART=$out.part.mkv
+
+    to480p_attempt 0
+    rc=$?
+    if [[ ( $rc -ne 0 || ! -s $PART ) && $mode != audio ]]; then
+      rm -f -- "$PART"
+      to480p_log "         retrying without subtitles"
+      to480p_attempt 1
+      rc=$?
+    fi
+
+    if [[ $rc -eq 0 && -s $PART ]] && (( $(stat -c%s -- "$PART") > 4096 )); then
+      mv -f -- "$PART" "$out"
+      PART=""
+      # keep the source mtime so ls -larth on output/ matches the source folder
+      touch -r "$f" -- "$out"
+      out_size=$(stat -c%s -- "$out")
+      if (( size > 0 )); then
+        pct=$((out_size * 100 / size))
+      else
+        pct=0
+      fi
+      out_total=$((out_total + out_size))
+      if [[ $mode == remux ]]; then
+        to480p_log "         copied (no re-encode): $(to480p_fmt_size "$size") -> $(to480p_fmt_size "$out_size")"
+        remuxed=$((remuxed + 1))
+      else
+        to480p_log "         done in $(to480p_fmt_dur "$((SECONDS - t0))"): $(to480p_fmt_size "$size") -> $(to480p_fmt_size "$out_size") (${pct}%)"
+        encoded=$((encoded + 1))
+      fi
+    else
+      rm -f -- "$PART"
+      PART=""
+      to480p_log "         FAILED: $base"
+      failed=$((failed + 1))
+    fi
+    to480p_log ""
+  done
+
+  trap - INT TERM
+
+  # --- summary --------------------------------------------------------------
+
+  local elapsed=$((SECONDS - start_all))
+
+  to480p_log ""
+  to480p_log "summary"
+  to480p_log "  encoded : $encoded"
+  to480p_log "  remuxed : $remuxed"
+  to480p_log "  failed  : $failed"
+  to480p_log "  time    : $(to480p_fmt_dur "$elapsed") ($elapsed seconds)"
+  to480p_log "  size    : $(to480p_fmt_size "$src_total") -> $(to480p_fmt_size "$out_total")"
+
+  (( failed == 0 )) || return 1
+}
