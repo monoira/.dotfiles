@@ -87,6 +87,8 @@ Due to how VSCode works, you must first open VSCode at least once for creation o
 | `ctrl u`     | Go all the way up (when focused)                 |
 | `ctrl n`     | Go down one item (when focused)                  |
 | `ctrl p`     | Go up one item (when focused)                    |
+| `j`          | Go down one item (when focused)                  |
+| `k`          | Go up one item (when focused)                    |
 | `a`          | Create a new file                                |
 | `f`          | Create a new directory                           |
 | `d`          | Delete selected file/directory                   |
