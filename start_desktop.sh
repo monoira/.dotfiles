@@ -24,16 +24,14 @@ run_script ~/.dotfiles/install_scripts/set_gsettings.sh
 
 # simple automated installations
 run_script ~/.dotfiles/install_scripts/packages.sh
+run_script ~/.dotfiles/install_scripts/packages_copr.sh
 run_script ~/.dotfiles/install_scripts/packages_flatpak.sh
 
 # complicated automated installations
 run_script ~/.dotfiles/install_scripts/install_nerd_font.sh
-run_script ~/.dotfiles/install_scripts/install_lazygit.sh
 run_script ~/.dotfiles/install_scripts/install_docker.sh
-run_script ~/.dotfiles/install_scripts/install_act.sh
 run_script ~/.dotfiles/install_scripts/install_nvm.sh
 run_script ~/.dotfiles/install_scripts/install_opencode.sh
-run_script ~/.dotfiles/install_scripts/install_ghostty.sh
 run_script ~/.dotfiles/install_scripts/install_cmus.sh
 run_script ~/.dotfiles/install_scripts/install_vimv.sh
 run_script ~/.dotfiles/install_scripts/install_vscode.sh

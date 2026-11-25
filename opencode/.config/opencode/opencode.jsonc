@@ -4,7 +4,7 @@
   "default_agent": "plan",
   "lsp": true,
   "policies": [
-    // hide certain built-in skills from the model and @ mention list
+    // hide certain built-in skills from @ mention list
     { "action": "skill.use", "resource": "report", "effect": "deny" },
     { "action": "skill.use", "resource": "browser", "effect": "deny" },
   ],
