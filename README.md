@@ -21,15 +21,15 @@
 
 - VSCode as primary code editor.
 - [Github Copilot](./copilot/) and [opencode](./opencode/.config/opencode/) for ai.
-- dotfiles and configs managed by `GNU/Stow` - Zsh, Kitty, Cmus, gitconfig, OpenCode and more.
+- dotfiles and configs managed by `GNU/Stow` - zsh, ghostty, opencode, cmus, gitconfig and more.
 - zsh functions.
 - Various installation scripts.
 
 ## requirements and dependencies
 
-- Be on Fedora.
-- Bash.
+- Be on Fedora Workstation.
 - Use gnome desktop environment, required for [gsettings](./install_scripts/set_gsettings.sh).
+- Bash.
 - Have ssh key configured with GitHub (cloning is done with SSH)
 
 ## what does this automate

@@ -5,8 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # my actual editor is vscode, but I need it to be nvim here for vimv
 export EDITOR=nvim
 export BROWSER=firefox
-export TERMINAL=kitty
-export LANG=en_US.UTF-8
+export TERMINAL=ghostty
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -16,8 +15,15 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Oh My Zsh update reminders
 zstyle ':omz:update' mode disabled
 
+# Disable Oh My Zsh automatic terminal title, using ghostty title instead
+DISABLE_AUTO_TITLE="true"
+
+# NVM lazy loading (must be before Oh My Zsh initialization)
+export NVM_DIR="$HOME/.nvm"
+zstyle ':omz:plugins:nvm' lazy yes
+
 # Plugins - zsh-autosuggestions and zsh-syntax-highlighting need to be last in list to work properly!
-plugins=(vi-mode fzf docker colored-man-pages extract zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(vi-mode fzf docker colored-man-pages extract nvm zsh-autosuggestions zsh-syntax-highlighting)
 
 # Theme
 ZSH_THEME="strug"
@@ -42,11 +48,6 @@ export PATH=/home/ira/.opencode/bin:$PATH
 
 # pulumi
 export PATH=$PATH:/home/ira/.pulumi/bin
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # dotnet-install
 export DOTNET_ROOT=$HOME/.dotnet

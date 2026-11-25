@@ -1,0 +1,34 @@
+# font
+font-family = Hack Nerd Font
+font-size = 20
+
+# mouse
+mouse-hide-while-typing = true
+
+# behavior
+confirm-close-surface = false
+copy-on-select = clipboard
+
+# theme
+theme = Catppuccin Mocha
+
+# window
+maximize = true
+window-theme = dark
+gtk-titlebar-style = tabs
+gtk-wide-tabs = false
+window-new-tab-position = end
+window-padding-color = extend
+
+# turning off notifications
+app-notifications = false
+desktop-notifications = false
+bell-features = false
+
+# keybindings
+# unbind the palette so ctrl+shift+p reaches opencode
+keybind = ctrl+shift+p=unbind
+
+keybind = ctrl+t=new_tab
+keybind = ctrl+w=close_tab:this
+keybind = ctrl+shift+alt+t=prompt_tab_title
