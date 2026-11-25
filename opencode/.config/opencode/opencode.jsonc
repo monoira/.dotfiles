@@ -3,6 +3,11 @@
   "update": "disable",
   "default_agent": "plan",
   "lsp": true,
+  "policies": [
+    // hide certain built-in skills from the model and @ mention list
+    { "action": "skill.use", "resource": "report", "effect": "deny" },
+    { "action": "skill.use", "resource": "browser", "effect": "deny" },
+  ],
   "mcp": {
     "servers": {
       // FOR: QA, automating UI flows
