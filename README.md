@@ -14,6 +14,7 @@
     - [nvm - install and use LTS nodejs and npm](#nvm---install-and-use-lts-nodejs-and-npm)
     - [install LTS version of chosen dotnet version -- installs at the same location as Rider](#install-lts-version-of-chosen-dotnet-version----installs-at-the-same-location-as-rider)
     - [login locally in pulumi](#login-locally-in-pulumi)
+    - [login with github cli](#login-with-github-cli)
     - [update submodules when necessary](#update-submodules-when-necessary)
   - [DONATE](#donate)
 
@@ -127,6 +128,14 @@ curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 10.0.
 ```bash
 pulumi login --local
 ```
+
+### login with github cli
+
+```bash
+gh auth login
+```
+
+Choose `GitHub.com`, then `SSH` as the git protocol, and authenticate with your browser or an authentication token.
 
 ### update submodules when necessary
 
