@@ -131,11 +131,11 @@ pulumi login --local
 
 ### login with github cli
 
+pick `GitHub.com`, then `SSH` as the git protocol, and authenticate with your browser
+
 ```bash
 gh auth login
 ```
-
-Choose `GitHub.com`, then `SSH` as the git protocol, and authenticate with your browser or an authentication token.
 
 ### update submodules when necessary
 
