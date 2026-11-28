@@ -19,7 +19,7 @@ zstyle ':omz:update' mode disabled
 DISABLE_AUTO_TITLE="true"
 
 # Plugins - zsh-autosuggestions and zsh-syntax-highlighting need to be last in list to work properly!
-plugins=(vi-mode fzf docker colored-man-pages extract nvm zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(vi-mode fzf nvm gh ssh docker colored-man-pages extract zsh-autosuggestions zsh-syntax-highlighting)
 
 # Theme
 ZSH_THEME="strug"

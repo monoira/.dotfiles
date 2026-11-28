@@ -5,7 +5,7 @@
   - [requirements and dependencies](#requirements-and-dependencies)
   - [what does this automate](#what-does-this-automate)
   - [installation](#installation)
-    - [install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting](#install-zsh-ohmyzsh-zsh-autosuggestions-zsh-syntax-highlighting)
+    - [install zsh and OhMyZsh](#install-zsh-and-ohmyzsh)
     - [installation script (if you're on desktop)](#installation-script-if-youre-on-desktop)
     - [installation script (if you're on laptop)](#installation-script-if-youre-on-laptop)
     - [setting up vscode and global settings.json and symlinking global AGENTS file](#setting-up-vscode-and-global-settingsjson-and-symlinking-global-agents-file)
@@ -55,18 +55,10 @@ For full info, check scripts themselves at
 
 ## installation
 
-### install zsh, OhMyZsh, zsh-autosuggestions, zsh-syntax-highlighting
+### install zsh and OhMyZsh
 
 ```bash
-sudo dnf install -y zsh
-```
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+sudo dnf install -y zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### installation script (if you're on desktop)
