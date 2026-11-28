@@ -1,0 +1,102 @@
+# convert a video to mp4, re-encoding the video to h264
+#
+#   mkvtomp4 <video_file> [crf]
+#
+# writes <name>.mp4 next to the input file. crf defaults to 23; lower means
+# better quality and bigger files, higher means smaller and worse (18-28 sane).
+# audio is copied when it is already mp4-friendly, otherwise encoded to aac.
+# subtitles are converted to mov_text, or dropped when that fails.
+mkvtomp4() {
+  if (( $# < 1 || $# > 2 )); then
+    printf '%s\n' "usage: mkvtomp4 <video_file> [crf]" >&2
+    return 2
+  fi
+
+  local in=$1
+  local crf=${2:-23}
+  local out=${in:r}.mp4
+
+  if [[ ! -f $in ]]; then
+    printf '%s\n' "not a file: $in" >&2
+    return 2
+  fi
+
+  if [[ $out == "$in" ]]; then
+    printf '%s\n' "input is already mp4: $in" >&2
+    return 2
+  fi
+
+  if [[ ! $crf =~ ^[0-9]+$ ]] || (( crf > 51 )); then
+    printf '%s\n' "crf must be a whole number from 0 to 51: $crf" >&2
+    return 2
+  fi
+
+  local bin
+  for bin in ffmpeg ffprobe; do
+    if ! command -v "$bin" >/dev/null; then
+      printf '%s\n' "missing dependency: $bin" >&2
+      return 2
+    fi
+  done
+
+  if ! ffmpeg -hide_banner -encoders 2>/dev/null | awk '$2 == "libx264" { f = 1 } END { exit(f ? 0 : 1) }'; then
+    printf '%s\n' "this ffmpeg has no libx264 encoder, install the full ffmpeg build" >&2
+    return 2
+  fi
+
+  local acodec
+  acodec=$(ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of csv=p=0 "$in" 2>/dev/null | head -n1)
+
+  local -a acodec_args
+  case $acodec in
+    aac|mp3|alac) acodec_args=(-c:a copy) ;;
+    *)            acodec_args=(-c:a aac -b:a 192k) ;;
+  esac
+
+  # never write straight to $out, so a failed run leaves an old file intact
+  local part=${out}.part.mp4
+
+  mkvtomp4_run() {
+    local -a subargs=()
+    if [[ $1 == 1 ]]; then
+      subargs=(-map '0:s?' -c:s mov_text)
+    fi
+    ffmpeg -hide_banner -nostdin -y -loglevel warning -stats -i "$in" \
+      -map 0:v:0 -map '0:a?' "${subargs[@]}" \
+      -c:v libx264 -preset medium -crf "$crf" \
+      -pix_fmt yuv420p -movflags +faststart \
+      "${acodec_args[@]}" \
+      -map_metadata 0 -map_chapters 0 "$part"
+  }
+
+  trap 'if [[ -n ${part:-} && -f $part ]]; then rm -f -- "$part"; fi; trap - INT TERM; return 130' INT TERM
+
+  printf '%s\n' "converting $in -> $out (h264 crf $crf, audio: ${acodec:-none})"
+
+  mkvtomp4_run 1
+  local rc=$?
+  if (( rc != 0 )); then
+    rm -f -- "$part"
+    printf '%s\n' "subtitle conversion failed, retrying without subtitles" >&2
+    mkvtomp4_run 0
+    rc=$?
+  fi
+
+  trap - INT TERM
+
+  if (( rc != 0 )) || [[ ! -s $part ]]; then
+    rm -f -- "$part"
+    printf '%s\n' "failed: $in" >&2
+    return 1
+  fi
+
+  mv -f -- "$part" "$out" || { rm -f -- "$part"; return 1; }
+
+  local before after pct
+  before=$(stat -c%s -- "$in" 2>/dev/null) || before=0
+  after=$(stat -c%s -- "$out" 2>/dev/null) || after=0
+  pct=0
+  (( before > 0 )) && pct=$((after * 100 / before))
+
+  printf '%s\n' "wrote $out ($(numfmt --to=iec --format='%.1f' "$before" 2>/dev/null || printf '%sB' "$before") -> $(numfmt --to=iec --format='%.1f' "$after" 2>/dev/null || printf '%sB' "$after"), ${pct}%)"
+}
